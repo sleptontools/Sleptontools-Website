@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>YNAB vs Rocket Money (2026): Which One Saves You More</title>
+<meta name="description" content="YNAB vs Rocket Money compared honestly: verified 2026 pricing, the bill negotiation fee trap, the App Store overcharge, and which app fits how you actually behave.">
+<link rel="canonical" href="https://sleptontools.com/ynab-vs-rocket-money.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,500..900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "YNAB vs Rocket Money (2026): One Builds the Habit, One Cleans Up the Mess",
+  "author": {"@type": "Organization", "name": "SleptonTools"},
+  "publisher": {"@type": "Organization", "name": "SleptonTools"},
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-07-05",
+  "mainEntityOfPage": "https://sleptontools.com/ynab-vs-rocket-money.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is YNAB or Rocket Money better?",
+      "acceptedAnswer": {"@type": "Answer", "text": "They solve different problems. YNAB ($109/yr) is a budgeting system that changes how you handle money — powerful, but it demands weekly effort. Rocket Money (free tier, Premium $7–$14/mo) is a cleanup tool that finds forgotten subscriptions and negotiates bills with almost no effort from you. Choose based on how much work you'll honestly put in."}
+    },
+    {
+      "@type": "Question",
+      "name": "Is Rocket Money's bill negotiation worth it?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Sometimes. It's free unless they succeed, then they charge 35–60% of your first year's savings — and you pick where in that range, so always choose 35%. Caveats: many negotiated rates are promotional and expire, the fee hits your card 48 hours after success unless you set up a payment plan, and they can charge the fee even for keeping your bill flat if a price hike was scheduled."}
+    },
+    {
+      "@type": "Question",
+      "name": "Why does YNAB cost more in the App Store?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Subscribing through Apple's App Store adds roughly $60–$70 per year to YNAB compared to signing up at ynab.com directly in a browser, where it's $14.99/mo or $109/yr. Always subscribe on the website, then log into the app."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use both YNAB and Rocket Money?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, and it's a legitimate combo: use Rocket Money's free tier once to audit subscriptions and try a bill negotiation, then run your actual budget in YNAB. Just don't pay for both premium tiers long-term — that's $190+/yr in money-management apps, which defeats the point."}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#101312; --paper:#FBFBF8; --green:#0E7A4B; --mint:#17C97B; --gold:#C9A227; --red:#B3402A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:var(--green)}
+header{position:sticky;top:0;background:var(--paper);z-index:50;border-bottom:2px solid var(--ink)}
+.hwrap{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{text-decoration:none}
+.logo span{color:var(--mint)}
+nav a{color:var(--ink);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:13px;margin-left:18px;opacity:.85}
+nav a:hover{opacity:1;color:var(--mint)}
+main{max-width:860px;margin:0 auto;padding:0 20px 60px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:12px;padding:18px 0 6px;color:#555}
+.breadcrumb a{color:#555;text-decoration:none}
+.breadcrumb a:hover{color:var(--green)}
+h1{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.08;margin:10px 0 14px;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--green)}
+h2{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:800;font-size:26px;margin:44px 0 14px;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:6px}
+h3{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:700;font-size:19px;margin:26px 0 8px}
+p{margin:0 0 16px}
+.meta{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#555;border-top:1px dashed #999;border-bottom:1px dashed #999;padding:8px 0;margin-bottom:18px}
+.disclosure{background:#F1EFE6;border-left:4px solid var(--gold);padding:12px 16px;font-size:13.5px;margin-bottom:26px}
+.verdict{border:2px solid var(--ink);background:#fff;padding:22px;margin:26px 0;box-shadow:6px 6px 0 var(--ink)}
+.verdict .label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--green)}
+.scorerow{display:flex;gap:24px;flex-wrap:wrap;margin:14px 0}
+.scorebox{flex:1;min-width:200px;border:1px dashed #999;padding:12px 16px}
+.score{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--green)}
+.score small{font-size:16px;color:#777}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
+th{font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:var(--ink);color:var(--paper);padding:10px;text-align:left}
+td{border:1px solid #ccc;padding:10px;vertical-align:top}
+td.num{font-family:'IBM Plex Mono',monospace}
+tr:nth-child(even) td{background:#F4F3EC}
+.callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0}
+.callout .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:600}
+.insight{border:2px solid var(--green);background:#EBF6F0;padding:16px 18px;margin:22px 0}
+.insight .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:600}
+.cta{background:var(--ink);color:var(--paper);padding:24px;margin:30px 0;text-align:center}
+.cta h3{color:var(--mint);margin-top:0}
+.btn{display:inline-block;background:var(--mint);color:var(--ink);font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:13px 26px;text-decoration:none;margin:8px 6px 4px;border:2px solid var(--ink)}
+.btn:hover{background:var(--gold)}
+.btn.alt{background:var(--paper)}
+.fineprint{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#999;margin-top:8px}
+.cta .fineprint{color:#aaa}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.pros,.cons{border:1px solid #ccc;padding:16px}
+.pros h4{color:var(--green)}.cons h4{color:var(--red)}
+.pros h4,.cons h4{font-family:'IBM Plex Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.pros ul,.cons ul,.wholist ul{padding-left:18px}
+.pros li,.cons li,.wholist li{margin-bottom:8px;font-size:15px}
+.faq details{border:1px solid #ccc;margin-bottom:10px;background:#fff}
+.faq summary{padding:14px 16px;font-weight:600;cursor:pointer;font-size:15.5px}
+.faq details p{padding:0 16px 14px;font-size:15px}
+.related{border:2px solid var(--ink);padding:18px;margin:34px 0;background:#fff}
+.related .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.related ul{list-style:none;margin-top:10px}
+.related li{padding:7px 0;border-bottom:1px dashed #ccc}
+footer{background:var(--ink);color:#aaa;font-size:13px;padding:30px 20px;text-align:center}
+footer a{color:var(--mint)}
+</style>
+</head>
+<body>
+
+<header><div class="hwrap">
+<a class="logo" style="display:flex;align-items:center;gap:9px" href="index.html"><img src="logo-full.png" alt="SleptonTools" height="60" style="display:block;width:auto"></a>
+<nav><a href="index.html">HOME</a><a href="index.html#reviews">REVIEWS</a></nav>
+</div></header>
+
+<main>
+<div class="breadcrumb"><a href="index.html">Home</a> / Comparisons / YNAB vs Rocket Money</div>
+
+<h1>YNAB vs Rocket Money: <em>One builds the habit, one cleans up the mess</em></h1>
+<div class="meta">UPDATED JULY 5, 2026 · PRICING FACT-CHECKED TODAY · ~9 MIN READ</div>
+
+<div class="disclosure"><strong>FTC disclosure:</strong> Some links on this page are affiliate links. If you sign up through them, we may earn a commission at no extra cost to you. That never changes the scores. We say what's broken.</div>
+
+<div class="verdict">
+<div class="label">The Verdict</div>
+<div class="scorerow">
+<div class="scorebox"><div class="score">4.4<small>/5</small></div><strong>YNAB</strong><br><span style="font-size:14px">Best if you're ready to actually change how you handle money. Demands effort. Rewards it.</span></div>
+<div class="scorebox"><div class="score">4.1<small>/5</small></div><strong>Rocket Money</strong><br><span style="font-size:14px">Best for finding money you're already wasting — with almost zero effort. Won't teach you anything.</span></div>
+</div>
+<p style="margin-bottom:0"><strong>Short version:</strong> This is the most common budgeting-app matchup and the most misunderstood, because they don't do the same job. YNAB is a gym membership. Rocket Money is a cleaning service. If your problem is "I don't know where my money goes and I keep ending months broke," you need YNAB. If your problem is "I'm bleeding subscriptions and my internet bill crept up again," Rocket Money fixes that this week.</p>
+</div>
+
+<h2>What each app actually is</h2>
+<p><strong><a href="ynab-review.html">YNAB</a></strong> (You Need A Budget) is a zero-based budgeting system: every dollar you earn gets assigned a job before you spend it. There's no free tier — it's a paid methodology with software attached, and it only works if you show up weekly. The people it works for tend to become lifers. YNAB's own numbers claim new users save $600 in month one; even if that's optimistic, engaged users typically recover the subscription cost fast.</p>
+<p><strong><a href="rocket-money-review.html">Rocket Money</a></strong> is a money janitor. It scans your linked accounts, surfaces every recurring charge (including the ones you forgot), cancels unwanted subscriptions for you on Premium, and offers a human team that negotiates your cable/internet/phone bills. The free tier is genuinely useful; Premium adds the concierge muscle. It requires almost nothing from you — which is exactly why it can't change your habits.</p>
+
+<h2>Pricing, fact-checked today</h2>
+<table>
+<tr><th>Cost</th><th>YNAB</th><th>Rocket Money</th></tr>
+<tr><td>Free tier</td><td class="num">None — 34-day trial (no card needed)</td><td class="num">Yes — subscription tracking, basic budget (2 categories), bill alerts</td></tr>
+<tr><td>Paid tier</td><td class="num">$14.99/mo or $109/yr ($9.08/mo effective)</td><td class="num">Premium: $7–$14/mo — YOU pick the price on a slider (7-day trial)</td></tr>
+<tr><td>What paid adds</td><td class="num">Everything — one tier, all features, up to 6 people share one subscription</td><td class="num">Concierge subscription cancellation, unlimited budget categories, net worth, web access</td></tr>
+<tr><td>Bill negotiation</td><td class="num">Doesn't exist</td><td class="num">All tiers: 35–60% of first-year savings, only if they succeed (fee-free on new Premium+ tier)</td></tr>
+<tr><td>Known trap</td><td class="num">Subscribing via Apple's App Store costs ~$60–70/yr MORE — always sign up at ynab.com in a browser</td><td class="num">Negotiated "savings" are often promo rates that expire; fee charges 48hrs after success</td></tr>
+</table>
+<p class="fineprint">Prices verified July 5, 2026 against both companies' own pricing pages and help centers. Both change these regularly.</p>
+
+<div class="callout">
+<div class="tag">⚠ The trap: Rocket Money's negotiation fee math</div>
+<p style="margin:8px 0 0">The pitch is "you only pay if we save you money" — true, but read the mechanics. You choose the fee on a 35–60% slider (<strong>nobody should ever choose above 35%</strong> — same service, you're just tipping a corporation). The fee is calculated on <em>projected 12-month savings</em>, but many negotiated rates are promotional deals that expire in 6–24 months, so your real savings can be less than what you paid the fee on. The fee auto-charges your card 48 hours after a successful negotiation unless you set up a payment plan first. And per their own terms: if your bill was <em>about to go up</em> and they negotiate it to stay flat, that counts as "savings" — and you get charged the fee for a bill that didn't drop a cent.</p>
+</div>
+
+<div class="insight">
+<div class="tag">✓ The YNAB trap, for balance</div>
+<p style="margin:8px 0 0">YNAB's dirty secret is quieter: sign up through Apple's App Store and you'll pay roughly $60–$70/yr more than the $109 direct price at ynab.com. Also, refunds on annual plans only come if you <em>delete your entire account</em> — merely canceling gets you nothing back. And the price itself has more than doubled since the subscription era began, which long-time users are rightly salty about. Subscribe in a browser, annually, and it's the best money-per-result app in the category. Subscribe monthly through Apple and you're paying $180/yr for the same thing.</p>
+</div>
+
+<h2>The real question: how much effort will you honestly put in?</h2>
+<p>Every "YNAB vs Rocket Money" article pretends this is a feature comparison. It isn't. It's a personality test.</p>
+<p>YNAB with 15 minutes a week is life-changing. YNAB opened twice and abandoned is $109 of guilt. Rocket Money used once to purge subscriptions is instantly profitable. Rocket Money Premium at $14/mo on the slider, kept for years out of inertia, quietly becomes one of the useless subscriptions it was supposed to catch — $168/yr for an app you stopped opening. The irony writes itself.</p>
+<p>Be honest about which failure you're prone to, and the choice makes itself.</p>
+
+<div class="cta">
+<h3>Pick your fighter</h3>
+<a class="btn" href="https://www.ynab.com/" rel="nofollow">Try YNAB free for 34 days →</a>
+<a class="btn alt" href="https://www.rocketmoney.com/" rel="nofollow">Try Rocket Money →</a>
+<div class="fineprint">affiliate link · no extra cost to you</div>
+</div>
+
+<h2>Pros &amp; cons</h2>
+<h3>YNAB — 4.4/5</h3>
+<div class="grid">
+<div class="pros"><h4>What works</h4><ul>
+<li>The method genuinely changes behavior — best-in-class for breaking paycheck-to-paycheck cycles</li>
+<li>One subscription covers up to 6 people</li>
+<li>34-day trial, no card required; students get a full year free</li>
+<li>No ads, no data selling — you're the customer, not the product</li>
+</ul></div>
+<div class="cons"><h4>What doesn't</h4><ul>
+<li>$109/yr with no free tier — priciest in the category</li>
+<li>Steep learning curve; useless without weekly engagement</li>
+<li>App Store signup overcharges ~$60–70/yr</li>
+<li>Annual refunds require deleting your whole account</li>
+</ul></div>
+</div>
+<h3>Rocket Money — 4.1/5</h3>
+<div class="grid">
+<div class="pros"><h4>What works</h4><ul>
+<li>Free tier finds forgotten subscriptions in minutes — instant win</li>
+<li>Concierge cancellation actually works for most services</li>
+<li>Pay-what-you-want Premium: always choose $7</li>
+<li>Bill negotiation succeeds most of the time, and costs nothing when it fails</li>
+</ul></div>
+<div class="cons"><h4>What doesn't</h4><ul>
+<li>Negotiation fee (35–60% of year-one savings) can exceed real benefit when promo rates expire</li>
+<li>Budgeting features are shallow — awareness, not a system</li>
+<li>Documented complaints about cancellation difficulty and surprise charges</li>
+<li>Won't teach you anything; the leaks come back if habits don't change</li>
+</ul></div>
+</div>
+
+<h2>Who should use which</h2>
+<div class="wholist">
+<h3>Pick YNAB if…</h3>
+<ul>
+<li>You end every month wondering where the money went</li>
+<li>You're paying off debt and need a system, not a dashboard</li>
+<li>You can commit 15 minutes a week — the price only pays off with engagement</li>
+</ul>
+<h3>Pick Rocket Money if…</h3>
+<ul>
+<li>You suspect you're paying for subscriptions you forgot exist (you are)</li>
+<li>Your internet/phone/cable bills have crept up and you'll never call to haggle</li>
+<li>You want passive awareness, not an active system</li>
+</ul>
+<h3>The smart combo</h3>
+<ul>
+<li>Use Rocket Money's <strong>free</strong> tier once as a cleanup audit, cancel the junk, maybe run one bill negotiation at 35%. Then build the actual budget in YNAB. Just don't pay for both premiums forever — $190+/yr in money apps is its own money leak.</li>
+</ul>
+</div>
+
+<h2>FAQ</h2>
+<div class="faq">
+<details><summary>Is YNAB or Rocket Money better?</summary><p>Different jobs. YNAB is a budgeting system that requires and rewards effort. Rocket Money is a low-effort cleanup tool for subscriptions and bills. Pick based on the problem you actually have — or use Rocket Money's free tier once, then budget in YNAB.</p></details>
+<details><summary>Is Rocket Money's bill negotiation worth it?</summary><p>Worth trying if you have a $100+/mo internet or cable bill and won't haggle yourself. Always set the fee slider to 35%, expect promo-rate expiration, and know the fee auto-charges 48 hours after success unless you set up a payment plan. Calling the provider yourself keeps 100% of the savings.</p></details>
+<details><summary>Why does YNAB cost more in the App Store?</summary><p>Apple takes a cut, and YNAB passes it on — roughly $60–70/yr extra for identical features. Always subscribe at ynab.com in a browser, then log into the mobile app.</p></details>
+<details><summary>Can I use both apps together?</summary><p>Yes — Rocket Money free for the subscription audit, YNAB for the actual budget, is a legitimate one-two punch. Paying for both premium tiers long-term defeats the purpose.</p></details>
+</div>
+
+<div class="cta">
+<h3>Apps track money. Systems tell it where to go.</h3>
+<p style="font-size:15px">Our $20 Personal Finance OS is the Notion dashboard we actually use — accounts, debts, sinking funds, one screen. Works alongside either app.</p>
+<a class="btn" href="https://agmster.gumroad.com/l/personal-finance-os">Get the Personal Finance OS →</a>
+<div class="fineprint">our own product · instant download</div>
+</div>
+
+<div class="related">
+<div class="tag">Keep reading</div>
+<ul>
+<li><a href="ynab-review.html">YNAB Review: The Full Breakdown</a></li>
+<li><a href="rocket-money-review.html">Rocket Money Review: The Fine Print</a></li>
+<li><a href="acorns-vs-robinhood.html">Acorns vs Robinhood: One of These IRA Matches Quietly Expires</a></li>
+<li><a href="ynab-alternatives.html">Best YNAB Alternatives: 5 Apps Compared</a></li>
+<li><a href="rocket-money-bill-negotiation.html">Is Rocket Money's Bill Negotiation Worth It?</a></li>
+<li><a href="index.html">← All reviews</a></li>
+</ul>
+</div>
+</main>
+
+<footer>
+<p>SLEPTONTOOLS · independent reviews of personal finance apps</p>
+<p style="margin-top:8px">Nothing here is financial advice. We're people who read the fine print so you don't have to. Some links are affiliate links. <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a></p>
+</footer>
+
+</body>
+</html>

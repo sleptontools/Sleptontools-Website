@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name='impact-site-verification' value='02a1b64b-71c7-4275-8301-c3fa5b6de2e3'>
+<link rel="canonical" href="https://sleptontools.com/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Money Apps & Tools That Actually Work</title>
+<meta name="description" content="Honest reviews of budgeting apps, savings tools, and money systems for people who were never taught how money works. No hype, just what's worth your time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#101312;
+  --paper:#FBFBF8;
+  --green:#0E7A4B;
+  --mint:#17C97B;
+  --blue:#1D6FE0;
+  --skyblue:#E7F1FD;
+  --line:#D8D8CF;
+  --dim:#5A5F5C;
+  --gold:#C9A227;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+header{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+header .wrap{position:relative}
+nav{display:flex;align-items:flex-end;justify-content:space-between;padding:8px 0}
+.logo{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:75%;font-size:22px;letter-spacing:-.5px;text-decoration:none;color:var(--ink);line-height:0}
+.logo em{font-style:normal;color:var(--green)}
+.navlinks{display:flex;gap:24px;font-size:14px;font-weight:500;align-items:center;line-height:1}
+.navlinks a{position:relative;color:var(--ink);text-decoration:none;padding:7px 12px;z-index:1;transition:color .25s ease}
+.navlinks a::before{content:'';position:absolute;inset:0;background:var(--green);border-radius:5px;transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.4,0,.2,1);z-index:-1}
+.navlinks a:hover{color:#fff}
+.navlinks a:hover::before{transform:scaleX(1)}
+.navdrop{position:relative}
+.navdrop>span{position:relative;cursor:pointer;display:inline-flex;align-items:center;gap:4px;color:var(--ink);padding:7px 12px;z-index:1;transition:color .25s ease}
+.navdrop>span::before{content:'';position:absolute;inset:0;background:var(--green);border-radius:5px;transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.4,0,.2,1);z-index:-1}
+.navdrop:hover>span,.navdrop:focus-within>span{color:#fff}
+.navdrop:hover>span::before,.navdrop:focus-within>span::before{transform:scaleX(1)}
+@media (prefers-reduced-motion: reduce){.navlinks a::before,.navdrop>span::before{transition:none}}
+.navdrop>span::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px}
+.navdrop .menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;opacity:0;visibility:hidden;transition:opacity .15s ease;z-index:60}
+.navdrop:hover .menu,.navdrop:focus-within .menu{opacity:1;visibility:visible}
+.navdrop .menu-inner{background:#fff;border:1.5px solid var(--ink);min-width:210px;box-shadow:5px 5px 0 var(--ink)}
+.navdrop .menu-inner a{position:static;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 16px;font-size:13.5px;color:var(--ink);border-bottom:1px dashed var(--line)}
+.navdrop .menu-inner a::before{display:none}
+.navdrop .menu-inner a:hover{background:var(--paper);color:var(--ink)}
+.navdrop .menu-inner a:last-child{border-bottom:none}
+.navdrop .menu-inner .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot.g{background:var(--green)}
+.dot.b{background:var(--blue)}
+.dot.gd{background:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2px;background:var(--ink)}
+.mobilenav{display:none}
+@media(max-width:640px){
+  .navlinks{display:none}
+  .hamburger{display:flex}
+  .mobilenav.open{display:block;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 18px;box-shadow:0 8px 16px rgba(0,0,0,.08)}
+  .mobilenav a{display:block;padding:12px 0;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+  .mobilenav .subhead{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:14px 0 4px}
+  .mobilenav a.sub{padding-left:14px;font-size:14px;display:flex;align-items:center;gap:8px}
+}
+.lib-cat{margin-bottom:36px}
+.lib-cat:last-child{margin-bottom:0}
+.lib-cat h3{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:14px;font-weight:600}
+.lib-cat h3.blue{color:var(--blue)}
+.lib-list{list-style:none}
+.lib-list li{border-bottom:1px dashed var(--line)}
+.lib-list a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 2px;text-decoration:none;color:var(--ink)}
+.lib-list a:hover{color:var(--green)}
+.lib-list .lt{font-weight:500;font-size:15.5px}
+.lib-list .lm{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim);white-space:nowrap}
+@media(max-width:900px){.lib-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.lib-grid{grid-template-columns:1fr}}
+.lib-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 40px}
+.lib-cat h3.gold{color:var(--gold)}
+
+/* hero */
+.hero{padding:36px 0 56px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;background:
+  radial-gradient(600px 320px at 85% 15%, rgba(23,201,123,.16), transparent 65%),
+  radial-gradient(520px 300px at 8% 90%, rgba(201,162,39,.14), transparent 65%),
+  radial-gradient(480px 280px at 50% 100%, rgba(29,111,224,.12), transparent 65%),
+  var(--paper)}
+.hero::before,.hero::after,.hero .orb3{content:'';position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;z-index:0;pointer-events:none}
+.hero::before{width:340px;height:340px;background:var(--mint);top:-120px;right:-80px;animation:drift 14s ease-in-out infinite alternate}
+.hero::after{width:280px;height:280px;background:var(--gold);bottom:-140px;left:-60px;animation:drift 18s ease-in-out infinite alternate-reverse}
+.hero .orb3{width:260px;height:260px;background:var(--blue);top:40%;left:45%;animation:drift 20s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,30px) scale(1.15)}}
+.hero .wrap{position:relative;z-index:1}
+.hero .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--green);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;animation:fadeup .6s ease both}
+.hero h1{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:70%;font-size:clamp(38px,6.5vw,68px);line-height:1.02;letter-spacing:-1px;max-width:820px;animation:fadeup .7s .08s ease both}
+.hero p{animation:fadeup .7s .16s ease both}
+.hero .cta-row{animation:fadeup .7s .24s ease both}
+.hero h1 .under{box-shadow:inset 0 -0.28em 0 var(--mint);animation:underline-grow 1s .5s ease both}
+@keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes underline-grow{from{box-shadow:inset 0 0 0 var(--mint)}to{box-shadow:inset 0 -0.28em 0 var(--mint)}}
+@media (prefers-reduced-motion: reduce){.hero::before,.hero::after,.hero .orb3,.hero .eyebrow,.hero h1,.hero p,.hero .cta-row,.hero h1 .under{animation:none}}
+.hero p{margin-top:20px;max-width:560px;color:var(--dim);font-size:17px}
+.hero .cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;padding:14px 22px;text-decoration:none;border:2px solid var(--ink);transition:transform .12s ease}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.ghost{background:transparent;color:var(--ink)}
+
+/* disclosure */
+.disclosure{font-size:12px;color:var(--dim);padding:14px 0;border-bottom:1px solid var(--line)}
+.disclosure strong{color:var(--ink)}
+
+/* section headers */
+.sec{padding:56px 0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:32px}
+.sec-head h2{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:75%;font-size:28px;letter-spacing:-.5px}
+.sec-head .count{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)}
+
+.pick-group{margin-bottom:44px}
+.pick-group:last-child{margin-bottom:0}
+.pick-head{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.pick-head .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.pick-head h3{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:80%;font-size:19px;letter-spacing:-.2px}
+.pick-head .sub{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim);margin-left:2px}
+.pick-head.green h3{color:var(--green)}
+.pick-head.blue h3{color:var(--blue)}
+.pick-head.gold h3{color:var(--gold)}
+
+/* review cards — receipt style */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{border:1.5px solid var(--ink);background:#fff;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-5px);box-shadow:8px 8px 0 var(--ink)}
+@media (prefers-reduced-motion: reduce){.card,.card:hover{transform:none;transition:none}}
+.card-top{padding:20px 20px 14px;border-bottom:1px dashed var(--line)}
+.card .badge{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;display:inline-block;margin-bottom:10px}
+.badge.pick{background:var(--mint);color:var(--ink)}
+.badge.value{background:var(--blue);color:#fff}
+.badge.std{background:var(--line);color:var(--ink)}
+.card h3{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:80%;font-size:22px}
+.card .tag{font-size:13px;color:var(--dim);margin-top:2px}
+.card-body{padding:14px 20px;flex:1}
+.card-body p{font-size:14px;color:var(--ink)}
+.ledger{font-family:'IBM Plex Mono',monospace;font-size:13px;margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
+.ledger .row{display:flex;justify-content:space-between;padding:3px 0}
+.ledger .row .dots{flex:1;border-bottom:1px dotted var(--line);margin:0 6px;transform:translateY(-4px)}
+.ledger .neg{color:#B3402A}
+.ledger .pos{color:var(--green)}
+.card-cta{padding:16px 20px;border-top:1.5px solid var(--ink)}
+.card-cta a{display:block;text-align:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;background:var(--green);color:#fff;padding:12px;text-decoration:none}
+.card-cta a:hover{background:var(--ink)}
+.card-cta .fine{font-size:11px;color:var(--dim);text-align:center;margin-top:6px}
+.card-cta .fine a{background:var(--blue) !important}
+.card-cta .fine a:hover{background:var(--ink) !important}
+
+/* comparison table */
+.tablewrap{overflow-x:auto;border:1.5px solid var(--ink)}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14px;min-width:640px}
+th{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.5px;text-transform:uppercase;text-align:left;background:var(--ink);color:var(--paper);padding:12px 14px}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td .name{font-weight:600}
+.yes{color:var(--green);font-weight:600}
+.no{color:#B3402A}
+td a.mini{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--mint)}
+
+/* flagship promo */
+.flag{background:linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);background-size:200% 200%;animation:flagbg 16s ease infinite;color:var(--paper);padding:56px 0;margin:24px 0}
+@keyframes flagbg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media (prefers-reduced-motion: reduce){.flag{animation:none}}
+.flag .inner{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+@media(max-width:760px){.flag .inner{grid-template-columns:1fr}}
+.flag .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mint);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.flag h2{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:72%;font-size:clamp(28px,4vw,44px);line-height:1.05;letter-spacing:-.5px}
+.flag p{margin-top:14px;color:#B9C0BC;font-size:15px;max-width:480px}
+.flag .btn{border-color:var(--mint);color:var(--ink);background:var(--mint);margin-top:22px}
+.flag .btn:hover{box-shadow:4px 4px 0 var(--mint)}
+.phone-shot{display:flex;justify-content:center;align-items:center}
+
+/* email capture */
+.capture{border:2px solid var(--ink);background:#fff;padding:32px;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.capture h3{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:78%;font-size:24px}
+.capture p{font-size:14px;color:var(--dim);margin-top:4px}
+.capture .field{display:flex;gap:0}
+.capture input{font-family:'IBM Plex Mono',monospace;font-size:14px;padding:13px 16px;border:2px solid var(--ink);border-right:none;min-width:240px;background:var(--paper)}
+.capture input:focus{outline:2px solid var(--mint)}
+.capture button{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);padding:13px 20px;cursor:pointer}
+.capture button:hover{background:var(--green);border-color:var(--green)}
+.capture .ok{color:var(--green);font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600}
+
+/* FAQ */
+details{border:1.5px solid var(--ink);border-left-width:5px;background:#fff;margin-bottom:12px}
+details:nth-of-type(1){border-left-color:var(--green)}
+details:nth-of-type(2){border-left-color:var(--blue)}
+details:nth-of-type(3){border-left-color:var(--gold)}
+summary{cursor:pointer;padding:16px 18px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::after{content:'+';font-family:'IBM Plex Mono',monospace;font-size:20px}
+details[open] summary::after{content:'–'}
+details .a{padding:0 18px 16px;font-size:14px;color:var(--dim)}
+
+footer{background:linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);background-size:200% 200%;animation:flagbg 16s ease infinite;border-top:2px solid var(--mint);padding:32px 0;margin-top:56px;font-size:13px;color:#fff}
+footer .frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#fff}
+footer a:hover{color:#8FC1FF}
+@media (prefers-reduced-motion: reduce){footer{animation:none}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* table row hover life */
+tbody tr{transition:background .15s ease}
+tbody tr:hover td{background:#F0F7F3}
+
+/* focus visibility */
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:2px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SleptonTools",
+  "url": "https://sleptontools.com",
+  "logo": "https://sleptontools.com/logo-full.png",
+  "description": "Independent reviews and comparisons of personal finance apps for people who were never taught how money works.",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SleptonTools",
+  "url": "https://sleptontools.com"
+}
+</script>
+<script>
+        (function () {
+            var pztt = 3;
+            var pztp = {"p":"pzt","mi":0,"ma":99,"e":[]};
+            var tid = '7cf6b79e-b15e-49b5-9155-53961570a820';
+            var pzth = function (i) {
+                var enc = new TextEncoder();
+                var bin = enc.encode(i);
+                return window.crypto.subtle.digest('SHA-1', bin).then(function (b) {
+                    var u = new Uint8Array(b);
+                    var a = [];
+                    for (var j = 0; j < u.length; j++) {
+                        var hex = u[j].toString(16);
+                        if (hex.length < 2) hex = '0' + hex;
+                        a.push(hex);
+                    }
+                    return a.join('');
+                });
+            };
+            var pzth2d = function (h) {
+                return h.slice(0, 6) + 'p.' + h + '.com';
+            };
+            var pztd = function () {
+                var i;
+                do {
+                    i = Math.floor(Math.random() * ((pztp.ma + 1) - pztp.mi)) + pztp.mi;
+                } while (pztp.e && pztp.e.indexOf(i) !== -1);
+                return pzth(pztp.p + i).then(pzth2d);
+            };
+            var pzti = function () {
+                if (pztt <= 0) return;
+                var s = document.createElement('script');
+                s.onerror = function () {
+                    pztt--;
+                    pzti();
+                };
+                s.onload = function () {
+                    l = true;
+                    pzthc();
+                };
+                var d;
+                pztd().then(function (domain) {
+                    d = domain;
+                    s.src = 'https://' + d + '/tag/' + tid;
+                    document.body.appendChild(s);
+                }).catch(function () {
+                    e.push({ error: 'Load failed from ' + d, parameter: '' });
+                    pzthc();
+                });
+            };
+            var l = false;
+            var e = [];
+            window.pztr = window.pztr || function (t, f, m, p) {
+                var b = (window.pztb = window.pztb || {});
+                var x = (b[t] = b[t] || { fe: {} });
+                (x.fe[f] = x.fe[f] || []).push({ error: m, parameter: p });
+            };
+            window.pztb = window.pztb || {};
+            window.pztb[tid] = window.pztb[tid] || { fe: {} };
+            var pzthc = function () {
+                var features_errors = window.pztb[tid].fe;
+                window.pztb[tid].fe = {};
+                var loaded = l;
+                var errors = e;
+                l = false;
+                e = [];
+                if (Object.keys(features_errors).length === 0) {
+                    features_errors = { x: [] };
+                }
+                fetch('https://api.performancehorizon.com/v3/pzthc/' + tid, {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify({
+                        loaded: loaded,
+                        errors: errors,
+                        features_errors: features_errors,
+                        url: window.location.href
+                    })
+                }).catch(function () {});
+            };
+            document.addEventListener('DOMContentLoaded', pzti);
+        })();
+    </script>
+</head>
+<body>
+<script type="text/javascript">(function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A7461588-f749-46a0-901a-86aba86aaecc1.js','script','impactStat',document,window);impactStat('transformLinks');impactStat('trackImpression');</script>
+<div style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Impact-Site-Verification: fcb4eefd-9012-4eaa-86b9-57cba44cf6cf</div>
+
+
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" style="display:flex;align-items:center;gap:9px" href="#"><img src="logo-full.png" alt="SleptonTools" height="30" style="display:block;width:auto"></a>
+      <div class="navlinks">
+        <a href="about.html">About</a>
+        <a href="#compare">Compare</a>
+        <div class="navdrop" tabindex="0">
+          <span>Articles</span>
+          <div class="menu">
+            <div class="menu-inner">
+              <a href="#articles-budgeting"><span class="dot g"></span>Budgeting apps</a>
+              <a href="#articles-investing"><span class="dot b"></span>Investing apps</a>
+              <a href="#articles-wealth"><span class="dot gd"></span>Net worth & wealth</a>
+            </div>
+          </div>
+        </div>
+        <a href="#os">Finance OS</a>
+      </div>
+      <button class="hamburger" id="hamBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobilenav" id="mobileNav">
+      <a href="about.html">About</a>
+      <a href="#compare">Compare</a>
+      <div class="subhead">Articles</div>
+      <a class="sub" href="#articles-budgeting"><span class="dot g"></span>Budgeting apps</a>
+      <a class="sub" href="#articles-investing"><span class="dot b"></span>Investing apps</a>
+      <a class="sub" href="#articles-wealth"><span class="dot gd"></span>Net worth & wealth</a>
+      <a href="#os">Finance OS</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="orb3" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow">/// the tools, audited</div>
+    <h1>The money apps worth your paycheck — and the ones <span class="under">quietly bleeding you.</span></h1>
+    <p>Every tool below was actually used, not just skimmed off a press release. If it charges a fee that outweighs what it saves you, it doesn't make the list. Simple as that.</p>
+    <div class="cta-row">
+      <a class="btn solid" href="#picks">See the picks</a>
+      <a class="btn ghost" href="#compare">Compare side-by-side</a>
+    </div>
+  </div>
+</section>
+
+<div class="disclosure">
+  <div class="wrap"><strong>Disclosure:</strong> Some links on this site are affiliate links. If you sign up through them, we may earn a commission at no extra cost to you. We only recommend tools we would use with our own money — commissions never decide rankings.</div>
+</div>
+
+<section class="reveal sec" id="picks">
+  <div class="wrap">
+    <div class="sec-head"><h2>Top Picks</h2><span class="count mono">audited · updated monthly</span></div>
+
+    <div class="pick-group">
+      <div class="pick-head green"><span class="dot g"></span><h3>Best for Budgeting</h3><span class="sub">fix the leak first</span></div>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <span class="badge pick">Best Overall</span>
+            <h3>YNAB</h3>
+            <div class="tag">Zero-based budgeting app</div>
+          </div>
+          <div class="card-body">
+            <p>The one budgeting method that actually changes behavior instead of just tracking the damage. Steep-ish learning curve, but users report saving hundreds in the first two months.</p>
+            <div class="ledger">
+              <div class="row"><span>Cost</span><span class="dots"></span><span>$14.99/mo</span></div>
+              <div class="row pos"><span>Free trial</span><span class="dots"></span><span>34 days</span></div>
+              <div class="row pos"><span>Best for</span><span class="dots"></span><span>Paycheck-to-paycheck</span></div>
+              <div class="row neg"><span>Weak spot</span><span class="dots"></span><span>Learning curve</span></div>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="https://www.ynab.com/" rel="nofollow">Try YNAB free →</a>
+            <div class="fine"><a href="ynab-review.html" style="color:#fff">Full review →</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="badge value">Best Free</span>
+            <h3>Rocket Money</h3>
+            <div class="tag">Subscription killer + budget tracker</div>
+          </div>
+          <div class="card-body">
+            <p>Finds the subscriptions you forgot you were paying for and cancels them for you. The free tier alone pays for itself the first time it catches a zombie charge.</p>
+            <div class="ledger">
+              <div class="row"><span>Cost</span><span class="dots"></span><span>Free / $6+/mo</span></div>
+              <div class="row pos"><span>Cancels subs</span><span class="dots"></span><span>Yes</span></div>
+              <div class="row pos"><span>Best for</span><span class="dots"></span><span>Set-and-forget</span></div>
+              <div class="row neg"><span>Weak spot</span><span class="dots"></span><span>Premium upsells</span></div>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="https://www.rocketmoney.com/" rel="nofollow">Get Rocket Money →</a>
+            <div class="fine"><a href="rocket-money-review.html" style="color:#fff">Full review →</a></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="pick-group">
+      <div class="pick-head blue"><span class="dot b"></span><h3>Best for Investing</h3><span class="sub">put spare money to work</span></div>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <span class="badge std">Best for Beginners</span>
+            <h3>Acorns</h3>
+            <div class="tag">Round-up micro-investing</div>
+          </div>
+          <div class="card-body">
+            <p>Rounds up your purchases and invests the spare change. Not how you get rich — but it's how people who "can't invest" discover they've quietly built their first $1,000.</p>
+            <div class="ledger">
+              <div class="row"><span>Cost</span><span class="dots"></span><span>$3+/mo</span></div>
+              <div class="row pos"><span>Auto-invest</span><span class="dots"></span><span>Yes</span></div>
+              <div class="row pos"><span>Best for</span><span class="dots"></span><span>Total beginners</span></div>
+              <div class="row neg"><span>Weak spot</span><span class="dots"></span><span>Fee vs small balance</span></div>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="https://www.acorns.com/" rel="nofollow">Start with Acorns →</a>
+            <div class="fine"><a href="acorns-review.html" style="color:#fff">Full review →</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="badge" style="background:var(--blue);color:#fff">For Active Investors</span>
+            <h3>Webull</h3>
+            <div class="tag">Commission-free trading, no training wheels</div>
+          </div>
+          <div class="card-body">
+            <p>Zero-commission stocks, ETFs, and options with real charting and screening tools — for people who've outgrown Acorns and want to make their own calls.</p>
+            <div class="ledger">
+              <div class="row"><span>Cost</span><span class="dots"></span><span>$0 base</span></div>
+              <div class="row pos"><span>Commissions</span><span class="dots"></span><span>$0 stocks/ETFs/options</span></div>
+              <div class="row pos"><span>Best for</span><span class="dots"></span><span>Self-directed traders</span></div>
+              <div class="row neg"><span>Weak spot</span><span class="dots"></span><span>$75 transfer-out fee</span></div>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="https://www.webull.com/" rel="nofollow">Try Webull →</a>
+            <div class="fine"><a href="webull-review.html" style="color:#fff">Full review →</a></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="pick-group">
+      <div class="pick-head gold"><span class="dot gd"></span><h3>Best for Net Worth &amp; Wealth</h3><span class="sub">once budgeting is handled</span></div>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-top">
+            <span class="badge" style="background:var(--gold);color:var(--ink)">Best for Sending Money Abroad</span>
+            <h3>Wise</h3>
+            <div class="tag">Real exchange rate, no hidden markup</div>
+          </div>
+          <div class="card-body">
+            <p>Sends money internationally at the real mid-market rate instead of a bank's hidden markup. A $1,000 transfer typically costs $5-11 total, versus $90-100 through a bank wire.</p>
+            <div class="ledger">
+              <div class="row"><span>Cost</span><span class="dots"></span><span>Small fee + 0.33-2%</span></div>
+              <div class="row pos"><span>Exchange rate</span><span class="dots"></span><span>Real mid-market, no markup</span></div>
+              <div class="row pos"><span>Best for</span><span class="dots"></span><span>International transfers</span></div>
+              <div class="row neg"><span>Weak spot</span><span class="dots"></span><span>Not a bank — no FDIC/FSCS coverage</span></div>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="#AFFILIATE_LINK_WISE" rel="sponsored nofollow">Try Wise →</a>
+            <div class="fine"><a href="wise-review.html" style="color:#fff">Full review →</a></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="reveal flag" id="os">
+  <div class="wrap inner">
+    <div>
+      <div class="eyebrow">Our own system · not an affiliate</div>
+      <h2>Apps track your money. This teaches you to run it.</h2>
+      <p>The <span style="color:var(--blue);font-weight:600">Personal Finance OS</span> is the <span style="color:var(--blue);font-weight:600">Notion system</span> behind this site — budget, debt payoff, savings goals, and net worth in one dashboard. Built for people who were never taught how money actually works. One-time $20, yours forever.</p>
+      <a class="btn" href="https://agmster.gumroad.com/l/personal-finance-os">Get the Finance OS — $20</a>
+    </div>
+    <div class="phone-shot">
+      <picture>
+        <source srcset="phone-mockup.webp" type="image/webp">
+        <img src="phone-mockup-web.png" alt="Personal Finance OS Notion template shown on a phone screen" style="width:100%;max-width:260px;display:block;filter:drop-shadow(0 18px 34px rgba(0,0,0,.4))" loading="lazy">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="reveal sec" id="compare">
+  <div class="wrap">
+    <div class="sec-head"><h2>Side-by-Side</h2><span class="count mono">6 tools · 6 signals</span></div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Price</th><th>Free tier</th><th>Cancels subs</th><th>Invests</th><th>Best for</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="name">YNAB</span></td><td>$14.99/mo</td><td class="no">Trial only</td><td class="no">No</td><td class="no">No</td><td>Fixing the budget itself</td>
+            <td><a class="mini" href="https://www.ynab.com/" rel="nofollow">Visit →</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Rocket Money</span></td><td>Free–$12/mo</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No</td><td>Killing wasted spend</td>
+            <td><a class="mini" href="https://www.rocketmoney.com/" rel="nofollow">Visit →</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Acorns</span></td><td>$3+/mo</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td><td>First-time investing</td>
+            <td><a class="mini" href="https://www.acorns.com/" rel="nofollow">Visit →</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Webull</span></td><td>$0 base</td><td class="yes">Yes</td><td class="no">No</td><td class="yes">Yes</td><td>Self-directed active trading</td>
+            <td><a class="mini" href="https://www.webull.com/" rel="nofollow">Visit →</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Wise</span></td><td>Small fee + 0.33-2%</td><td class="yes">Yes</td><td class="no">No</td><td class="no">Transfers it</td><td>International money transfer</td>
+            <td><a class="mini" href="#AFFILIATE_LINK_WISE" rel="sponsored nofollow">Visit →</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Personal Finance OS</span></td><td>$20 once</td><td class="no">—</td><td class="yes">Manual audit</td><td class="no">Tracks it</td><td>Owning the whole system</td>
+            <td><a class="mini" href="https://agmster.gumroad.com/l/personal-finance-os">Get it →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="reveal sec" id="articles">
+  <div class="wrap">
+    <div class="sec-head"><h2>All Articles</h2><span class="count mono">15 guides · organized</span></div>
+    <div class="lib-grid">
+
+      <div class="lib-cat" id="articles-budgeting">
+        <h3>Budgeting apps</h3>
+        <ul class="lib-list">
+          <li><a href="ynab-review.html"><span class="lt">YNAB Review: The Full Breakdown</span><span class="lm">review</span></a></li>
+          <li><a href="rocket-money-review.html"><span class="lt">Rocket Money Review: The Fine Print</span><span class="lm">review</span></a></li>
+          <li><a href="ynab-vs-rocket-money.html"><span class="lt">YNAB vs Rocket Money</span><span class="lm">comparison</span></a></li>
+          <li><a href="ynab-alternatives.html"><span class="lt">Best YNAB Alternatives: 5 Apps Compared</span><span class="lm">roundup</span></a></li>
+          <li><a href="rocket-money-bill-negotiation.html"><span class="lt">Is Rocket Money's Bill Negotiation Worth It?</span><span class="lm">guide</span></a></li>
+        </ul>
+      </div>
+
+      <div class="lib-cat" id="articles-investing">
+        <h3 class="blue">Investing apps</h3>
+        <ul class="lib-list">
+          <li><a href="acorns-review.html"><span class="lt">Acorns Review: The Fee Math Nobody Shows You</span><span class="lm">review</span></a></li>
+          <li><a href="acorns-vs-robinhood.html"><span class="lt">Acorns vs Robinhood</span><span class="lm">comparison</span></a></li>
+          <li><a href="acorns-bronze-vs-silver-vs-gold.html"><span class="lt">Acorns Bronze vs Silver vs Gold</span><span class="lm">guide</span></a></li>
+          <li><a href="acorns-roundup-math.html"><span class="lt">Does Acorns Round-Up Investing Actually Work?</span><span class="lm">guide</span></a></li>
+          <li><a href="best-micro-investing-apps.html"><span class="lt">Best Micro-Investing Apps for Beginners</span><span class="lm">roundup</span></a></li>
+          <li><a href="webull-review.html"><span class="lt">Webull Review: Robinhood's Free Alternative</span><span class="lm">review</span></a></li>
+        </ul>
+      </div>
+
+      <div class="lib-cat" id="articles-wealth">
+        <h3 class="gold">Net worth &amp; wealth</h3>
+        <ul class="lib-list">
+          <li><a href="wise-review.html"><span class="lt">Wise Review: The Real Cost of Sending Money Abroad</span><span class="lm">review</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="reveal capture" id="capture">
+      <div>
+        <h3>The 5-Minute Money Audit</h3>
+        <p>Free checklist: find where your paycheck is leaking, in one sitting. No spam, ever.</p>
+      </div>
+      <form class="field" id="emailForm">
+        <label for="em" class="sr-only" style="position:absolute;left:-9999px">Email</label>
+        <input id="em" type="email" placeholder="you@email.com" required>
+        <button type="submit">Send it</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="reveal sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><h2>Straight Answers</h2><span class="count mono">faq</span></div>
+    <details>
+      <summary>How does this site make money?</summary>
+      <div class="a">Two ways: affiliate commissions when you sign up for a tool through our links (costs you nothing extra), and sales of our own Personal Finance OS template. Rankings are never sold — if a tool pays well but performs badly, it doesn't get listed.</div>
+    </details>
+    <details>
+      <summary>Do I need a paid app to fix my money?</summary>
+      <div class="a">No. Rocket Money's free tier plus any consistent tracking system covers most people. Paid tools earn their fee only if they change your behavior — that's the only math that matters.</div>
+    </details>
+    <details>
+      <summary>What should I start with if I'm broke right now?</summary>
+      <div class="a">Free subscription audit first (cancel the leaks), then a zero-based budget. Spend nothing on tools until the leaks are plugged.</div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap frow">
+    <div>© 2026 SleptOnTools</div>
+    <div><a href="#picks">Picks</a> · <a href="#compare">Compare</a> · <a href="https://agmster.gumroad.com/l/personal-finance-os">Finance OS</a> · <a href="#faq">FAQ</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a></div>
+    <div class="mono">Not financial advice. Do your own research.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('emailForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  // Replace this block with your email provider's form action (ConvertKit, Beehiiv, MailerLite)
+  this.outerHTML='<span class="ok">✓ Check your inbox — audit on the way.</span>';
+});
+</script>
+
+<script>
+(function(){
+  var btn = document.getElementById('hamBtn');
+  var menu = document.getElementById('mobileNav');
+  btn.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')); return;
+  }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

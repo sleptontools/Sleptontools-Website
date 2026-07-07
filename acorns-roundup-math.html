@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Does Acorns Round-Up Investing Actually Work? The Real Math (2026)</title>
+<meta name="description" content="We ran the actual numbers on Acorns round-up investing: how much an average spender really accumulates, how the $3/mo fee eats into it, and when round-ups genuinely help.">
+<link rel="canonical" href="https://sleptontools.com/acorns-roundup-math.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,500..900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Does Acorns Round-Up Investing Actually Work? The Real Math (2026)","author":{"@type":"Organization","name":"SleptonTools"},"publisher":{"@type":"Organization","name":"SleptonTools"},"datePublished":"2026-07-06","dateModified":"2026-07-06","mainEntityOfPage":"https://sleptontools.com/acorns-roundup-math.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much money do Acorns round-ups actually add up to?","acceptedAnswer":{"@type":"Answer","text":"For someone with 20-25 card transactions a month, round-ups average about $0.50 per transaction, totaling roughly $10-13/month or $120-150/year before any investment growth."}},
+{"@type":"Question","name":"Does the Acorns fee cancel out round-up gains?","acceptedAnswer":{"@type":"Answer","text":"At typical round-up volumes, the $36/yr Bronze fee is a meaningful chunk of $120-150/yr in round-ups alone. Round-ups work best when combined with recurring investments, not relied on as the sole contribution."}},
+{"@type":"Question","name":"Is round-up investing better than doing nothing?","acceptedAnswer":{"@type":"Answer","text":"Yes, for people who would otherwise invest nothing. Round-ups convert unnoticed spare change into consistent investing behavior, which is a real behavioral win even if the raw dollar amounts are modest."}}
+]}
+</script>
+<style>
+:root{--ink:#101312;--paper:#FBFBF8;--green:#0E7A4B;--mint:#17C97B;--gold:#C9A227;--red:#B3402A;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:var(--green)}
+header{position:sticky;top:0;background:var(--paper);z-index:50;border-bottom:2px solid var(--ink)}
+.hwrap{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{text-decoration:none}
+nav a{color:var(--ink);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:13px;margin-left:18px;opacity:.85}
+nav a:hover{opacity:1;color:var(--green)}
+main{max-width:860px;margin:0 auto;padding:0 20px 60px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:12px;padding:18px 0 6px;color:#555}
+.breadcrumb a{color:#555;text-decoration:none}
+h1{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.08;margin:10px 0 14px;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--green)}
+h2{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:800;font-size:26px;margin:44px 0 14px;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:6px}
+h3{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:700;font-size:19px;margin:26px 0 8px}
+p{margin:0 0 16px}
+.meta{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#555;border-top:1px dashed #999;border-bottom:1px dashed #999;padding:8px 0;margin-bottom:18px}
+.disclosure{background:#F1EFE6;border-left:4px solid var(--gold);padding:12px 16px;font-size:13.5px;margin-bottom:26px}
+.verdict{border:2px solid var(--ink);background:#fff;padding:22px;margin:26px 0;box-shadow:6px 6px 0 var(--ink)}
+.verdict .label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--green)}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
+th{font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:var(--ink);color:var(--paper);padding:10px;text-align:left}
+td{border:1px solid #ccc;padding:10px;vertical-align:top}
+td.num{font-family:'IBM Plex Mono',monospace}
+tr:nth-child(even) td{background:#F4F3EC}
+.callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0}
+.callout .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:600}
+.insight{border:2px solid var(--green);background:#EBF6F0;padding:16px 18px;margin:22px 0}
+.insight .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:600}
+.cta{background:var(--ink);color:var(--paper);padding:24px;margin:30px 0;text-align:center}
+.cta h3{color:var(--mint);margin-top:0}
+.btn{display:inline-block;background:var(--mint);color:var(--ink);font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:13px 26px;text-decoration:none;margin:8px 6px 4px;border:2px solid var(--ink)}
+.btn:hover{background:var(--gold)}
+.fineprint{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#999;margin-top:8px}
+.cta .fineprint{color:#aaa}
+.faq details{border:1px solid #ccc;margin-bottom:10px;background:#fff}
+.faq summary{padding:14px 16px;font-weight:600;cursor:pointer;font-size:15.5px}
+.faq details p{padding:0 16px 14px;font-size:15px}
+.related{border:2px solid var(--ink);padding:18px;margin:34px 0;background:#fff}
+.related .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.related ul{list-style:none;margin-top:10px}
+.related li{padding:7px 0;border-bottom:1px dashed #ccc}
+footer{background:var(--ink);color:#aaa;font-size:13px;padding:30px 20px;text-align:center}
+footer a{color:var(--mint)}
+</style>
+</head>
+<body>
+<header><div class="hwrap">
+<a class="logo" href="index.html"><img src="logo-full.png" alt="SleptonTools" height="60" style="display:block;width:auto"></a>
+<nav><a href="index.html">HOME</a><a href="index.html#reviews">REVIEWS</a></nav>
+</div></header>
+<main>
+<div class="breadcrumb"><a href="index.html">Home</a> / Guides / Acorns Round-Up Math</div>
+<h1>Does Acorns Round-Up Investing <em>Actually Work?</em></h1>
+<div class="meta">UPDATED JULY 6, 2026 · PRICING FACT-CHECKED JULY 5, 2026 · ~7 MIN READ</div>
+<div class="disclosure"><strong>FTC disclosure:</strong> Some links on this page are affiliate links. If you sign up through them, we may earn a commission at no extra cost to you. That never changes what we say.</div>
+
+<div class="verdict">
+<div class="label">The Verdict</div>
+<p style="margin-bottom:0"><strong>Round-ups alone are modest — real, but modest.</strong> For a typical spender with 20-25 card transactions a month, round-ups average roughly $120-150 a year, which the $36/yr Bronze fee eats a meaningful chunk of. Round-ups aren't a wealth strategy on their own. They're a behavioral trick that gets money into the market that would otherwise sit spent and forgotten — and that's genuinely worth something, just not a fortune.</p>
+</div>
+
+<h2>How round-ups actually work</h2>
+<p>Every time you spend with a linked card, Acorns rounds the transaction up to the next dollar and holds the difference. Once your round-up total hits $5, it invests automatically into your portfolio. A $4.30 coffee rounds up $0.70; a $52.15 grocery run rounds up $0.85. Individually invisible. Collectively, the question is whether they add up to anything real.</p>
+
+<h2>The actual math</h2>
+<p>Take a realistic spender: 22 card transactions a month (groceries, gas, coffee, subscriptions, dining). Round-up amounts aren't random — they cluster based on how often prices land near a whole dollar. Real-world averages sit around $0.45-$0.55 per transaction.</p>
+<table>
+<tr><th>Spending pattern</th><th>Avg round-up/transaction</th><th>Transactions/mo</th><th>Monthly total</th><th>Annual total</th></tr>
+<tr><td>Light spender</td><td class="num">$0.40</td><td class="num">15</td><td class="num">$6.00</td><td class="num">$72</td></tr>
+<tr><td>Average spender</td><td class="num">$0.50</td><td class="num">22</td><td class="num">$11.00</td><td class="num">$132</td></tr>
+<tr><td>Heavy spender</td><td class="num">$0.55</td><td class="num">35</td><td class="num">$19.25</td><td class="num">$231</td></tr>
+</table>
+<p class="fineprint">Estimates based on typical U.S. card-spending patterns; individual results vary with real transaction amounts.</p>
+
+<div class="callout">
+<div class="tag">⚠ Where the fee bites</div>
+<p style="margin:8px 0 0">An average spender generating $132/yr in round-ups is paying $36/yr for Acorns Bronze — <strong>27% of their round-up contribution goes straight to the subscription fee.</strong> A light spender at $72/yr in round-ups loses exactly half to the fee. Round-ups alone, on the cheapest tier, are a genuinely tight margin. The math only gets comfortable once round-ups are paired with additional recurring deposits — which is exactly what Acorns nudges you to set up during onboarding, and exactly why that nudge exists.</p>
+</div>
+
+<h2>What round-ups are actually good for</h2>
+<p>The honest case for round-ups isn't the raw dollar figure — it's what behavioral economists call a "set it and forget it" win. Someone who would otherwise invest exactly $0 a year, because starting feels like a decision they keep postponing, ends up with $100-200 invested without ever making an active choice. That's not nothing. It's also not a retirement plan. Compounded over 20-30 years, $130/year at typical market returns turns into a meaningful chunk of change — but the same $130/year invested manually, fee-free, in any brokerage compounds identically and keeps the fee.</p>
+
+<div class="insight">
+<div class="tag">✓ The move that makes the math work</div>
+<p style="margin:8px 0 0">Turn on round-ups AND set a small recurring weekly or biweekly deposit — even $10/week adds $520/year on top of round-ups, which dwarfs the $36/yr fee and makes Acorns' automation genuinely worthwhile. Round-ups alone are a nice bonus. Round-ups plus a real recurring contribution is the actual product.</p>
+</div>
+
+<h2>Bottom line</h2>
+<p>Round-ups work exactly as advertised — they're just smaller than the marketing implies. As a standalone strategy on Acorns' cheapest tier, they roughly cover a third to half of the subscription fee for most people. As a companion to a real recurring investment habit, they're free extra money that took zero willpower. The honest pitch is "round-ups make investing happen without you noticing," not "round-ups make you rich."</p>
+
+<div class="cta">
+<h3>Curious what tier fits your habits?</h3>
+<a class="btn" href="https://www.acorns.com/" rel="nofollow">Start with Acorns →</a>
+<div class="fineprint">affiliate link · no extra cost to you</div>
+</div>
+
+<h2>FAQ</h2>
+<div class="faq">
+<details><summary>How much do Acorns round-ups actually add up to?</summary><p>For someone with 20-25 transactions a month, roughly $120-150/year before growth, based on typical round-up averages of $0.45-$0.55 per transaction.</p></details>
+<details><summary>Does the Acorns fee cancel out round-up gains?</summary><p>It eats a large share of them at typical volumes — the $36/yr Bronze fee is 25-50% of a typical year's round-up total. Pairing round-ups with a recurring deposit fixes this math.</p></details>
+<details><summary>Is round-up investing better than doing nothing?</summary><p>Yes, for people who would otherwise invest $0. It's a real behavioral win even though the raw dollar amounts are modest on their own.</p></details>
+</div>
+
+<div class="related">
+<div class="tag">Keep reading</div>
+<ul>
+<li><a href="acorns-review.html">Acorns Review: The Fee Math Nobody Shows You</a></li>
+<li><a href="acorns-bronze-vs-silver-vs-gold.html">Acorns Bronze vs Silver vs Gold: Which Tier Is Actually Worth It?</a></li>
+<li><a href="acorns-vs-robinhood.html">Acorns vs Robinhood</a></li>
+<li><a href="index.html">← All reviews</a></li>
+</ul>
+</div>
+</main>
+<footer>
+<p>SLEPTONTOOLS · independent reviews of personal finance apps</p>
+<p style="margin-top:8px">Nothing here is financial advice. Some links are affiliate links. <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a></p>
+</footer>
+</body>
+</html>
