@@ -30,7 +30,7 @@ body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;lin
 .mono{font-family:'IBM Plex Mono',monospace}
 a{color:var(--green)}
 header{position:sticky;top:0;background:var(--paper);z-index:50;border-bottom:2px solid var(--ink)}
-.hwrap{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.hwrap{max-width:860px;margin:0 auto;padding:14px 20px}
 .logo{text-decoration:none}
 nav a{color:var(--ink);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:13px;margin-left:18px;opacity:.85}
 nav a:hover{opacity:1;color:var(--green)}
@@ -43,22 +43,33 @@ h2{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:800;font-size:2
 h3{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:700;font-size:19px;margin:26px 0 8px}
 p{margin:0 0 16px}
 .meta{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#555;border-top:1px dashed #999;border-bottom:1px dashed #999;padding:8px 0;margin-bottom:18px}
-.disclosure{background:#F1EFE6;border-left:4px solid var(--gold);padding:12px 16px;font-size:13.5px;margin-bottom:26px}
+.disclosure{background:#fff;border:1.5px solid var(--ink);border-left:5px solid var(--gold);padding:13px 16px;font-size:13.5px;margin-bottom:26px;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.disclosure::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(201,162,39,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.disclosure:hover{transform:translateY(-2px);box-shadow:4px 4px 0 var(--ink)}
+.disclosure:hover::before{transform:translateX(100%)}
 .verdict{border:2px solid var(--ink);background:#fff;padding:22px;margin:26px 0;box-shadow:6px 6px 0 var(--ink)}
 .verdict .label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--green)}
-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
-th{font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:var(--ink);color:var(--paper);padding:10px;text-align:left}
-td{border:1px solid #ccc;padding:10px;vertical-align:top}
-td.num{font-family:'IBM Plex Mono',monospace}
-tr:nth-child(even) td{background:#F4F3EC}
-.callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0}
+table{width:100%;border-collapse:collapse;margin:0;font-size:15px}
+.tablebox{border:2px solid var(--ink);background:#fff;margin:18px 0;overflow:hidden;box-shadow:6px 6px 0 var(--ink)}
+th{font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:var(--green);color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+td{border:none;border-bottom:1px solid var(--line);padding:13px 14px;vertical-align:top;background:#fff;transition:background .15s ease}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#EBF6F0}
+td.num{font-family:'IBM Plex Mono',monospace;font-weight:400;color:var(--ink)}
+.callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.callout::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.callout:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
+.callout:hover::before{transform:translateX(100%)}
 .callout .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:600}
-.insight{border:2px solid var(--green);background:#EBF6F0;padding:16px 18px;margin:22px 0}
+.insight{border:2px solid var(--green);background:#EBF6F0;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.insight::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(14,122,75,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.insight:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
+.insight:hover::before{transform:translateX(100%)}
 .insight .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:600}
 .cta{background:var(--ink);color:var(--paper);padding:24px;margin:30px 0;text-align:center}
 .cta h3{color:var(--mint);margin-top:0}
-.btn{display:inline-block;background:var(--mint);color:var(--ink);font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:13px 26px;text-decoration:none;margin:8px 6px 4px;border:2px solid var(--ink)}
-.btn:hover{background:var(--gold)}
+.btn{display:inline-block;background:var(--mint);color:var(--ink);font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:13px 26px;text-decoration:none;margin:8px 6px 4px;border:2px solid var(--ink);transition:transform .12s ease}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
 .fineprint{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#999;margin-top:8px}
 .cta .fineprint{color:#aaa}
 .faq details{border:1px solid #ccc;margin-bottom:10px;background:#fff}
@@ -148,6 +159,7 @@ nav{display:flex;align-items:center;justify-content:space-between}
 <p>You link the bills you want negotiated — cable, internet, phone are the common ones — and Rocket Money's team contacts the provider on your behalf, using the leverage of "competitor pricing" and "loyalty discount" requests that reps are trained to offer but rarely volunteer. If they succeed, you keep the new lower rate going forward. If they fail, you pay nothing. That part is genuinely fair.</p>
 
 <h2>The fee, in full</h2>
+<div class="tablebox">
 <table>
 <tr><th>Mechanic</th><th>What actually happens</th></tr>
 <tr><td>Fee range</td><td class="num">35%–60% of your estimated first-year savings, chosen by YOU on a slider at signup</td></tr>
@@ -156,6 +168,7 @@ nav{display:flex;align-items:center;justify-content:space-between}
 <tr><td>What counts as "savings"</td><td class="num">Includes cases where a scheduled price increase was prevented — bill stays flat, fee still applies</td></tr>
 <tr><td>If negotiation fails</td><td class="num">$0 charged</td></tr>
 </table>
+</div>
 
 <div class="callout">
 <div class="tag">⚠ The clause nobody reads</div>
