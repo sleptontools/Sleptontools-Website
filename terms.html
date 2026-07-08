@@ -25,7 +25,7 @@ body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;lin
 .mono{font-family:'IBM Plex Mono',monospace}
 a{color:var(--green)}
 nav a{color:var(--ink);text-decoration:none}
-nav a:hover{opacity:1;color:var(--green)}
+nav a:hover{color:var(--green)}
 main{max-width:800px;margin:0 auto;padding:0 20px 60px}
 .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:12px;padding:18px 0 6px;color:#555}
 .breadcrumb a{color:#555;text-decoration:none}
@@ -44,17 +44,17 @@ footer .frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 footer a{color:#fff;text-decoration:none}
 footer a:hover{color:var(--mint)}
 header{background:var(--paper);border-bottom:2px solid var(--ink);width:100%}
-.hwrap{max-width:1150px;margin:0 auto;padding:0 24px;height:75px;display:flex;align-items:center;justify-content:space-between;position:relative}
-nav{display:flex;align-items:center;width:100%}
-.logo{text-decoration:none;display:flex;align-items:center;flex-shrink:0;margin-right:auto}
+.hwrap{max-width:1150px;margin:0 auto;padding:0 24px;height:75px;display:flex;align-items:center;justify-content:space-between}
+nav{display:flex;align-items:center;justify-content:space-between;width:100%}
+.logo{text-decoration:none;display:flex;align-items:center;flex-shrink:0}
 .navlinks{display:flex;align-items:center;gap:35px;font-size:17px;font-weight:500}
-.navlinks>a{color:var(--ink);text-decoration:none;padding:14px 0}
+.navlinks>a{color:var(--ink);text-decoration:none;padding:14px 0;display:inline-block}
 .navlinks>a:hover{color:var(--green)}
-.navdrop{position:relative}
+.navdrop{position:relative;display:inline-flex}
 .navdrop>span{cursor:pointer;display:inline-flex;align-items:center;gap:5px;color:var(--ink);padding:14px 0;font-size:17px;font-weight:500}
 .navdrop>span:hover{color:var(--green)}
 .navdrop>span::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px}
-.navdrop .menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;opacity:0;visibility:hidden;transition:opacity .15s ease;z-index:60}
+.navdrop .menu{position:absolute;top:100%;left:0;padding-top:14px;opacity:0;visibility:hidden;transition:opacity .15s ease;z-index:60}
 .navdrop:hover .menu,.navdrop:focus-within .menu{opacity:1;visibility:visible}
 .navdrop .menu-inner{background:#fff;border:1.5px solid var(--ink);min-width:210px;box-shadow:5px 5px 0 var(--ink)}
 .navdrop .menu-inner a{display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:14px;color:var(--ink);border-bottom:1px dashed var(--line);text-decoration:none}
