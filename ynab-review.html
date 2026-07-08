@@ -47,20 +47,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 <style>
+/* ===== HEADER - matches index.html exactly ===== */
+header{border-bottom:2px solid var(--ink);background:var(--paper);z-index:50}
+.hinner{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo img{display:block;width:auto;height:30px}
+.logo{text-decoration:none;line-height:0}
+.navlinks{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:500}
+.navlinks>a{color:var(--ink);text-decoration:none;padding:7px 10px;border-radius:5px}
+.navlinks>a:hover{background:var(--green);color:#fff}
+.navdrop{position:relative}
+.navdrop>span{cursor:pointer;display:inline-flex;align-items:center;gap:4px;color:var(--ink);padding:7px 10px;border-radius:5px;font-size:14px;font-weight:500}
+.navdrop>span:hover{background:var(--green);color:#fff}
+.navdrop>span::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;display:inline-block}
+.navdrop .menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);opacity:0;visibility:hidden;transition:opacity .15s;z-index:60;min-width:200px}
+.navdrop:hover .menu,.navdrop:focus-within .menu{opacity:1;visibility:visible}
+.navdrop .menu-inner{background:#fff;border:1.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.navdrop .menu-inner a{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:13px;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+.navdrop .menu-inner a:last-child{border-bottom:none}
+.navdrop .menu-inner a:hover{background:var(--paper)}
+.dot.g{background:var(--green);width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+.dot.b{background:var(--blue);width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{width:22px;height:2px;background:var(--ink);display:block}
+.mobilenav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 16px;box-shadow:0 6px 14px rgba(0,0,0,.08);z-index:59}
+.mobilenav.open{display:block}
+.mobilenav a{display:block;padding:11px 0;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+.mobilenav .subhead{font-size:11px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);padding:12px 0 2px}
+.mobilenav a.sub{padding-left:12px;font-size:14px}
+@media(max-width:640px){.navlinks{display:none}.hamburger{display:flex}}
+/* ===== END HEADER ===== */
 :root{--ink:#101312;--paper:#F2F3F1;--green:#0E7A4B;--mint:#17C97B;--blue:#1D6FE0;--line:#D8D8CF;--dim:#5A5F5C;--gold:#C9A227;--red:#B3402A}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
 .mono{font-family:'IBM Plex Mono',monospace}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
-.hwrap{max-width:800px;margin:0 auto;padding:14px 20px}
-.logo{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:75%;font-size:22px;letter-spacing:-.5px;text-decoration:none;color:var(--ink)}
 .logo em{font-style:normal;color:var(--green)}
-.navlinks{display:flex;gap:24px;font-size:14px;font-weight:500}
-.navlinks a{color:var(--ink);text-decoration:none}
-.navlinks a:hover{color:var(--green)}
-@media(max-width:640px){.navlinks{display:none}}
+@media(max-width:640px){}
 .crumb{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim);padding:20px 0 0}
 .crumb a{color:var(--green);text-decoration:none}
 article{padding:16px 0 56px}
@@ -115,40 +138,24 @@ details .a{padding:0 18px 14px;font-size:14px;color:var(--dim)}
 .related h3{margin-top:0}
 .related a{display:block;color:var(--green);font-size:15px;padding:6px 0;text-decoration:none;border-bottom:1px dashed var(--line)}
 .related a:last-child{border-bottom:none}
-footer{border-top:2px solid var(--ink);padding:32px 0;font-size:13px;color:var(--dim)}
-footer .frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:0 20px}
-footer a{color:var(--ink)}
 a:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:2px}
 
-.navdrop{position:relative}
-.navdrop>span{position:relative;cursor:pointer;display:inline-flex;align-items:center;gap:4px;color:var(--ink);padding:7px 12px;z-index:1;transition:color .25s ease}
-.navdrop>span::before{content:'';position:absolute;inset:0;background:var(--green);border-radius:5px;transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.4,0,.2,1);z-index:-1}
-.navdrop:hover>span,.navdrop:focus-within>span{color:#fff}
-.navdrop:hover>span::before,.navdrop:focus-within>span::before{transform:scaleX(1)}
-.navdrop>span::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px}
-.navdrop .menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;opacity:0;visibility:hidden;transition:opacity .15s ease;z-index:60}
-.navdrop:hover .menu,.navdrop:focus-within .menu{opacity:1;visibility:visible}
-.navdrop .menu-inner{background:#fff;border:1.5px solid var(--ink);min-width:210px;box-shadow:5px 5px 0 var(--ink)}
-.navdrop .menu-inner a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 16px;font-size:13.5px;color:var(--ink);border-bottom:1px dashed var(--line);text-decoration:none}
-.navdrop .menu-inner a:hover{background:var(--paper)}
-.navdrop .menu-inner a:last-child{border-bottom:none}
-.navdrop .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.dot.g{background:var(--green)}
-.dot.b{background:var(--blue)}
-.dot.gd{background:var(--gold)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-.hamburger span{width:24px;height:2px;background:var(--ink)}
-.mobilenav{display:none}
-nav{display:flex;align-items:flex-end;justify-content:space-between}
-.navlinks{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:500}
 @media(max-width:640px){
-  .navlinks{display:none}
-  .hamburger{display:flex}
-  .mobilenav.open{display:block;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 18px;box-shadow:0 8px 16px rgba(0,0,0,.08)}
-  .mobilenav a{display:block;padding:12px 0;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
-  .mobilenav .subhead{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:14px 0 4px}
-  .mobilenav a.sub{padding-left:14px;font-size:14px;display:flex;align-items:center;gap:8px}
+            }
+@media(max-width:640px){
+            }
+@media(max-width:700px){
+            }
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+@media(max-width:640px){
 }
+50%{background-position:100% 50%}}
+footer{background:linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);background-size:200% 200%;animation:flagbg 16s ease infinite;border-top:2px solid var(--mint);padding:32px 0;margin-top:56px;font-size:13px;color:#fff}
+footer .frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#fff}
+footer a:hover{color:#8FC1FF}
+@keyframes flagbg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media(prefers-reduced-motion:reduce){footer{animation:none}}
 </style>
 </head>
 <body>
@@ -157,25 +164,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <header>
-  <div class="hwrap" style="position:relative">
-    <nav>
-      <a class="logo" style="display:flex;align-items:center;gap:9px" href="index.html"><img src="logo-full.png" alt="sleptontools" height="30" style="display:block;width:auto"></a>
-      <div class="navlinks">
-        <a href="about.html">About</a>
-        <a href="index.html#compare">Compare</a>
-        <div class="navdrop" tabindex="0">
-          <span>Articles</span>
-          <div class="menu">
-            <div class="menu-inner">
-              <a href="budgeting-apps.html"><span class="dot g"></span>Budgeting apps</a>
-              <a href="investing-apps.html"><span class="dot b"></span>Investing apps</a>
-            </div>
+  <div class="hinner" style="position:relative">
+    <a class="logo" href="index.html"><img src="logo-full.png" alt="sleptontools" height="30"></a>
+    <div class="navlinks">
+      <a href="about.html">About</a>
+      <a href="index.html#compare">Compare</a>
+      <div class="navdrop" tabindex="0">
+        <span>Articles</span>
+        <div class="menu">
+          <div class="menu-inner">
+            <a href="budgeting-apps.html"><span class="dot g"></span>Budgeting apps</a>
+            <a href="investing-apps.html"><span class="dot b"></span>Investing apps</a>
           </div>
         </div>
-        <a href="index.html#os">Finance OS</a>
       </div>
-      <button class="hamburger" id="hamBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </nav>
+      <a href="index.html#os">Finance OS</a>
+    </div>
+    <button class="hamburger" id="hamBtn" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="mobilenav" id="mobileNav">
       <a href="about.html">About</a>
       <a href="index.html#compare">Compare</a>
@@ -290,27 +295,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <footer>
-  <div class="frow">
+  <div class="wrap frow">
     <div>© 2026 sleptontools</div>
-    <div><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+    <div><a href="index.html#picks">Picks</a> · <a href="index.html#compare">Compare</a> · <a href="https://agmster.gumroad.com/l/personal-finance-os">Finance OS</a> · <a href="index.html#faq">FAQ</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
     <div class="mono">Not financial advice. Do your own research.</div>
   </div>
 </footer>
 
 
+
 <script>
 (function(){
-  var btn = document.getElementById('hamBtn');
-  var menu = document.getElementById('mobileNav');
-  if(btn && menu){
-    btn.addEventListener('click', function(){
-      var open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    menu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
-    });
-  }
+  var b=document.getElementById('hamBtn'),m=document.getElementById('mobileNav');
+  if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false);});});}
 })();
 </script>
 </body>
