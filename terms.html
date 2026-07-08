@@ -45,8 +45,8 @@ footer a{color:var(--ink)}
 .dot.gd{background:var(--gold)}
 header{background:var(--paper);border-bottom:2px solid var(--ink);width:100%}
 .hwrap{max-width:1150px;margin:0 auto;padding:0 24px;height:75px;display:flex;align-items:center;justify-content:space-between;position:relative}
-nav{display:flex;align-items:center;width:100%;gap:0}
-.logo{text-decoration:none;display:flex;align-items:center;flex-shrink:0;margin-right:auto}
+nav{display:flex;align-items:center;justify-content:space-between;width:100%}
+.logo{text-decoration:none;display:flex;align-items:center;flex-shrink:0}
 .navlinks{display:flex;align-items:center;gap:35px;font-size:17px;font-weight:500}
 .navlinks>a{color:var(--ink);text-decoration:none;padding:14px 0}
 .navlinks>a:hover{color:var(--green)}
@@ -63,16 +63,16 @@ nav{display:flex;align-items:center;width:100%;gap:0}
 .navdrop .menu-inner .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .dot.g{background:var(--green)}
 .dot.b{background:var(--blue)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;margin-left:20px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
 .hamburger span{width:24px;height:2px;background:var(--ink)}
-.mobilenav{display:none;position:absolute;top:75px;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 18px;box-shadow:0 8px 16px rgba(0,0,0,.08);z-index:59}
-.mobilenav.open{display:block}
-.mobilenav a{display:block;padding:13px 0;font-size:16px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
-.mobilenav .subhead{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:14px 0 4px}
-.mobilenav a.sub{padding-left:14px;font-size:14px;display:flex;align-items:center;gap:8px}
+.mobilenav{display:none}
 @media(max-width:700px){
   .navlinks{display:none}
   .hamburger{display:flex}
+  .mobilenav.open{display:block;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 18px;box-shadow:0 8px 16px rgba(0,0,0,.08);z-index:59}
+  .mobilenav a{display:block;padding:13px 0;font-size:16px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+  .mobilenav .subhead{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:14px 0 4px}
+  .mobilenav a.sub{padding-left:14px;font-size:14px;display:flex;align-items:center;gap:8px}
 }
 </style>
 </head>
@@ -98,15 +98,15 @@ nav{display:flex;align-items:center;width:100%;gap:0}
         <a href="index.html#os">Finance OS</a>
       </div>
       <button class="hamburger" id="hamBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="mobilenav" id="mobileNav">
+        <a href="about.html">About</a>
+        <a href="index.html#compare">Compare</a>
+        <div class="subhead">Articles</div>
+        <a class="sub" href="budgeting-apps.html"><span class="dot g"></span>Budgeting apps</a>
+        <a class="sub" href="investing-apps.html"><span class="dot b"></span>Investing apps</a>
+        <a href="index.html#os">Finance OS</a>
+      </div>
     </nav>
-    <div class="mobilenav" id="mobileNav">
-      <a href="about.html">About</a>
-      <a href="index.html#compare">Compare</a>
-      <div class="subhead">Articles</div>
-      <a class="sub" href="budgeting-apps.html"><span class="dot g"></span>Budgeting apps</a>
-      <a class="sub" href="investing-apps.html"><span class="dot b"></span>Investing apps</a>
-      <a href="index.html#os">Finance OS</a>
-    </div>
   </div>
 </header>
 
