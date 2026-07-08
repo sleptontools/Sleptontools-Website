@@ -24,7 +24,7 @@
 ]}
 </script>
 <style>
-:root{--ink:#101312;--paper:#F2F3F1;--green:#0E7A4B;--mint:#17C97B;--gold:#C9A227;--red:#B3402A;}
+:root{--ink:#101312;--paper:#F2F3F1;--green:#0E7A4B;--mint:#17C97B;--blue:#1D6FE0;--gold:#C9A227;--red:#B3402A;}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65}
 .mono{font-family:'IBM Plex Mono',monospace}
@@ -70,13 +70,70 @@ tr:nth-child(even) td{background:#F4F3EC}
 .related li{padding:7px 0;border-bottom:1px dashed #ccc}
 footer{background:var(--ink);color:#aaa;font-size:13px;padding:30px 20px;text-align:center}
 footer a{color:var(--mint)}
+
+.navdrop{position:relative}
+.navdrop>span{position:relative;cursor:pointer;display:inline-flex;align-items:center;gap:4px;color:var(--ink);padding:7px 12px;z-index:1;transition:color .25s ease}
+.navdrop>span::before{content:'';position:absolute;inset:0;background:var(--green);border-radius:5px;transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.4,0,.2,1);z-index:-1}
+.navdrop:hover>span,.navdrop:focus-within>span{color:#fff}
+.navdrop:hover>span::before,.navdrop:focus-within>span::before{transform:scaleX(1)}
+.navdrop>span::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px}
+.navdrop .menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;opacity:0;visibility:hidden;transition:opacity .15s ease;z-index:60}
+.navdrop:hover .menu,.navdrop:focus-within .menu{opacity:1;visibility:visible}
+.navdrop .menu-inner{background:#fff;border:1.5px solid var(--ink);min-width:210px;box-shadow:5px 5px 0 var(--ink)}
+.navdrop .menu-inner a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 16px;font-size:13.5px;color:var(--ink);border-bottom:1px dashed var(--line);text-decoration:none}
+.navdrop .menu-inner a:hover{background:var(--paper)}
+.navdrop .menu-inner a:last-child{border-bottom:none}
+.navdrop .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot.g{background:var(--green)}
+.dot.b{background:var(--blue)}
+.dot.gd{background:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2px;background:var(--ink)}
+.mobilenav{display:none}
+nav{display:flex;align-items:center;justify-content:space-between}
+@media(max-width:640px){
+  .navlinks{display:none}
+  .hamburger{display:flex}
+  .mobilenav.open{display:block;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 18px;box-shadow:0 8px 16px rgba(0,0,0,.08)}
+  .mobilenav a{display:block;padding:12px 0;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+  .mobilenav .subhead{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:14px 0 4px}
+  .mobilenav a.sub{padding-left:14px;font-size:14px;display:flex;align-items:center;gap:8px}
+}
 </style>
 </head>
 <body>
-<header><div class="hwrap">
-<a class="logo" href="index.html"><img src="logo-full.png" alt="sleptontools" height="30" style="display:block;width:auto"></a>
-<nav><a href="index.html">HOME</a><a href="index.html#reviews">REVIEWS</a></nav>
-</div></header>
+<header>
+  <div class="hwrap" style="position:relative">
+    <nav>
+      <a class="logo" style="display:flex;align-items:center;gap:9px" href="index.html"><img src="logo-full.png" alt="sleptontools" height="30" style="display:block;width:auto"></a>
+      <div class="navlinks">
+        <a href="about.html">About</a>
+        <a href="index.html#compare">Compare</a>
+        <div class="navdrop" tabindex="0">
+          <span>Articles</span>
+          <div class="menu">
+            <div class="menu-inner">
+              <a href="index.html#articles-budgeting"><span class="dot g"></span>Budgeting apps</a>
+              <a href="index.html#articles-investing"><span class="dot b"></span>Investing apps</a>
+              <a href="index.html#articles-wealth"><span class="dot gd"></span>Money & Transfers</a>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#os">Finance OS</a>
+      </div>
+      <button class="hamburger" id="hamBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobilenav" id="mobileNav">
+      <a href="about.html">About</a>
+      <a href="index.html#compare">Compare</a>
+      <div class="subhead">Articles</div>
+      <a class="sub" href="index.html#articles-budgeting"><span class="dot g"></span>Budgeting apps</a>
+      <a class="sub" href="index.html#articles-investing"><span class="dot b"></span>Investing apps</a>
+      <a class="sub" href="index.html#articles-wealth"><span class="dot gd"></span>Money & Transfers</a>
+      <a href="index.html#os">Finance OS</a>
+    </div>
+  </div>
+</header>
 <main>
 <div class="breadcrumb"><a href="index.html">Home</a> / Guides / Rocket Money Bill Negotiation</div>
 <h1>Is Rocket Money's Bill Negotiation <em>Actually Worth It?</em></h1>
@@ -144,5 +201,21 @@ footer a{color:var(--mint)}
 <p>SLEPTONTOOLS · independent reviews of personal finance apps</p>
 <p style="margin-top:8px">Nothing here is financial advice. Some links are affiliate links. <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
 </footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('hamBtn');
+  var menu = document.getElementById('mobileNav');
+  if(btn && menu){
+    btn.addEventListener('click', function(){
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+    });
+  }
+})();
+</script>
 </body>
 </html>
