@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4NQ244R');</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -49,13 +55,19 @@ p{margin:0 0 16px}
 .disclosure:hover::before{transform:translateX(100%)}
 .verdict{border:2px solid var(--ink);background:#fff;padding:22px;margin:26px 0;box-shadow:6px 6px 0 var(--ink)}
 .verdict .label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--green)}
-table{width:100%;border-collapse:collapse;margin:0;font-size:15px}
-.tablebox{border:2px solid var(--ink);background:#fff;margin:18px 0;overflow:hidden;box-shadow:6px 6px 0 var(--ink)}
-th{font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:var(--green);color:#fff;padding:12px 14px;text-align:left;font-weight:700}
-td{border:none;border-bottom:1px solid var(--line);padding:13px 14px;vertical-align:top;background:#fff;transition:background .15s ease}
-tr:last-child td{border-bottom:none}
-tr:hover td{background:#EBF6F0}
-td.num{font-family:'IBM Plex Mono',monospace;font-weight:400;color:var(--ink)}
+.appgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0;position:relative}
+.appgrid::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-50%);margin-left:-9px}
+@media(max-width:640px){.appgrid{grid-template-columns:1fr}.appgrid::before{display:none}}
+.appcard{background:#fff;border:2px solid var(--ink);border-left:6px solid var(--green);padding:16px 18px;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.appcard::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(14,122,75,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.appcard:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
+.appcard:hover::before{transform:translateX(100%)}
+.appcard h4{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:80%;font-size:19px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--line);position:relative;z-index:1}
+.appcard .field{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px;position:relative;z-index:1}
+.appcard .field:last-child{border-bottom:none}
+.appcard .field .k{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);flex-shrink:0}
+.appcard .field .v{text-align:right;font-weight:500}
+
 .callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 .callout::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
 .callout:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
@@ -114,6 +126,9 @@ nav{display:flex;align-items:flex-end;justify-content:space-between}
 </style>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4NQ244R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 <header>
   <div class="hwrap" style="position:relative">
     <nav>
@@ -156,15 +171,37 @@ nav{display:flex;align-items:flex-end;justify-content:space-between}
 </div>
 
 <h2>The lineup</h2>
-<div class="tablebox">
-<table>
-<tr><th>App</th><th>Price</th><th>Platform</th><th>Best for</th></tr>
-<tr><td><strong>EveryDollar</strong></td><td class="num">Free (basic) / $79.99/yr or $17.99/mo (Premium)</td><td class="num">iOS, Android, web</td><td>Zero-based budgeting on a real budget</td></tr>
-<tr><td><strong>Monarch Money</strong></td><td class="num">$99.99/yr Core, $199/yr Plus</td><td class="num">iOS, Android, web</td><td>Couples, net worth tracking</td></tr>
-<tr><td><strong>Copilot Money</strong></td><td class="num">~$95-99/yr, no free tier</td><td class="num">iOS, Mac only</td><td>Apple users who want polish + AI</td></tr>
-<tr><td><strong>PocketGuard</strong></td><td class="num">Free (basic) / $12.99/mo Plus</td><td class="num">iOS, Android, web</td><td>One number: what's safe to spend</td></tr>
-<tr><td><strong>Rocket Money</strong></td><td class="num">Free / $7-14/mo Premium</td><td class="num">iOS, Android, web</td><td>Subscription cleanup, not deep budgeting</td></tr>
-</table>
+<div class="appgrid">
+<div class="appcard">
+<h4>EveryDollar</h4>
+<div class="field"><span class="k">Price</span><span class="v">Free (basic) / $79.99/yr or $17.99/mo (Premium)</span></div>
+<div class="field"><span class="k">Platform</span><span class="v">iOS, Android, web</span></div>
+<div class="field"><span class="k">Best for</span><span class="v">Zero-based budgeting on a real budget</span></div>
+</div>
+<div class="appcard">
+<h4>Monarch Money</h4>
+<div class="field"><span class="k">Price</span><span class="v">$99.99/yr Core, $199/yr Plus</span></div>
+<div class="field"><span class="k">Platform</span><span class="v">iOS, Android, web</span></div>
+<div class="field"><span class="k">Best for</span><span class="v">Couples, net worth tracking</span></div>
+</div>
+<div class="appcard">
+<h4>Copilot Money</h4>
+<div class="field"><span class="k">Price</span><span class="v">~$95-99/yr, no free tier</span></div>
+<div class="field"><span class="k">Platform</span><span class="v">iOS, Mac only</span></div>
+<div class="field"><span class="k">Best for</span><span class="v">Apple users who want polish + AI</span></div>
+</div>
+<div class="appcard">
+<h4>PocketGuard</h4>
+<div class="field"><span class="k">Price</span><span class="v">Free (basic) / $12.99/mo Plus</span></div>
+<div class="field"><span class="k">Platform</span><span class="v">iOS, Android, web</span></div>
+<div class="field"><span class="k">Best for</span><span class="v">One number: what's safe to spend</span></div>
+</div>
+<div class="appcard">
+<h4>Rocket Money</h4>
+<div class="field"><span class="k">Price</span><span class="v">Free / $7-14/mo Premium</span></div>
+<div class="field"><span class="k">Platform</span><span class="v">iOS, Android, web</span></div>
+<div class="field"><span class="k">Best for</span><span class="v">Subscription cleanup, not deep budgeting</span></div>
+</div>
 </div>
 <p class="fineprint">Prices verified July 5-6, 2026 against each company's official pricing page. All change regularly.</p>
 

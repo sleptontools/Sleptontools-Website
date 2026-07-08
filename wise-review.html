@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4NQ244R');</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -56,13 +62,15 @@ p{margin:0 0 16px}
 .scorebox{flex:1;min-width:200px;border:1px dashed #999;padding:12px 16px;background:#EAF1FC}
 .score{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--blue)}
 .score small{font-size:16px;color:#777}
-table{width:100%;border-collapse:collapse;margin:0;font-size:15px}
-.tablebox{border:2px solid var(--ink);background:#fff;margin:18px 0;overflow:hidden;box-shadow:6px 6px 0 var(--ink)}
-th{font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:var(--blue);color:#fff;padding:12px 14px;text-align:left;font-weight:700}
-td{border:none;border-bottom:1px solid var(--line);padding:13px 14px;vertical-align:top;background:#fff;transition:background .15s ease}
-tr:last-child td{border-bottom:none}
-tr:hover td{background:#EAF1FC}
-td.num{font-family:'IBM Plex Mono',monospace;font-weight:400;color:var(--ink)}
+.factgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0;position:relative}
+.factgrid::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-50%);margin-left:-8px}
+@media(max-width:640px){.factgrid{grid-template-columns:1fr}.factgrid::before{display:none}}
+.factcard{background:#fff;border:2px solid var(--ink);border-left:6px solid var(--blue);padding:14px 16px;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.factcard::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(29,111,224,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.factcard:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
+.factcard:hover::before{transform:translateX(100%)}
+.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--blue);margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);position:relative;z-index:1}
+.factcard p{font-size:14.5px;margin:0;position:relative;z-index:1}
 .callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 .callout::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
 .callout:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
@@ -143,6 +151,9 @@ nav{display:flex;align-items:flex-end;justify-content:space-between}
 </style>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4NQ244R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 <header>
   <div class="hwrap" style="position:relative">
     <nav>
@@ -194,18 +205,15 @@ nav{display:flex;align-items:flex-end;justify-content:space-between}
 <p>This is a different category from anything else on this site. It's not a budgeting app like <a href="ynab-review.html">YNAB</a>, not an investing platform like <a href="acorns-review.html">Acorns</a>. It's the tool you reach for specifically when money needs to cross a border — paying a freelancer overseas, sending money to family abroad, or managing income in a second currency.</p>
 
 <h2>Pricing, fact-checked today</h2>
-<div class="tablebox">
-<table>
-<tr><th>Cost</th><th>Wise</th></tr>
-<tr><td>Monthly account fee</td><td class="num">$0 for most personal accounts</td></tr>
-<tr><td>Transfer fee structure</td><td class="num">Small fixed fee + 0.33%-2% variable, depending on route and funding method</td></tr>
-<tr><td>Exchange rate markup</td><td class="num">$0 — uses the real mid-market rate</td></tr>
-<tr><td>Example: $1,000 to a common currency</td><td class="num">~$5-11 total, funded by bank/ACH</td></tr>
-<tr><td>Debit card</td><td class="num">~$9 one-time order fee</td></tr>
-<tr><td>ATM withdrawals</td><td class="num">Free up to $250/month; $1.95 + 1.95% after that</td></tr>
-<tr><td>Cheapest funding method</td><td class="num">Bank transfer/ACH</td></tr>
-<tr><td>Most expensive funding method</td><td class="num">Credit card (treated as a cash advance by some card issuers)</td></tr>
-</table>
+<div class="factgrid">
+<div class="factcard"><h4>Monthly account fee</h4><p>$0 for most personal accounts</p></div>
+<div class="factcard"><h4>Transfer fee structure</h4><p>Small fixed fee + 0.33%-2% variable, depending on route and funding method</p></div>
+<div class="factcard"><h4>Exchange rate markup</h4><p>$0 — uses the real mid-market rate</p></div>
+<div class="factcard"><h4>Example: $1,000 to a common currency</h4><p>~$5-11 total, funded by bank/ACH</p></div>
+<div class="factcard"><h4>Debit card</h4><p>~$9 one-time order fee</p></div>
+<div class="factcard"><h4>ATM withdrawals</h4><p>Free up to $250/month; $1.95 + 1.95% after that</p></div>
+<div class="factcard"><h4>Cheapest funding method</h4><p>Bank transfer/ACH</p></div>
+<div class="factcard"><h4>Most expensive funding method</h4><p>Credit card (treated as a cash advance by some card issuers)</p></div>
 </div>
 <p class="fineprint">Prices verified July 6, 2026 against Wise's official pricing page. Exact fees vary by currency corridor and change regularly — always check the live quote before sending.</p>
 

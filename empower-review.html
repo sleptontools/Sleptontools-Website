@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4NQ244R');</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -56,13 +62,16 @@ p{margin:0 0 16px}
 .scorebox{flex:1;min-width:200px;border:1px dashed #999;padding:12px 16px;background:#FBF4E2}
 .score{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--gold)}
 .score small{font-size:16px;color:#777}
-table{width:100%;border-collapse:collapse;margin:0;font-size:15px}
-.tablebox{border:2px solid var(--ink);background:#fff;margin:18px 0;overflow:hidden;box-shadow:6px 6px 0 var(--ink)}
-th{font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:var(--gold);color:var(--ink);padding:13px 14px;text-align:left;font-weight:700}
-td{border:none;border-bottom:1px solid var(--line);padding:14px;vertical-align:top;background:#fff;transition:background .15s ease}
-tr:last-child td{border-bottom:none}
-tr:hover td{background:#FBF4E2}
-td.num{font-family:'IBM Plex Mono',monospace;font-weight:400;color:var(--ink)}
+.factgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0;position:relative}
+.factgrid::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-50%);margin-left:-8px}
+@media(max-width:640px){.factgrid{grid-template-columns:1fr}.factgrid::before{display:none}}
+.factcard{background:#fff;border:2px solid var(--ink);border-left:6px solid var(--gold);padding:14px 16px;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.factcard::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(201,162,39,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.factcard:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
+.factcard:hover::before{transform:translateX(100%)}
+.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:#8A6D14;margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);position:relative;z-index:1;display:flex;justify-content:space-between;align-items:baseline}
+.factcard h4 .cost{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink);text-transform:none;letter-spacing:0}
+.factcard p{font-size:14.5px;margin:0;position:relative;z-index:1}
 .callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 .callout::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
 .callout:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
@@ -143,6 +152,9 @@ nav{display:flex;align-items:flex-end;justify-content:space-between}
 </style>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4NQ244R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 <header>
   <div class="hwrap" style="position:relative">
     <nav>
@@ -194,14 +206,11 @@ nav{display:flex;align-items:flex-end;justify-content:space-between}
 <p>This is a different category from anything else on this site — not a budgeting app like <a href="ynab-review.html">YNAB</a>, not a beginner investing app like <a href="acorns-review.html">Acorns</a>. It's the tool you add once budgeting is handled and you want to see the whole financial picture in one place.</p>
 
 <h2>Pricing, fact-checked today</h2>
-<div class="tablebox">
-<table>
-<tr><th>Tier</th><th>Cost</th><th>What it includes</th></tr>
-<tr><td>Free dashboard</td><td class="num">$0</td><td>Net worth tracking, spending categorization, retirement planner, 401(k) fee analyzer, cash flow view</td></tr>
-<tr><td>Personal Strategy (advisor)</td><td class="num">0.89% AUM under $1M</td><td>Dedicated advisor team, tax-loss harvesting, personalized portfolio</td></tr>
-<tr><td>Higher balances</td><td class="num">0.79% ($1-3M) → 0.49% ($10M+)</td><td>Same service, declining rate on larger tiers</td></tr>
-<tr><td>Advisor minimum</td><td class="num">$100,000 investable assets</td><td>Required to access any paid tier</td></tr>
-</table>
+<div class="factgrid">
+<div class="factcard"><h4>Free dashboard <span class="cost">$0</span></h4><p>Net worth tracking, spending categorization, retirement planner, 401(k) fee analyzer, cash flow view</p></div>
+<div class="factcard"><h4>Personal Strategy (advisor) <span class="cost">0.89% AUM under $1M</span></h4><p>Dedicated advisor team, tax-loss harvesting, personalized portfolio</p></div>
+<div class="factcard"><h4>Higher balances <span class="cost">0.79% ($1-3M) → 0.49% ($10M+)</span></h4><p>Same service, declining rate on larger tiers</p></div>
+<div class="factcard"><h4>Advisor minimum <span class="cost">$100,000</span></h4><p>Investable assets required to access any paid tier</p></div>
 </div>
 <p class="fineprint">Prices verified July 6, 2026 against Empower's official pricing and advisory disclosures.</p>
 
