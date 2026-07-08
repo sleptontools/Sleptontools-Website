@@ -44,10 +44,10 @@ footer .frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 footer a{color:#fff;text-decoration:none}
 footer a:hover{color:var(--mint)}
 header{background:var(--paper);border-bottom:2px solid var(--ink);width:100%}
-.hwrap{max-width:1150px;margin:0 auto;padding:0 24px;height:75px;display:flex;align-items:center;justify-content:space-between}
-nav{display:flex;align-items:center;justify-content:space-between;width:100%}
+.hwrap{max-width:1150px;margin:0 auto;padding:0 24px;height:75px;display:flex;align-items:center;justify-content:space-between;position:relative}
+nav{display:flex;align-items:center;width:100%;flex-wrap:nowrap}
 .logo{text-decoration:none;display:flex;align-items:center;flex-shrink:0}
-.navlinks{display:flex;align-items:center;gap:35px;font-size:17px;font-weight:500}
+.navlinks{display:flex;align-items:center;gap:35px;font-size:17px;font-weight:500;white-space:nowrap;margin-left:auto}
 .navlinks>a{color:var(--ink);text-decoration:none;padding:14px 0;display:inline-block}
 .navlinks>a:hover{color:var(--green)}
 .navdrop{position:relative;display:inline-flex}
@@ -63,7 +63,7 @@ nav{display:flex;align-items:center;justify-content:space-between;width:100%}
 .navdrop .menu-inner .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .dot.g{background:var(--green)}
 .dot.b{background:var(--blue)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0;margin-left:20px}
 .hamburger span{width:24px;height:2px;background:var(--ink)}
 @media(max-width:700px){
   .navlinks{display:none}
