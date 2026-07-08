@@ -55,15 +55,16 @@ p{margin:0 0 16px}
 .disclosure:hover::before{transform:translateX(100%)}
 .verdict{border:2px solid var(--ink);background:#fff;padding:22px;margin:26px 0;box-shadow:6px 6px 0 var(--ink)}
 .verdict .label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--green)}
-.factgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0;position:relative}
-.factgrid::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-50%);margin-left:-8px}
-@media(max-width:640px){.factgrid{grid-template-columns:1fr}.factgrid::before{display:none}}
-.factcard{background:#fff;border:2px solid var(--ink);border-left:6px solid var(--green);padding:14px 16px;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
-.factcard::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(14,122,75,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
-.factcard:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
-.factcard:hover::before{transform:translateX(100%)}
-.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--green);margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);position:relative;z-index:1}
-.factcard p{font-size:14.5px;margin:0;position:relative;z-index:1}
+.factgrid{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--ink);margin:18px 0;overflow:hidden}
+@media(max-width:640px){.factgrid{grid-template-columns:1fr}}
+.factcard{padding:14px 16px;transition:background .15s ease}
+.factcard:hover{background:#EAF5EF}
+.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--green);margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);display:flex;align-items:center;gap:8px}
+.factcard .num{width:20px;height:20px;border-radius:50%;background:var(--green);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0}
+.factcard p{font-size:14.5px;margin:0}
+.factcard:nth-child(1),.factcard:nth-child(3){border-right:2px solid var(--ink)}
+.factcard:nth-child(1),.factcard:nth-child(2),.factcard:nth-child(3),.factcard:nth-child(4){border-bottom:2px solid var(--ink)}
+@media(max-width:640px){.factcard{border-right:none !important}}
 .callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 .callout::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
 .callout:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
@@ -169,26 +170,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>How it actually works</h2>
 <p>You link the bills you want negotiated — cable, internet, phone are the common ones — and Rocket Money's team contacts the provider on your behalf, using the leverage of "competitor pricing" and "loyalty discount" requests that reps are trained to offer but rarely volunteer. If they succeed, you keep the new lower rate going forward. If they fail, you pay nothing. That part is genuinely fair.</p>
 
-<h2>The fee, in full</h2>
+<h2 style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:34px;border-radius:50%;background:#00A99D;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:11px;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--ink);text-transform:none;letter-spacing:0">RM</span>The fee, in full</h2>
 <div class="factgrid">
 <div class="factcard">
-<h4>Fee range</h4>
+<h4><span class="num">1</span>Fee range</h4>
 <p>35%–60% of your estimated first-year savings, chosen by YOU on a slider at signup</p>
 </div>
 <div class="factcard">
-<h4>Our recommendation</h4>
+<h4><span class="num">2</span>Our recommendation</h4>
 <p>Always select 35% — identical service at every percentage</p>
 </div>
 <div class="factcard">
-<h4>When you're charged</h4>
+<h4><span class="num">3</span>When you're charged</h4>
 <p>48 hours after a successful negotiation, automatically, unless a payment plan is set up first</p>
 </div>
 <div class="factcard">
-<h4>What counts as "savings"</h4>
+<h4><span class="num">4</span>What counts as "savings"</h4>
 <p>Includes cases where a scheduled price increase was prevented — bill stays flat, fee still applies</p>
 </div>
 <div class="factcard">
-<h4>If negotiation fails</h4>
+<h4><span class="num">5</span>If negotiation fails</h4>
 <p>$0 charged</p>
 </div>
 </div>

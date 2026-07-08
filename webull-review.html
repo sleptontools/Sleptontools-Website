@@ -62,15 +62,16 @@ p{margin:0 0 16px}
 .scorebox{flex:1;min-width:200px;border:1px dashed #999;padding:12px 16px;background:#EAF1FC}
 .score{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--blue)}
 .score small{font-size:16px;color:#777}
-.factgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0;position:relative}
-.factgrid::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-50%);margin-left:-8px}
-@media(max-width:640px){.factgrid{grid-template-columns:1fr}.factgrid::before{display:none}}
-.factcard{background:#fff;border:2px solid var(--ink);border-left:6px solid var(--blue);padding:14px 16px;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
-.factcard::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(29,111,224,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
-.factcard:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
-.factcard:hover::before{transform:translateX(100%)}
-.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--blue);margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);position:relative;z-index:1}
-.factcard p{font-size:14.5px;margin:0;position:relative;z-index:1}
+.factgrid{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--ink);margin:18px 0;overflow:hidden}
+@media(max-width:640px){.factgrid{grid-template-columns:1fr}}
+.factcard{padding:14px 16px;transition:background .15s ease}
+.factcard:hover{background:#EAF1FC}
+.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--blue);margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);display:flex;align-items:center;gap:8px}
+.factcard .num{width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0}
+.factcard p{font-size:14.5px;margin:0}
+.factcard:nth-child(1),.factcard:nth-child(3),.factcard:nth-child(5){border-right:2px solid var(--ink)}
+.factcard:nth-child(1),.factcard:nth-child(2),.factcard:nth-child(3),.factcard:nth-child(4),.factcard:nth-child(5),.factcard:nth-child(6){border-bottom:2px solid var(--ink)}
+@media(max-width:640px){.factcard{border-right:none !important}}
 .callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 .callout::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
 .callout:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
@@ -203,15 +204,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>What Webull actually is</h2>
 <p>Webull is a self-directed brokerage: commission-free stocks, ETFs, and options, plus IRAs, crypto (via a linked Webull Pay app), and futures. Unlike <a href="acorns-review.html">Acorns</a>, nothing is automated — you pick every trade. Unlike <a href="acorns-vs-robinhood.html">Robinhood</a>, the platform assumes you already know roughly what you're doing: real-time charting, dozens of technical indicators, stock screeners, and a genuinely excellent paper-trading sandbox for testing strategies with fake money before risking real cash.</p>
 
-<h2>Pricing, fact-checked today</h2>
+<h2 style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:34px;border-radius:50%;background:#2E5BFF;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:11px;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--ink);text-transform:none;letter-spacing:0">WB</span>Pricing, fact-checked today</h2>
 <div class="factgrid">
-<div class="factcard"><h4>Stock/ETF trades</h4><p>$0 commission</p></div>
-<div class="factcard"><h4>Options trades</h4><p>$0 commission, $0 per contract (equity); ~$0.50-0.55/contract on index options</p></div>
-<div class="factcard"><h4>Account minimum</h4><p>$0</p></div>
-<div class="factcard"><h4>Cash management APY</h4><p>3.4% (Premium subscribers); tiered rate below $25K for non-subscribers</p></div>
-<div class="factcard"><h4>ACH withdrawal</h4><p>Free</p></div>
-<div class="factcard"><h4>Transfer out (ACATS)</h4><p>$75 per transfer</p></div>
-<div class="factcard"><h4>Inactivity fee</h4><p>None</p></div>
+<div class="factcard"><h4><span class="num">1</span>Stock/ETF trades</h4><p>$0 commission</p></div>
+<div class="factcard"><h4><span class="num">2</span>Options trades</h4><p>$0 commission, $0 per contract (equity); ~$0.50-0.55/contract on index options</p></div>
+<div class="factcard"><h4><span class="num">3</span>Account minimum</h4><p>$0</p></div>
+<div class="factcard"><h4><span class="num">4</span>Cash management APY</h4><p>3.4% (Premium subscribers); tiered rate below $25K for non-subscribers</p></div>
+<div class="factcard"><h4><span class="num">5</span>ACH withdrawal</h4><p>Free</p></div>
+<div class="factcard"><h4><span class="num">6</span>Transfer out (ACATS)</h4><p>$75 per transfer</p></div>
+<div class="factcard"><h4><span class="num">7</span>Inactivity fee</h4><p>None</p></div>
 </div>
 <p class="fineprint">Prices verified July 6, 2026 against Webull's official pricing page and independent broker-fee trackers.</p>
 

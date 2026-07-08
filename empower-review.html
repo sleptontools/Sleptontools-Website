@@ -62,16 +62,18 @@ p{margin:0 0 16px}
 .scorebox{flex:1;min-width:200px;border:1px dashed #999;padding:12px 16px;background:#FBF4E2}
 .score{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--gold)}
 .score small{font-size:16px;color:#777}
-.factgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0;position:relative}
-.factgrid::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-50%);margin-left:-8px}
-@media(max-width:640px){.factgrid{grid-template-columns:1fr}.factgrid::before{display:none}}
-.factcard{background:#fff;border:2px solid var(--ink);border-left:6px solid var(--gold);padding:14px 16px;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
-.factcard::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(201,162,39,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
-.factcard:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
-.factcard:hover::before{transform:translateX(100%)}
-.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:#8A6D14;margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);position:relative;z-index:1;display:flex;justify-content:space-between;align-items:baseline}
+.factgrid{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--ink);margin:18px 0;overflow:hidden}
+@media(max-width:640px){.factgrid{grid-template-columns:1fr}}
+.factcard{padding:14px 16px;transition:background .15s ease}
+.factcard:hover{background:#FBF4E2}
+.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:#8A6D14;margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;align-items:baseline}
+.factcard h4 .lbl{display:flex;align-items:center;gap:8px}
+.factcard .num{width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0}
 .factcard h4 .cost{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink);text-transform:none;letter-spacing:0}
-.factcard p{font-size:14.5px;margin:0;position:relative;z-index:1}
+.factcard p{font-size:14.5px;margin:0}
+.factcard:nth-child(1),.factcard:nth-child(3){border-right:2px solid var(--ink)}
+.factcard:nth-child(1),.factcard:nth-child(2){border-bottom:2px solid var(--ink)}
+@media(max-width:640px){.factcard{border-right:none !important}}
 .callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 .callout::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
 .callout:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
@@ -205,12 +207,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Empower runs two genuinely separate products under one roof. The first is a free financial dashboard: link your bank accounts, credit cards, mortgage, and investment accounts, and it tracks your net worth over time, categorizes spending, projects retirement readiness, and runs a "fee analyzer" that flags expensive mutual funds hiding in your 401(k). The second is Empower Personal Strategy, a paid wealth management service with human advisors, available only above a $100,000 investable-asset minimum.</p>
 <p>This is a different category from anything else on this site — not a budgeting app like <a href="ynab-review.html">YNAB</a>, not a beginner investing app like <a href="acorns-review.html">Acorns</a>. It's the tool you add once budgeting is handled and you want to see the whole financial picture in one place.</p>
 
-<h2>Pricing, fact-checked today</h2>
+<h2 style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:34px;border-radius:50%;background:#C9A227;color:var(--ink);font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:11px;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--ink);text-transform:none;letter-spacing:0">EM</span>Pricing, fact-checked today</h2>
 <div class="factgrid">
-<div class="factcard"><h4>Free dashboard <span class="cost">$0</span></h4><p>Net worth tracking, spending categorization, retirement planner, 401(k) fee analyzer, cash flow view</p></div>
-<div class="factcard"><h4>Personal Strategy (advisor) <span class="cost">0.89% AUM under $1M</span></h4><p>Dedicated advisor team, tax-loss harvesting, personalized portfolio</p></div>
-<div class="factcard"><h4>Higher balances <span class="cost">0.79% ($1-3M) → 0.49% ($10M+)</span></h4><p>Same service, declining rate on larger tiers</p></div>
-<div class="factcard"><h4>Advisor minimum <span class="cost">$100,000</span></h4><p>Investable assets required to access any paid tier</p></div>
+<div class="factcard"><h4><span class="lbl"><span class="num">1</span>Free dashboard</span><span class="cost">$0</span></h4><p>Net worth tracking, spending categorization, retirement planner, 401(k) fee analyzer, cash flow view</p></div>
+<div class="factcard"><h4><span class="lbl"><span class="num">2</span>Personal Strategy (advisor)</span><span class="cost">0.89% AUM under $1M</span></h4><p>Dedicated advisor team, tax-loss harvesting, personalized portfolio</p></div>
+<div class="factcard"><h4><span class="lbl"><span class="num">3</span>Higher balances</span><span class="cost">0.79% ($1-3M) → 0.49% ($10M+)</span></h4><p>Same service, declining rate on larger tiers</p></div>
+<div class="factcard"><h4><span class="lbl"><span class="num">4</span>Advisor minimum</span><span class="cost">$100,000</span></h4><p>Investable assets required to access any paid tier</p></div>
 </div>
 <p class="fineprint">Prices verified July 6, 2026 against Empower's official pricing and advisory disclosures.</p>
 

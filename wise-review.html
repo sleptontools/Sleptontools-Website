@@ -62,15 +62,16 @@ p{margin:0 0 16px}
 .scorebox{flex:1;min-width:200px;border:1px dashed #999;padding:12px 16px;background:#EAF1FC}
 .score{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--blue)}
 .score small{font-size:16px;color:#777}
-.factgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0;position:relative}
-.factgrid::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-50%);margin-left:-8px}
-@media(max-width:640px){.factgrid{grid-template-columns:1fr}.factgrid::before{display:none}}
-.factcard{background:#fff;border:2px solid var(--ink);border-left:6px solid var(--blue);padding:14px 16px;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
-.factcard::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(29,111,224,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
-.factcard:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
-.factcard:hover::before{transform:translateX(100%)}
-.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--blue);margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);position:relative;z-index:1}
-.factcard p{font-size:14.5px;margin:0;position:relative;z-index:1}
+.factgrid{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--ink);margin:18px 0;overflow:hidden}
+@media(max-width:640px){.factgrid{grid-template-columns:1fr}}
+.factcard{padding:14px 16px;transition:background .15s ease}
+.factcard:hover{background:#EAF1FC}
+.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--blue);margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);display:flex;align-items:center;gap:8px}
+.factcard .num{width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0}
+.factcard p{font-size:14.5px;margin:0}
+.factcard:nth-child(1),.factcard:nth-child(3),.factcard:nth-child(5),.factcard:nth-child(7){border-right:2px solid var(--ink)}
+.factcard:nth-child(1),.factcard:nth-child(2),.factcard:nth-child(3),.factcard:nth-child(4),.factcard:nth-child(5),.factcard:nth-child(6){border-bottom:2px solid var(--ink)}
+@media(max-width:640px){.factcard{border-right:none !important}}
 .callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 .callout::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
 .callout:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
@@ -204,16 +205,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Wise (formerly TransferWise) is an international money transfer service and multi-currency account. You can send money abroad, hold balances in 40+ currencies, and spend with a Wise debit card in 150+ countries. It's built for one core promise: no exchange-rate markup, ever. Where a bank quotes you a "no fee" transfer but bakes a 2-5% markup into the exchange rate, Wise shows the real mid-market rate — the same number you'd see on Google — and charges its fee as a separate, visible line item.</p>
 <p>This is a different category from anything else on this site. It's not a budgeting app like <a href="ynab-review.html">YNAB</a>, not an investing platform like <a href="acorns-review.html">Acorns</a>. It's the tool you reach for specifically when money needs to cross a border — paying a freelancer overseas, sending money to family abroad, or managing income in a second currency.</p>
 
-<h2>Pricing, fact-checked today</h2>
+<h2 style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:34px;border-radius:50%;background:#1D6FE0;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:11px;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--ink);text-transform:none;letter-spacing:0">WI</span>Pricing, fact-checked today</h2>
 <div class="factgrid">
-<div class="factcard"><h4>Monthly account fee</h4><p>$0 for most personal accounts</p></div>
-<div class="factcard"><h4>Transfer fee structure</h4><p>Small fixed fee + 0.33%-2% variable, depending on route and funding method</p></div>
-<div class="factcard"><h4>Exchange rate markup</h4><p>$0 — uses the real mid-market rate</p></div>
-<div class="factcard"><h4>Example: $1,000 to a common currency</h4><p>~$5-11 total, funded by bank/ACH</p></div>
-<div class="factcard"><h4>Debit card</h4><p>~$9 one-time order fee</p></div>
-<div class="factcard"><h4>ATM withdrawals</h4><p>Free up to $250/month; $1.95 + 1.95% after that</p></div>
-<div class="factcard"><h4>Cheapest funding method</h4><p>Bank transfer/ACH</p></div>
-<div class="factcard"><h4>Most expensive funding method</h4><p>Credit card (treated as a cash advance by some card issuers)</p></div>
+<div class="factcard"><h4><span class="num">1</span>Monthly account fee</h4><p>$0 for most personal accounts</p></div>
+<div class="factcard"><h4><span class="num">2</span>Transfer fee structure</h4><p>Small fixed fee + 0.33%-2% variable, depending on route and funding method</p></div>
+<div class="factcard"><h4><span class="num">3</span>Exchange rate markup</h4><p>$0 — uses the real mid-market rate</p></div>
+<div class="factcard"><h4><span class="num">4</span>Example: $1,000 to a common currency</h4><p>~$5-11 total, funded by bank/ACH</p></div>
+<div class="factcard"><h4><span class="num">5</span>Debit card</h4><p>~$9 one-time order fee</p></div>
+<div class="factcard"><h4><span class="num">6</span>ATM withdrawals</h4><p>Free up to $250/month; $1.95 + 1.95% after that</p></div>
+<div class="factcard"><h4><span class="num">7</span>Cheapest funding method</h4><p>Bank transfer/ACH</p></div>
+<div class="factcard"><h4><span class="num">8</span>Most expensive funding method</h4><p>Credit card (treated as a cash advance by some card issuers)</p></div>
 </div>
 <p class="fineprint">Prices verified July 6, 2026 against Wise's official pricing page. Exact fees vary by currency corridor and change regularly — always check the live quote before sending.</p>
 
