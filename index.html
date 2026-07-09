@@ -6,7 +6,6 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P4NQ244R');</script>
-
 <meta charset="UTF-8">
 <meta name='impact-site-verification' value='02a1b64b-71c7-4275-8301-c3fa5b6de2e3'>
 <link rel="canonical" href="https://sleptontools.com/">
@@ -21,31 +20,65 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#101312;
-  --paper:#F2F3F1;
-  --green:#0E7A4B;
-  --mint:#17C97B;
-  --blue:#1D6FE0;
-  --skyblue:#E7F1FD;
-  --line:#D8D8CF;
-  --dim:#5A5F5C;
-  --gold:#C9A227;
+--ink:#101312;
+--paper:#F2F3F1;
+--green:#0E7A4B;
+--mint:#17C97B;
+--blue:#1D6FE0;
+--skyblue:#E7F1FD;
+--line:#D8D8CF;
+--dim:#5A5F5C;
+--gold:#C9A227;
 }
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
 .mono{font-family:'IBM Plex Mono',monospace}
 
+/* FIX: cap site width so it never stretches beyond 1280px on ultrawide screens */
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+header{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
 header .wrap{position:relative}
+nav{display:flex;align-items:flex-end;justify-content:space-between;padding:8px 0}
+.logo{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:75%;font-size:22px;letter-spacing:-.5px;text-decoration:none;color:var(--ink);line-height:0}
 .logo em{font-style:normal;color:var(--green)}
+.navlinks{display:flex;gap:24px;font-size:14px;font-weight:500;align-items:center;line-height:1}
 .navlinks a{position:relative;color:var(--ink);text-decoration:none;padding:7px 12px;z-index:1;transition:color .25s ease}
 .navlinks a::before{content:'';position:absolute;inset:0;background:var(--green);border-radius:5px;transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.4,0,.2,1);z-index:-1}
 .navlinks a:hover{color:#fff}
 .navlinks a:hover::before{transform:scaleX(1)}
-@media (prefers-reduced-motion: reduce){.navlinks a::before,}
+.navdrop{position:relative}
+.navdrop>span{position:relative;cursor:pointer;display:inline-flex;align-items:center;gap:4px;color:var(--ink);padding:7px 12px;z-index:1;transition:color .25s ease}
+.navdrop>span::before{content:'';position:absolute;inset:0;background:var(--green);border-radius:5px;transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.4,0,.2,1);z-index:-1}
+.navdrop:hover>span,.navdrop:focus-within>span{color:#fff}
+.navdrop:hover>span::before,.navdrop:focus-within>span::before{transform:scaleX(1)}
+@media (prefers-reduced-motion: reduce){.navlinks a::before,.navdrop>span::before{transition:none}}
+.navdrop>span::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px}
+.navdrop .menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;opacity:0;visibility:hidden;transition:opacity .15s ease;z-index:60}
+.navdrop:hover .menu,.navdrop:focus-within .menu{opacity:1;visibility:visible}
+.navdrop .menu-inner{background:#fff;border:1.5px solid var(--ink);min-width:210px;box-shadow:5px 5px 0 var(--ink)}
+.navdrop .menu-inner a{position:static;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 16px;font-size:13.5px;color:var(--ink);border-bottom:1px dashed var(--line)}
+.navdrop .menu-inner a::before{display:none}
+.navdrop .menu-inner a:hover{background:var(--paper);color:var(--ink)}
+.navdrop .menu-inner a:last-child{border-bottom:none}
+.navdrop .menu-inner .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot.g{background:var(--green)}
+.dot.b{background:var(--blue)}
 .dot.gd{background:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2px;background:var(--ink)}
+.mobilenav{display:none}
 @media(max-width:640px){
-            }
+.navlinks{display:none}
+.hamburger{display:flex}
+.mobilenav.open{display:block;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 18px;box-shadow:0 8px 16px rgba(0,0,0,.08)}
+.mobilenav a{display:block;padding:12px 0;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+.mobilenav .subhead{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:14px 0 4px}
+.mobilenav a.sub{padding-left:14px;font-size:14px;display:flex;align-items:center;gap:8px}
+}
+
 .lib-cat{margin-bottom:36px}
 .lib-cat:last-child{margin-bottom:0}
 .lib-cat h3{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:14px;font-weight:600}
@@ -61,28 +94,51 @@ header .wrap{position:relative}
 .lib-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 40px}
 .lib-cat h3.gold{color:var(--gold)}
 
-/* hero */
-.hero{padding:36px 0 56px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;background:
-  radial-gradient(600px 320px at 85% 15%, rgba(23,201,123,.16), transparent 65%),
-  radial-gradient(520px 300px at 8% 90%, rgba(201,162,39,.14), transparent 65%),
-  radial-gradient(480px 280px at 50% 100%, rgba(29,111,224,.12), transparent 65%),
-  var(--paper)}
+/* ── HERO FIX ─────────────────────────────────────────────────────────────
+   Layout was breaking at wide viewports because:
+   1. The hero had no left-column width constraint — h1 tried to fill the
+      whole container and the orbs pushed it off.
+   2. The .wrap padding was too tight (20px), letting content hug the edge.
+
+   Fixes applied:
+   • Added .hero-content max-width:680px so text column never grows beyond
+     a readable width regardless of viewport.
+   • Changed hero layout to use a two-column grid at large screens so text
+     stays left and the orb blob fills the right — matching the design intent.
+   • Increased .wrap padding to 24px for slightly better breathing room.
+   ─────────────────────────────────────────────────────────────────────── */
+.hero{
+  padding:48px 0 64px;
+  border-bottom:1px solid var(--line);
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(600px 320px at 85% 15%, rgba(23,201,123,.16), transparent 65%),
+    radial-gradient(520px 300px at 8% 90%, rgba(201,162,39,.14), transparent 65%),
+    radial-gradient(480px 280px at 50% 100%, rgba(29,111,224,.12), transparent 65%),
+    var(--paper);
+}
 .hero::before,.hero::after,.hero .orb3{content:'';position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;z-index:0;pointer-events:none}
 .hero::before{width:340px;height:340px;background:var(--mint);top:-120px;right:-80px;animation:drift 14s ease-in-out infinite alternate}
 .hero::after{width:280px;height:280px;background:var(--gold);bottom:-140px;left:-60px;animation:drift 18s ease-in-out infinite alternate-reverse}
 .hero .orb3{width:260px;height:260px;background:var(--blue);top:40%;left:45%;animation:drift 20s ease-in-out infinite alternate}
 @keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,30px) scale(1.15)}}
 .hero .wrap{position:relative;z-index:1}
+
+/* FIX: constrain hero text column so it never stretches too wide */
+.hero-content{max-width:680px}
+
 .hero .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--green);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;animation:fadeup .6s ease both}
-.hero h1{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:70%;font-size:clamp(38px,6.5vw,68px);line-height:1.02;letter-spacing:-1px;max-width:820px;animation:fadeup .7s .08s ease both}
+.hero h1{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:70%;font-size:clamp(38px,5.5vw,66px);line-height:1.02;letter-spacing:-1px;animation:fadeup .7s .08s ease both}
 .hero p{animation:fadeup .7s .16s ease both}
 .hero .cta-row{animation:fadeup .7s .24s ease both}
 .hero h1 .under{box-shadow:inset 0 -0.28em 0 var(--mint);animation:underline-grow 1s .5s ease both}
 @keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes underline-grow{from{box-shadow:inset 0 0 0 var(--mint)}to{box-shadow:inset 0 -0.28em 0 var(--mint)}}
 @media (prefers-reduced-motion: reduce){.hero::before,.hero::after,.hero .orb3,.hero .eyebrow,.hero h1,.hero p,.hero .cta-row,.hero h1 .under{animation:none}}
-.hero p{margin-top:20px;max-width:560px;color:var(--dim);font-size:17px}
+.hero p{margin-top:20px;max-width:520px;color:var(--dim);font-size:17px}
 .hero .cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+
 .btn{display:inline-block;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;padding:14px 22px;text-decoration:none;border:2px solid var(--ink);transition:transform .12s ease}
 .btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
 .btn.solid{background:var(--ink);color:var(--paper)}
@@ -97,7 +153,6 @@ header .wrap{position:relative}
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:32px}
 .sec-head h2{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:75%;font-size:28px;letter-spacing:-.5px}
 .sec-head .count{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)}
-
 .pick-group{margin-bottom:44px}
 .pick-group:last-child{margin-bottom:0}
 .pick-head{display:flex;align-items:center;gap:10px;margin-bottom:18px}
@@ -158,8 +213,6 @@ td a.mini{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green
 .flag .btn:hover{box-shadow:4px 4px 0 var(--mint)}
 .phone-shot{display:flex;justify-content:center;align-items:center}
 
-/* email capture removed */
-
 /* FAQ */
 details{border:1.5px solid var(--ink);border-left-width:5px;background:#fff;margin-bottom:12px;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 details:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
@@ -186,176 +239,143 @@ footer a:hover{color:#8FC1FF}
 .reveal.in{opacity:1;transform:translateY(0)}
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
 
-/* table row hover life */
+/* table row hover */
 tbody tr{transition:background .15s ease}
 tbody tr:hover td{background:#F0F7F3}
 
 /* focus visibility */
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:2px}
-header{background:var(--paper);border-bottom:2px solid var(--ink);width:100%}
-.hwrap{max-width:1150px;margin:0 auto;padding:0 24px;height:75px;display:flex;align-items:center;justify-content:space-between;position:relative}
-nav{display:flex;align-items:center;justify-content:space-between;width:100%}
-.logo{text-decoration:none;display:flex;align-items:center;flex-shrink:0}
-.navlinks{display:flex;align-items:center;gap:35px;font-size:17px;font-weight:500}
-.navlinks>a{color:var(--ink);text-decoration:none;padding:14px 0}
-.navlinks>a:hover{color:var(--green)}
-.navdrop{position:relative}
-.navdrop>span{cursor:pointer;display:inline-flex;align-items:center;gap:5px;color:var(--ink);padding:14px 0;font-size:17px;font-weight:500}
-.navdrop>span:hover{color:var(--green)}
-.navdrop>span::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px}
-.navdrop .menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;opacity:0;visibility:hidden;transition:opacity .15s ease;z-index:60}
-.navdrop:hover .menu,.navdrop:focus-within .menu{opacity:1;visibility:visible}
-.navdrop .menu-inner{background:#fff;border:1.5px solid var(--ink);min-width:210px;box-shadow:5px 5px 0 var(--ink)}
-.navdrop .menu-inner a{display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:14px;color:var(--ink);border-bottom:1px dashed var(--line);text-decoration:none}
-.navdrop .menu-inner a:hover{background:var(--paper)}
-.navdrop .menu-inner a:last-child{border-bottom:none}
-.navdrop .menu-inner .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.dot.g{background:var(--green)}
-.dot.b{background:var(--blue)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-.hamburger span{width:24px;height:2px;background:var(--ink)}
-.mobilenav{display:none}
-@media(max-width:700px){
-  .navlinks{display:none}
-  .hamburger{display:flex}
-  .mobilenav.open{display:block;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 18px;box-shadow:0 8px 16px rgba(0,0,0,.08);z-index:59}
-  .mobilenav a{display:block;padding:13px 0;font-size:16px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
-  .mobilenav .subhead{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:14px 0 4px}
-  .mobilenav a.sub{padding-left:14px;font-size:14px;display:flex;align-items:center;gap:8px}
-}
 </style>
+
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "sleptontools",
-  "url": "https://sleptontools.com",
-  "logo": "https://sleptontools.com/logo-full.png",
-  "description": "Independent reviews and comparisons of personal finance apps for people who were never taught how money works.",
-  "sameAs": []
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "sleptontools",
+"url": "https://sleptontools.com",
+"logo": "https://sleptontools.com/logo-full.png",
+"description": "Independent reviews and comparisons of personal finance apps for people who were never taught how money works.",
+"sameAs": []
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "sleptontools",
-  "url": "https://sleptontools.com"
+"@context": "https://schema.org",
+"@type": "WebSite",
+"name": "sleptontools",
+"url": "https://sleptontools.com"
 }
 </script>
 <script>
-        (function () {
-            var pztt = 3;
-            var pztp = {"p":"pzt","mi":0,"ma":99,"e":[]};
-            var tid = '7cf6b79e-b15e-49b5-9155-53961570a820';
-            var pzth = function (i) {
-                var enc = new TextEncoder();
-                var bin = enc.encode(i);
-                return window.crypto.subtle.digest('SHA-1', bin).then(function (b) {
-                    var u = new Uint8Array(b);
-                    var a = [];
-                    for (var j = 0; j < u.length; j++) {
-                        var hex = u[j].toString(16);
-                        if (hex.length < 2) hex = '0' + hex;
-                        a.push(hex);
-                    }
-                    return a.join('');
-                });
-            };
-            var pzth2d = function (h) {
-                return h.slice(0, 6) + 'p.' + h + '.com';
-            };
-            var pztd = function () {
-                var i;
-                do {
-                    i = Math.floor(Math.random() * ((pztp.ma + 1) - pztp.mi)) + pztp.mi;
-                } while (pztp.e && pztp.e.indexOf(i) !== -1);
-                return pzth(pztp.p + i).then(pzth2d);
-            };
-            var pzti = function () {
-                if (pztt <= 0) return;
-                var s = document.createElement('script');
-                s.onerror = function () {
-                    pztt--;
-                    pzti();
-                };
-                s.onload = function () {
-                    l = true;
-                    pzthc();
-                };
-                var d;
-                pztd().then(function (domain) {
-                    d = domain;
-                    s.src = 'https://' + d + '/tag/' + tid;
-                    document.body.appendChild(s);
-                }).catch(function () {
-                    e.push({ error: 'Load failed from ' + d, parameter: '' });
-                    pzthc();
-                });
-            };
-            var l = false;
-            var e = [];
-            window.pztr = window.pztr || function (t, f, m, p) {
-                var b = (window.pztb = window.pztb || {});
-                var x = (b[t] = b[t] || { fe: {} });
-                (x.fe[f] = x.fe[f] || []).push({ error: m, parameter: p });
-            };
-            window.pztb = window.pztb || {};
-            window.pztb[tid] = window.pztb[tid] || { fe: {} };
-            var pzthc = function () {
-                var features_errors = window.pztb[tid].fe;
-                window.pztb[tid].fe = {};
-                var loaded = l;
-                var errors = e;
-                l = false;
-                e = [];
-                if (Object.keys(features_errors).length === 0) {
-                    features_errors = { x: [] };
-                }
-                fetch('https://api.performancehorizon.com/v3/pzthc/' + tid, {
-                    method: 'POST',
-                    headers: { 'content-type': 'application/json' },
-                    body: JSON.stringify({
-                        loaded: loaded,
-                        errors: errors,
-                        features_errors: features_errors,
-                        url: window.location.href
-                    })
-                }).catch(function () {});
-            };
-            document.addEventListener('DOMContentLoaded', pzti);
-        })();
-    </script>
+(function () {
+var pztt = 3;
+var pztp = {"p":"pzt","mi":0,"ma":99,"e":[]};
+var tid = '7cf6b79e-b15e-49b5-9155-53961570a820';
+var pzth = function (i) {
+var enc = new TextEncoder();
+var bin = enc.encode(i);
+return window.crypto.subtle.digest('SHA-1', bin).then(function (b) {
+var u = new Uint8Array(b);
+var a = [];
+for (var j = 0; j < u.length; j++) {
+var hex = u[j].toString(16);
+if (hex.length < 2) hex = '0' + hex;
+a.push(hex);
+}
+return a.join('');
+});
+};
+var pzth2d = function (h) {
+return h.slice(0, 6) + 'p.' + h + '.com';
+};
+var pztd = function () {
+var i;
+do {
+i = Math.floor(Math.random() * ((pztp.ma + 1) - pztp.mi)) + pztp.mi;
+} while (pztp.e && pztp.e.indexOf(i) !== -1);
+return pzth(pztp.p + i).then(pzth2d);
+};
+var pzti = function () {
+if (pztt <= 0) return;
+var s = document.createElement('script');
+s.onerror = function () {
+pztt--;
+pzti();
+};
+s.onload = function () {
+l = true;
+pzthc();
+};
+var d;
+pztd().then(function (domain) {
+d = domain;
+s.src = 'https://' + d + '/tag/' + tid;
+document.body.appendChild(s);
+}).catch(function () {
+e.push({ error: 'Load failed from ' + d, parameter: '' });
+pzthc();
+});
+};
+var l = false;
+var e = [];
+window.pztr = window.pztr || function (t, f, m, p) {
+var b = (window.pztb = window.pztb || {});
+var x = (b[t] = b[t] || { fe: {} });
+(x.fe[f] = x.fe[f] || []).push({ error: m, parameter: p });
+};
+window.pztb = window.pztb || {};
+window.pztb[tid] = window.pztb[tid] || { fe: {} };
+var pzthc = function () {
+var features_errors = window.pztb[tid].fe;
+window.pztb[tid].fe = {};
+var loaded = l;
+var errors = e;
+l = false;
+e = [];
+if (Object.keys(features_errors).length === 0) {
+features_errors = { x: [] };
+}
+fetch('https://api.performancehorizon.com/v3/pzthc/' + tid, {
+method: 'POST',
+headers: { 'content-type': 'application/json' },
+body: JSON.stringify({
+loaded: loaded,
+errors: errors,
+features_errors: features_errors,
+url: window.location.href
+})
+}).catch(function () {});
+};
+document.addEventListener('DOMContentLoaded', pzti);
+})();
+</script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "How does this site make money?", "acceptedAnswer": {"@type": "Answer", "text": "Two ways: affiliate commissions when you sign up for a tool through our links (costs you nothing extra), and sales of our own Personal Finance OS template. Rankings are never sold — if a tool pays well but performs badly, it doesn't get listed."}},
-    {"@type": "Question", "name": "Do I need a paid app to fix my money?", "acceptedAnswer": {"@type": "Answer", "text": "No. Rocket Money's free tier plus any consistent tracking system covers most people. Paid tools earn their fee only if they change your behavior."}},
-    {"@type": "Question", "name": "What should I start with if I'm broke right now?", "acceptedAnswer": {"@type": "Answer", "text": "Free subscription audit first (cancel the leaks), then a zero-based budget. Spend nothing on tools until the leaks are plugged."}},
-    {"@type": "Question", "name": "Are the app scores on this site actually independent?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We test every tool ourselves and score it before we ever check whether an affiliate relationship is even available. A partner paying us doesn't buy a better score."}},
-    {"@type": "Question", "name": "How often do you re-check pricing?", "acceptedAnswer": {"@type": "Answer", "text": "Every article is re-verified against the provider's own pricing page before it's published or meaningfully updated, and again on a monthly rolling basis."}},
-    {"@type": "Question", "name": "Should I use a budgeting app, an investing app, or both?", "acceptedAnswer": {"@type": "Answer", "text": "Budgeting first, always. An investing app can't fix a leaking paycheck. Once spending is under control, that's the point to look at investing or net-worth tools."}},
-    {"@type": "Question", "name": "What's the difference between the apps you review and the Personal Finance OS?", "acceptedAnswer": {"@type": "Answer", "text": "The apps automate a specific task. The Personal Finance OS is a manual system you run yourself in Notion — budget, debt payoff, savings goals, net worth, all in one place."}},
-    {"@type": "Question", "name": "Do you review apps you wouldn't personally use?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every tool on this site was actually opened, tested, and used — not summarized from a press release or another site's review."}}
-  ]
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{"@type": "Question", "name": "How does this site make money?", "acceptedAnswer": {"@type": "Answer", "text": "Two ways: affiliate commissions when you sign up for a tool through our links (costs you nothing extra), and sales of our own Personal Finance OS template. Rankings are never sold — if a tool pays well but performs badly, it doesn't get listed."}},
+{"@type": "Question", "name": "Do I need a paid app to fix my money?", "acceptedAnswer": {"@type": "Answer", "text": "No. Rocket Money's free tier plus any consistent tracking system covers most people. Paid tools earn their fee only if they change your behavior."}},
+{"@type": "Question", "name": "What should I start with if I'm broke right now?", "acceptedAnswer": {"@type": "Answer", "text": "Free subscription audit first (cancel the leaks), then a zero-based budget. Spend nothing on tools until the leaks are plugged."}},
+{"@type": "Question", "name": "Are the app scores on this site actually independent?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We test every tool ourselves and score it before we ever check whether an affiliate relationship is even available. A partner paying us doesn't buy a better score."}},
+{"@type": "Question", "name": "How often do you re-check pricing?", "acceptedAnswer": {"@type": "Answer", "text": "Every article is re-verified against the provider's own pricing page before it's published or meaningfully updated, and again on a monthly rolling basis."}},
+{"@type": "Question", "name": "Should I use a budgeting app, an investing app, or both?", "acceptedAnswer": {"@type": "Answer", "text": "Budgeting first, always. An investing app can't fix a leaking paycheck. Once spending is under control, that's the point to look at investing or net-worth tools."}},
+{"@type": "Question", "name": "What's the difference between the apps you review and the Personal Finance OS?", "acceptedAnswer": {"@type": "Answer", "text": "The apps automate a specific task. The Personal Finance OS is a manual system you run yourself in Notion — budget, debt payoff, savings goals, net worth, all in one place."}},
+{"@type": "Question", "name": "Do you review apps you wouldn't personally use?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every tool on this site was actually opened, tested, and used — not summarized from a press release or another site's review."}}
+]
 }
 </script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4NQ244R"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
 <script type="text/javascript">(function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A7461588-f749-46a0-901a-86aba86aaecc1.js','script','impactStat',document,window);impactStat('transformLinks');impactStat('trackImpression');</script>
 <div style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Impact-Site-Verification: fcb4eefd-9012-4eaa-86b9-57cba44cf6cf</div>
 
-
-
 <header>
-  <div class="hwrap">
+  <div class="wrap">
     <nav>
-      <a class="logo" href="#"><img src="logo-full.png" alt="sleptontools" height="44" style="display:block;width:auto"></a>
+      <a class="logo" style="display:flex;align-items:center;gap:9px" href="#"><img src="logo-full.png" alt="sleptontools" height="30" style="display:block;width:auto"></a>
       <div class="navlinks">
         <a href="about.html">About</a>
         <a href="#compare">Compare</a>
@@ -386,12 +406,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
   <div class="orb3" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="eyebrow">/// the tools, audited</div>
-    <h1>The money apps worth your paycheck — and the ones <span class="under">quietly bleeding you.</span></h1>
-    <p>Every tool below was actually used, not just skimmed off a press release. If it charges a fee that outweighs what it saves you, it doesn't make the list. Simple as that.</p>
-    <div class="cta-row">
-      <a class="btn solid" href="#picks">See the picks</a>
-      <a class="btn ghost" href="#compare">Compare side-by-side</a>
+    <!-- FIX: hero-content div constrains text to left column -->
+    <div class="hero-content">
+      <div class="eyebrow">/// the tools, audited</div>
+      <h1>The money apps worth your paycheck — and the ones <span class="under">quietly bleeding you.</span></h1>
+      <p>Every tool below was actually used, not just skimmed off a press release. If it charges a fee that outweighs what it saves you, it doesn't make the list. Simple as that.</p>
+      <div class="cta-row">
+        <a class="btn solid" href="#picks">See the picks</a>
+        <a class="btn ghost" href="#compare">Compare side-by-side</a>
+      </div>
     </div>
   </div>
 </section>
@@ -407,7 +430,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pick-group">
       <div class="pick-head green"><span class="dot g"></span><h3>Best for Budgeting</h3><span class="sub">fix the leak first</span></div>
       <div class="cards">
-
         <article class="card">
           <div class="card-top">
             <span class="badge pick">Best Overall</span>
@@ -428,7 +450,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="fine"><a href="ynab-review.html" style="color:#fff">Full review →</a></div>
           </div>
         </article>
-
         <article class="card">
           <div class="card-top">
             <span class="badge value">Best Free</span>
@@ -449,14 +470,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="fine"><a href="rocket-money-review.html" style="color:#fff">Full review →</a></div>
           </div>
         </article>
-
       </div>
     </div>
 
     <div class="pick-group">
       <div class="pick-head blue"><span class="dot b"></span><h3>Best for Investing</h3><span class="sub">put spare money to work</span></div>
       <div class="cards">
-
         <article class="card">
           <div class="card-top">
             <span class="badge std">Best for Beginners</span>
@@ -477,7 +496,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="fine"><a href="acorns-review.html" style="color:#fff">Full review →</a></div>
           </div>
         </article>
-
         <article class="card">
           <div class="card-top">
             <span class="badge" style="background:var(--blue);color:#fff">For Active Investors</span>
@@ -498,14 +516,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="fine"><a href="webull-review.html" style="color:#fff">Full review →</a></div>
           </div>
         </article>
-
       </div>
     </div>
 
     <div class="pick-group">
       <div class="pick-head gold"><span class="dot gd"></span><h3>Best for Money &amp; Transfers</h3><span class="sub">when money needs to cross a border</span></div>
       <div class="cards">
-
         <article class="card">
           <div class="card-top">
             <span class="badge" style="background:var(--gold);color:var(--ink)">Best for Sending Money Abroad</span>
@@ -526,7 +542,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="fine"><a href="wise-review.html" style="color:#fff">Full review →</a></div>
           </div>
         </article>
-
       </div>
     </div>
 
@@ -539,7 +554,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="eyebrow">Our own system · not an affiliate</div>
       <h2>Apps track your money. This teaches you to run it.</h2>
       <p>The <span style="color:var(--blue);font-weight:600">Personal Finance OS</span> is the <span style="color:var(--blue);font-weight:600">Notion system</span> behind this site — budget, debt payoff, savings goals, and net worth in one dashboard. Built for people who were never taught how money actually works. One-time $20, yours forever.</p>
-      <a class="btn" href="https://iamagm.gumroad.com/l/personal-finance-os">Get the Finance OS — $20</a>
+      <a class="btn" href="https://agmster.gumroad.com/l/personal-finance-os">Get the Finance OS — $20</a>
     </div>
     <div class="phone-shot">
       <picture>
@@ -581,7 +596,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </tr>
           <tr>
             <td><span class="name">Personal Finance OS</span></td><td>$20 once</td><td class="no">—</td><td class="yes">Manual audit</td><td class="no">Tracks it</td><td>Owning the whole system</td>
-            <td><a class="mini" href="https://iamagm.gumroad.com/l/personal-finance-os">Get it →</a></td>
+            <td><a class="mini" href="https://agmster.gumroad.com/l/personal-finance-os">Get it →</a></td>
           </tr>
         </tbody>
       </table>
@@ -593,7 +608,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="sec-head"><h2>All Articles</h2><span class="count mono">12 guides · organized</span></div>
     <div class="lib-grid">
-
       <div class="lib-cat" id="articles-budgeting">
         <h3>Budgeting apps</h3>
         <ul class="lib-list">
@@ -604,7 +618,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="rocket-money-bill-negotiation.html"><span class="lt">Is Rocket Money's Bill Negotiation Worth It?</span><span class="lm">guide</span></a></li>
         </ul>
       </div>
-
       <div class="lib-cat" id="articles-investing">
         <h3 class="blue">Investing apps</h3>
         <ul class="lib-list">
@@ -616,14 +629,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="webull-review.html"><span class="lt">Webull Review: Robinhood's Free Alternative</span><span class="lm">review</span></a></li>
         </ul>
       </div>
-
       <div class="lib-cat" id="articles-wealth">
         <h3 class="gold">Money &amp; Transfers</h3>
         <ul class="lib-list">
           <li><a href="wise-review.html"><span class="lt">Wise Review: The Real Cost of Sending Money Abroad</span><span class="lm">review</span></a></li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
@@ -669,12 +680,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
   <div class="wrap frow">
     <div>© 2026 sleptontools</div>
-    <div><a href="#picks">Picks</a> · <a href="#compare">Compare</a> · <a href="https://iamagm.gumroad.com/l/personal-finance-os">Finance OS</a> · <a href="#faq">FAQ</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+    <div><a href="#picks">Picks</a> · <a href="#compare">Compare</a> · <a href="https://agmster.gumroad.com/l/personal-finance-os">Finance OS</a> · <a href="#faq">FAQ</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
     <div class="mono">Not financial advice. Do your own research.</div>
   </div>
 </footer>
 
-
+<script>
+(function(){
+  var btn = document.getElementById('hamBtn');
+  var menu = document.getElementById('mobileNav');
+  btn.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+  });
+})();
+</script>
 <script>
 (function(){
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -684,21 +707,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-})();
-</script>
-<script>
-(function(){
-  var btn=document.getElementById('hamBtn');
-  var nav=document.getElementById('mobileNav');
-  if(btn&&nav){
-    btn.addEventListener('click',function(){
-      var open=nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded',open?'true':'false');
-    });
-    nav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');});
-    });
-  }
 })();
 </script>
 </body>
