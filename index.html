@@ -153,6 +153,16 @@ nav{display:flex;align-items:flex-end;justify-content:space-between;padding:8px 
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:32px}
 .sec-head h2{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:75%;font-size:28px;letter-spacing:-.5px}
 .sec-head .count{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)}
+.latest-list{list-style:none}
+.latest-list li{background:#fff;border:1.5px solid var(--ink);border-left:6px solid var(--blue);position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.latest-list li:hover{transform:translateY(-4px);box-shadow:7px 7px 0 var(--ink)}
+.latest-list a{display:flex;align-items:center;gap:16px;padding:20px 22px;text-decoration:none;color:var(--ink)}
+.latest-badge{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:11px;color:#fff;border:2px solid var(--ink);flex-shrink:0}
+.latest-body{flex:1}
+.latest-title{font-weight:700;font-size:17px;display:block}
+.latest-desc{font-size:14px;color:var(--dim);display:block;margin-top:4px}
+.latest-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);white-space:nowrap;flex-shrink:0;background:#EAF1FC;border:1px solid var(--blue);padding:5px 10px;border-radius:20px}
+@media(max-width:560px){.latest-list a{flex-wrap:wrap}.latest-tag{margin-left:54px}}
 .pick-group{margin-bottom:44px}
 .pick-group:last-child{margin-bottom:0}
 .pick-head{display:flex;align-items:center;gap:10px;margin-bottom:18px}
@@ -422,6 +432,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="disclosure">
   <div class="wrap"><strong>Disclosure:</strong> Some links on this site are affiliate links. If you sign up through them, we may earn a commission at no extra cost to you. We only recommend tools we would use with our own money — commissions never decide rankings.</div>
 </div>
+
+<section class="reveal sec" id="latest">
+  <div class="wrap">
+    <div class="sec-head"><h2>Latest Reads</h2><span class="count mono">fresh off the desk</span></div>
+    <ul class="latest-list">
+      <li><a href="morningstar-review.html">
+        <span class="latest-badge" style="background:#6B3FA0">MS</span>
+        <span class="latest-body">
+          <span class="latest-title">Morningstar Investor Review: The Next Step After Beginner Apps</span>
+          <span class="latest-desc">Independent research tools for people who've outgrown round-ups and simple trading apps.</span>
+        </span>
+        <span class="latest-tag">new review</span>
+      </a></li>
+    </ul>
+  </div>
+</section>
 
 <section class="reveal sec" id="picks">
   <div class="wrap">
