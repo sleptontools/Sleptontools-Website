@@ -41,7 +41,13 @@ p{font-size:17px;color:var(--dim);margin-bottom:30px}
 .suggest li{padding:9px 0;border-bottom:1px dashed var(--line);text-align:center}
 .suggest a{text-decoration:none;font-size:15px}
 .suggest a:hover{color:var(--green)}
-footer{border-top:2px solid var(--ink);padding:24px 0;font-size:13px;color:var(--dim);text-align:center}
+footer{background:linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);background-size:200% 200%;animation:flagbg 16s ease infinite;border-top:2px solid var(--mint);padding:32px 0;margin-top:56px;font-size:13px;color:#fff}
+footer .wrap{max-width:1080px}
+footer .frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#fff}
+footer a:hover{color:#8FC1FF}
+@keyframes flagbg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media (prefers-reduced-motion: reduce){footer{animation:none}}
 </style>
 </head>
 <body>
@@ -73,6 +79,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </main>
 
-<footer>© 2026 sleptontools</footer>
+<footer>
+  <div class="wrap frow">
+    <div>© 2026 sleptontools</div>
+    <div><a href="index.html#picks">Picks</a> · <a href="index.html#compare">Compare</a> · <a href="https://iamagm.gumroad.com/l/personal-finance-os">Finance OS</a> · <a href="index.html#faq">FAQ</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+    <div class="mono">Not financial advice. Do your own research.</div>
+  </div>
+</footer>
 </body>
 </html>
