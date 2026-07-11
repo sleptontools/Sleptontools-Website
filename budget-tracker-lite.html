@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4NQ244R');</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Notion Budget Tracker — Free Personal Finance Starter (Lite)</title>
+<meta name="description" content="A free Notion budget tracker: basic budget, spending log, and savings goal tracker. The free starter version of our $20 Personal Finance OS — no credit card required.">
+<link rel="canonical" href="https://sleptontools.com/budget-tracker-lite.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Notion Budget Tracker — Free Personal Finance Starter (Lite)","applicationCategory":"FinanceApplication","operatingSystem":"Web (Notion)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"sleptontools"}}
+</script>
+<style>
+/* ===== HEADER - matches index.html exactly ===== */
+header{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+.hinner{max-width:1080px;margin:0 auto;padding:8px 24px;display:flex;align-items:flex-end;justify-content:space-between}
+.logo img{display:block;width:auto;height:30px}
+.logo{text-decoration:none;line-height:0}
+.navlinks{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:500;line-height:1}
+.navlinks>a{color:var(--ink);text-decoration:none;padding:7px 10px;border-radius:5px}
+.navlinks>a:hover{background:var(--green);color:#fff}
+.navdrop{position:relative}
+.navdrop>span{cursor:pointer;display:inline-flex;align-items:center;gap:4px;color:var(--ink);padding:7px 10px;border-radius:5px;font-size:14px;font-weight:500}
+.navdrop>span:hover{background:var(--green);color:#fff}
+.navdrop>span::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;display:inline-block}
+.navdrop .menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);opacity:0;visibility:hidden;transition:opacity .15s;z-index:60;min-width:200px}
+.navdrop:hover .menu,.navdrop:focus-within .menu{opacity:1;visibility:visible}
+.navdrop .menu-inner{background:#fff;border:1.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.navdrop .menu-inner a{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:13px;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+.navdrop .menu-inner a:last-child{border-bottom:none}
+.navdrop .menu-inner a:hover{background:var(--paper)}
+.dot.g{background:var(--green);width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+.dot.b{background:var(--blue);width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{width:22px;height:2px;background:var(--ink);display:block}
+.mobilenav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 16px;box-shadow:0 6px 14px rgba(0,0,0,.08);z-index:59}
+.mobilenav.open{display:block}
+.mobilenav a{display:block;padding:11px 0;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+.mobilenav .subhead{font-size:11px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);padding:12px 0 2px}
+.mobilenav a.sub{padding-left:12px;font-size:14px}
+@media(max-width:640px){.navlinks{display:none}.hamburger{display:flex}}
+/* ===== END HEADER ===== */
+:root{--ink:#101312;--paper:#F2F3F1;--green:#0E7A4B;--mint:#17C97B;--blue:#1D6FE0;--line:#D8D8CF;--dim:#5A5F5C;--gold:#C9A227;--red:#B3402A}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+main{max-width:860px;margin:0 auto;padding:0 24px 60px}
+.crumb{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim);padding:20px 0 0}
+.crumb a{color:var(--green);text-decoration:none}
+
+.pagehero{padding:28px 0 8px}
+.badge-free{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;background:var(--mint);color:var(--ink);padding:4px 10px;display:inline-block;margin-bottom:14px}
+h1{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:70%;font-size:clamp(30px,5vw,46px);line-height:1.05;letter-spacing:-.8px;margin-bottom:14px}
+.lead{font-size:17px;color:var(--dim);max-width:620px;margin-bottom:26px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.btn{display:inline-block;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;padding:14px 22px;text-decoration:none;border:2px solid var(--ink);transition:transform .12s ease}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.fineprint{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);margin-top:8px}
+
+h2{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:78%;font-size:26px;letter-spacing:-.4px;margin:44px 0 14px;border-bottom:2px solid var(--ink);padding-bottom:8px}
+p{margin-bottom:16px;font-size:16px}
+
+.card{border:1.5px solid var(--ink);background:#fff;margin:20px 0}
+.card-top{padding:18px 20px 12px;border-bottom:1px dashed var(--line)}
+.card-top h3{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:80%;font-size:20px}
+.card-body{padding:14px 20px}
+.ledger{font-family:'IBM Plex Mono',monospace;font-size:14px}
+.ledger .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line)}
+.ledger .row:last-child{border-bottom:none}
+.ledger .row .dots{flex:1;border-bottom:1px dotted var(--line);margin:0 8px;transform:translateY(-4px)}
+.ledger .pos{color:var(--green);font-weight:600}
+.ledger .no{color:var(--red);font-weight:600}
+
+.tablewrap{overflow-x:auto;border:1.5px solid var(--ink);box-shadow:6px 6px 0 var(--ink);margin:20px 0}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14px;min-width:480px}
+th{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.5px;text-transform:uppercase;text-align:left;background:var(--ink);color:var(--paper);padding:12px 14px}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td .name{font-weight:600}
+.yes{color:var(--green);font-weight:600}
+.no{color:var(--red);font-weight:600}
+
+.flag{background:linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);background-size:200% 200%;animation:flagbg 16s ease infinite;color:var(--paper);padding:36px;margin:36px 0;border:2px solid var(--ink)}
+@keyframes flagbg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media (prefers-reduced-motion: reduce){.flag{animation:none}}
+.flag .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mint);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+.flag h2{color:var(--paper);border:none;margin:0 0 10px;padding:0}
+.flag p{color:#B9C0BC;font-size:15px;max-width:520px;margin-bottom:18px}
+.flag .btn{border-color:var(--mint);color:var(--ink);background:var(--mint)}
+.flag .btn:hover{box-shadow:4px 4px 0 var(--mint)}
+
+.faq details{border:1.5px solid var(--ink);background:#fff;margin-bottom:12px}
+.faq summary{cursor:pointer;padding:14px 18px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-family:'IBM Plex Mono',monospace;font-size:20px}
+.faq details[open] summary::after{content:'–'}
+.faq details p{padding:0 18px 14px;font-size:14.5px;color:var(--dim);margin:0}
+
+footer{background:linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);background-size:200% 200%;animation:flagbg 16s ease infinite;border-top:2px solid var(--mint);padding:32px 0;margin-top:56px;font-size:13px;color:#fff}
+footer .wrap{padding:0 24px}
+footer .frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#fff}
+footer a:hover{color:#8FC1FF}
+@media(prefers-reduced-motion:reduce){footer{animation:none}}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4NQ244R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <div class="hinner" style="position:relative">
+    <a class="logo" href="index.html"><img src="logo-full.png" alt="sleptontools" height="30"></a>
+    <div class="navlinks">
+      <a href="about.html">About</a>
+      <a href="index.html#compare">Compare</a>
+      <div class="navdrop" tabindex="0">
+        <span>Articles</span>
+        <div class="menu">
+          <div class="menu-inner">
+            <a href="budgeting-apps.html"><span class="dot g"></span>Budgeting apps</a>
+            <a href="investing-apps.html"><span class="dot b"></span>Investing apps</a>
+          </div>
+        </div>
+      </div>
+      <a href="index.html#os">Finance OS</a>
+    </div>
+    <button class="hamburger" id="hamBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="mobilenav" id="mobileNav">
+      <a href="about.html">About</a>
+      <a href="index.html#compare">Compare</a>
+      <div class="subhead">Articles</div>
+      <a class="sub" href="budgeting-apps.html"><span class="dot g"></span>Budgeting apps</a>
+      <a class="sub" href="investing-apps.html"><span class="dot b"></span>Investing apps</a>
+      <a href="index.html#os">Finance OS</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="crumb"><a href="index.html">Home</a> / Finance OS Lite</div>
+
+<div class="pagehero">
+<div class="badge-free">Free · No Credit Card</div>
+<h1>Notion Budget Tracker — Free Personal Finance Starter (Lite)</h1>
+<p class="lead">The free entry point to the <a href="index.html#os" style="color:var(--green)">Personal Finance OS</a> — a stripped-down Notion system that covers the basics: track your budget, log your spending, and watch a savings goal move. No sign-up, no trial that expires, no credit card. If you outgrow it, the full $20 system is one click away.</p>
+<div class="cta-row">
+<a class="btn solid" href="https://iamagm.gumroad.com/l/finance-os-lite" target="_blank" rel="noopener">Get the Free Lite Version →</a>
+<a class="btn ghost" href="#compare">See what's in the full version</a>
+</div>
+<div class="fineprint">Notion template · duplicate to your own workspace · free forever</div>
+</div>
+
+<h2>What's Included</h2>
+<div class="card">
+  <div class="card-top"><h3>Finance OS Lite</h3></div>
+  <div class="card-body">
+    <div class="ledger">
+      <div class="row"><span>Basic Budget Tracker</span><span class="dots"></span><span class="pos">Included</span></div>
+      <div class="row"><span>Spending Log</span><span class="dots"></span><span class="pos">Included</span></div>
+      <div class="row"><span>Savings Goal Tracker</span><span class="dots"></span><span class="pos">Included</span></div>
+    </div>
+  </div>
+</div>
+<p>That's it — on purpose. Lite is built to answer one question honestly: can a free Notion template actually get you to track your money consistently? If it does, the full system is the natural next step. If it doesn't, you haven't paid anything to find out.</p>
+
+<h2 id="compare">Lite vs. the Full Personal Finance OS</h2>
+<p>Here's exactly what changes if you upgrade — no vague "premium features," just the honest feature list.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Feature</th><th>Lite (Free)</th><th>Personal Finance OS ($20)</th></tr></thead>
+  <tbody>
+    <tr><td class="name">Budget tracker</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+    <tr><td class="name">Spending log</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+    <tr><td class="name">Savings goal tracker</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+    <tr><td class="name">Debt payoff planner</td><td class="no">No</td><td class="yes">Yes</td></tr>
+    <tr><td class="name">Net worth dashboard</td><td class="no">No</td><td class="yes">Yes</td></tr>
+    <tr><td class="name">Sinking funds (irregular expenses)</td><td class="no">No</td><td class="yes">Yes</td></tr>
+    <tr><td class="name">Price</td><td class="yes">$0</td><td>$20 one-time</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="flag">
+  <div class="eyebrow">Ready for the full system?</div>
+  <h2>Budget, debt payoff, savings goals, and net worth in one dashboard.</h2>
+  <p>When spreadsheet-basics stop being enough, the Personal Finance OS adds the three things Lite leaves out — debt payoff, net worth, and sinking funds — in the same Notion workspace. One-time $20, yours forever.</p>
+  <a class="btn" href="https://iamagm.gumroad.com/l/personal-finance-os" target="_blank" rel="noopener">Get the Full Personal Finance OS — $20</a>
+</div>
+
+<h2>FAQ</h2>
+<div class="faq">
+<details><summary>Is the Lite version actually free?</summary><p>Yes — no credit card, no trial period, no expiration. Duplicate it into your own Notion workspace and keep it for good.</p></details>
+<details><summary>Do I need a paid Notion account?</summary><p>No. Everything in Finance OS Lite works on Notion's free personal plan.</p></details>
+<details><summary>Can I upgrade later without starting over?</summary><p>Yes — the Personal Finance OS shares the same core layout, so moving your existing budget and spending data into the full system is straightforward.</p></details>
+<details><summary>What's the catch?</summary><p>No catch — Lite is intentionally limited to the basics (budget, spending log, savings goal) so you can decide if a Notion-based system works for you before paying for the full one.</p></details>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <div>© 2026 sleptontools</div>
+    <div><a href="index.html#picks">Picks</a> · <a href="index.html#compare">Compare</a> · <a href="index.html#os">Finance OS</a> · <a href="index.html#faq">FAQ</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+    <div class="mono">Not financial advice. Do your own research.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('hamBtn'),m=document.getElementById('mobileNav');
+  if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false);});});}
+})();
+</script>
+</body>
+</html>
