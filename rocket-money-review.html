@@ -165,6 +165,17 @@ footer a{color:#fff}
 footer a:hover{color:#8FC1FF}
 @keyframes flagbg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 @media(prefers-reduced-motion:reduce){footer{animation:none}}
+.you-might-like{background:linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);background-size:200% 200%;animation:flagbg 16s ease infinite;padding:40px 24px;margin-top:40px}
+@media(prefers-reduced-motion:reduce){.you-might-like{animation:none}}
+.yml-head{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:75%;font-size:24px;text-transform:uppercase;letter-spacing:-.3px;color:var(--paper);margin:0 0 20px;max-width:860px;margin-left:auto;margin-right:auto}
+.yml-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:860px;margin:0 auto}
+@media(max-width:760px){.yml-grid{grid-template-columns:1fr}}
+.yml-card{background:#fff;border-left:4px solid var(--mint);padding:16px 18px;transition:transform .18s ease,box-shadow .18s ease}
+.yml-card:hover{transform:translateY(-4px);box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+.yml-card h3{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:80%;font-size:17px;color:var(--ink);margin-bottom:6px}
+.yml-card p{font-size:13.5px;color:var(--dim);margin-bottom:10px}
+.yml-card a{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--green);text-decoration:none}
+.yml-card a:hover{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -310,6 +321,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </article>
 </div>
+
+<section class="you-might-like">
+  <h2 class="yml-head">You Might Also Like</h2>
+  <div class="yml-grid">
+    <div class="yml-card">
+      <h3>Acorns</h3>
+      <p>Micro-investing app for beginners. Rounds up your spare change automatically.</p>
+      <a href="acorns-review.html">Read Review →</a>
+    </div>
+    <div class="yml-card">
+      <h3>YNAB</h3>
+      <p>Zero-based budgeting that gives every dollar a job.</p>
+      <a href="ynab-review.html">Read Review →</a>
+    </div>
+    <div class="yml-card">
+      <h3>Credit Karma</h3>
+      <p>Free credit score monitoring with no credit card required.</p>
+      <a href="credit-karma-review.html">Read Review →</a>
+    </div>
+    <div class="yml-card">
+      <h3>Morningstar Investor</h3>
+      <p>Professional-grade stock and fund research for regular investors.</p>
+      <a href="morningstar-review.html">Read Review →</a>
+    </div>
+    <div class="yml-card">
+      <h3>Wise</h3>
+      <p>International money transfers at the real exchange rate.</p>
+      <a href="wise-review.html">Read Review →</a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap frow">
