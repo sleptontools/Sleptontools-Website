@@ -77,6 +77,12 @@ p{margin:0 0 16px}
 .meta{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#555;border-top:1px dashed #999;border-bottom:1px dashed #999;padding:8px 0;margin-bottom:4px}
 .byline{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#555;margin-bottom:18px}
 .disclosure{background:#fff;border:1.5px solid var(--ink);border-left:5px solid var(--gold);padding:13px 16px;font-size:13.5px;margin-bottom:26px}
+.shot{border:2px solid var(--ink);overflow:hidden;box-shadow:6px 6px 0 var(--ink);background:#fff}
+.shot a{display:block;line-height:0}
+.shot img{display:block;width:100%;height:auto}
+.shot .cap{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#555;padding:10px 14px;border-top:1px solid var(--line)}
+.shotgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}
+@media(max-width:640px){.shotgrid{grid-template-columns:1fr}}
 .verdict{border:2px solid var(--ink);background:#fff;padding:22px;margin:26px 0;box-shadow:6px 6px 0 var(--ink)}
 .verdict .label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--green)}
 .appgrid{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--ink);margin:18px 0;overflow:hidden}
@@ -174,6 +180,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="verdict">
 <div class="label">The Short Answer</div>
 <p style="margin-bottom:0"><strong>Acorns</strong> is the best fully-automated starting point for true beginners. <strong>Robinhood</strong> and <strong>SoFi Invest</strong> are the better choice if you're comfortable making your own decisions, since neither charges a subscription fee. <strong>Stash</strong> offers a DIY-plus-automated hybrid but costs more than Acorns at every comparable tier.</p>
+</div>
+
+<div class="shotgrid">
+<div class="shot">
+<a href="https://www.acorns.com/" target="_blank" rel="nofollow noopener">
+<img src="acorns-screenshot-hero.jpg" alt="Acorns homepage showing the Get started button" loading="lazy" width="1440" height="560">
+</a>
+<div class="cap">Acorns' actual homepage.</div>
+</div>
+<div class="shot">
+<a href="https://robinhood.com/" target="_blank" rel="nofollow noopener">
+<img src="robinhood-screenshot-hero.jpg" alt="Robinhood homepage showing the Sign up button" loading="lazy" width="1440" height="560">
+</a>
+<div class="cap">Robinhood's actual homepage.</div>
+</div>
 </div>
 
 <h2>The lineup</h2>
