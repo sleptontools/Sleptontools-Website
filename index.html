@@ -212,9 +212,27 @@ td .name{font-weight:600}
 td a.mini{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--mint)}
 
 /* flagship promo */
-.flag{background:linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);background-size:200% 200%;animation:flagbg 16s ease infinite;color:var(--paper);padding:56px 0;margin:24px 0}
-@keyframes flagbg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.flag{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(560px 340px at 12% 18%, rgba(23,201,123,.32), transparent 62%),
+    radial-gradient(580px 360px at 90% 12%, rgba(29,111,224,.28), transparent 60%),
+    radial-gradient(520px 320px at 60% 105%, rgba(232,121,26,.24), transparent 60%),
+    linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);
+  background-size:auto,auto,auto,200% 200%;
+  animation:osbg 16s ease infinite;
+  color:var(--paper);
+  padding:56px 0;
+  margin:24px 0;
+}
+@keyframes osbg{0%,100%{background-position:0 0,0 0,0 0,0% 50%}50%{background-position:0 0,0 0,0 0,100% 50%}}
 @media (prefers-reduced-motion: reduce){.flag{animation:none}}
+.flag::before,.flag::after{content:'';position:absolute;z-index:0;border-radius:50%;filter:blur(70px);opacity:.4;pointer-events:none}
+.flag::before{width:280px;height:280px;background:var(--blue);top:-90px;right:12%;animation:drift 15s ease-in-out infinite alternate}
+.flag::after{width:240px;height:240px;background:#E8791A;bottom:-110px;left:10%;animation:drift 19s ease-in-out infinite alternate-reverse}
+@media (prefers-reduced-motion: reduce){.flag::before,.flag::after{animation:none}}
+.flag .wrap{position:relative;z-index:1}
 .flag .inner{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
 @media(max-width:760px){.flag .inner{grid-template-columns:1fr}}
 .flag .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mint);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
