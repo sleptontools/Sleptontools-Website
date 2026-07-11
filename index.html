@@ -216,19 +216,21 @@ td a.mini{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green
   position:relative;
   overflow:hidden;
   background:
-    radial-gradient(560px 340px at 12% 18%, rgba(23,201,123,.32), transparent 62%),
-    radial-gradient(580px 360px at 90% 12%, rgba(29,111,224,.28), transparent 60%),
-    radial-gradient(520px 320px at 60% 105%, rgba(232,121,26,.24), transparent 60%),
+    radial-gradient(560px 340px at 12% 18%, rgba(23,201,123,.14), transparent 62%),
+    radial-gradient(580px 360px at 90% 12%, rgba(29,111,224,.12), transparent 60%),
+    radial-gradient(520px 320px at 60% 105%, rgba(232,121,26,.10), transparent 60%),
     linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);
   background-size:auto,auto,auto,200% 200%;
   animation:osbg 16s ease infinite;
   color:var(--paper);
   padding:56px 0;
   margin:24px 0;
+  -webkit-mask-image:linear-gradient(to bottom, transparent, #000 44px, #000 calc(100% - 44px), transparent);
+  mask-image:linear-gradient(to bottom, transparent, #000 44px, #000 calc(100% - 44px), transparent);
 }
 @keyframes osbg{0%,100%{background-position:0 0,0 0,0 0,0% 50%}50%{background-position:0 0,0 0,0 0,100% 50%}}
 @media (prefers-reduced-motion: reduce){.flag{animation:none}}
-.flag::before,.flag::after{content:'';position:absolute;z-index:0;border-radius:50%;filter:blur(70px);opacity:.4;pointer-events:none}
+.flag::before,.flag::after{content:'';position:absolute;z-index:0;border-radius:50%;filter:blur(70px);opacity:.22;pointer-events:none}
 .flag::before{width:280px;height:280px;background:var(--blue);top:-90px;right:12%;animation:drift 15s ease-in-out infinite alternate}
 .flag::after{width:240px;height:240px;background:#E8791A;bottom:-110px;left:10%;animation:drift 19s ease-in-out infinite alternate-reverse}
 @media (prefers-reduced-motion: reduce){.flag::before,.flag::after{animation:none}}
