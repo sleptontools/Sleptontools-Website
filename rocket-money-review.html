@@ -79,6 +79,23 @@ header{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(-
 .mobilenav .subhead{font-size:11px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);padding:12px 0 2px}
 .mobilenav a.sub{padding-left:12px;font-size:14px}
 @media(max-width:640px){.navlinks{display:none}.hamburger{display:flex}}
+.search-wrap{position:relative;display:flex;align-items:center}
+.search-toggle{background:none;border:none;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;color:var(--ink)}
+.search-toggle:hover{color:var(--green)}
+.search-toggle svg{width:18px;height:18px;display:block}
+.search-box{display:none;position:absolute;top:calc(100% + 10px);right:0;background:var(--paper);border:1.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:10px;width:280px;z-index:80}
+.search-box.open{display:block}
+.search-input{width:100%;font-family:'IBM Plex Mono',monospace;font-size:13px;padding:9px 10px;border:1.5px solid var(--line);background:#fff;color:var(--ink)}
+.search-input:focus{outline:none;border-color:var(--mint)}
+.search-results{margin-top:8px;max-height:300px;overflow-y:auto}
+.search-results a{display:block;padding:9px 10px;border:1px solid var(--line);border-left:3px solid transparent;background:#fff;text-decoration:none;color:var(--ink);margin-bottom:6px}
+.search-results a:last-child{margin-bottom:0}
+.search-results a:hover{border-left-color:var(--mint)}
+.search-results .sr-title{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;display:block;color:var(--ink)}
+.search-results .sr-desc{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);display:block;margin-top:3px}
+.search-empty{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim);padding:8px 2px}
+@media(max-width:640px){.search-wrap{position:static}.search-box{left:12px;right:12px;top:100%;width:auto}}
+
 /* ===== END HEADER ===== */
 :root{--ink:#101312;--paper:#F2F3F1;--green:#0E7A4B;--mint:#17C97B;--blue:#1D6FE0;--line:#D8D8CF;--dim:#5A5F5C;--gold:#C9A227;--red:#B3402A}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -185,29 +202,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header>
   <div class="hinner" style="position:relative">
-    <a class="logo" href="index.html"><img src="logo-full.png" alt="sleptontools" height="30"></a>
+    <a class="logo" href="/"><img src="logo-full.png" alt="sleptontools" height="30"></a>
     <div class="navlinks">
-      <a href="about.html">About</a>
-      <a href="index.html#compare">Compare</a>
+      <a href="/">Home</a>
       <div class="navdrop" tabindex="0">
-        <span>Articles</span>
+        <span>Reviews</span>
         <div class="menu">
           <div class="menu-inner">
-            <a href="budgeting-apps.html"><span class="dot g"></span>Budgeting apps</a>
-            <a href="investing-apps.html"><span class="dot b"></span>Investing apps</a>
+            <a href="/budgeting-apps"><span class="dot g"></span>Budgeting apps</a>
+            <a href="/investing-apps"><span class="dot b"></span>Investing apps</a>
           </div>
         </div>
       </div>
-      <a href="personal-finance-os-review.html">Finance OS</a>
+      <a href="/budget-tracker">Free Tools</a>
+      <a href="/personal-finance-os-review">Finance OS</a>
+      <a href="/about">About</a>
+    </div>
+    <div class="search-wrap">
+      <button class="search-toggle" id="searchToggle" aria-label="Search" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+      <div class="search-box" id="searchBox">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search the site..." autocomplete="off">
+        <div class="search-results" id="searchResults"></div>
+      </div>
     </div>
     <button class="hamburger" id="hamBtn" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="mobilenav" id="mobileNav">
-      <a href="about.html">About</a>
-      <a href="index.html#compare">Compare</a>
-      <div class="subhead">Articles</div>
-      <a class="sub" href="budgeting-apps.html"><span class="dot g"></span>Budgeting apps</a>
-      <a class="sub" href="investing-apps.html"><span class="dot b"></span>Investing apps</a>
-      <a href="personal-finance-os-review.html">Finance OS</a>
+      <a href="/">Home</a>
+      <div class="subhead">Reviews</div>
+      <a class="sub" href="/budgeting-apps"><span class="dot g"></span>Budgeting apps</a>
+      <a class="sub" href="/investing-apps"><span class="dot b"></span>Investing apps</a>
+      <a href="/budget-tracker">Free Tools</a>
+      <a href="/personal-finance-os-review">Finance OS</a>
+      <a href="/about">About</a>
     </div>
   </div>
 </header>
@@ -356,7 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
   <div class="wrap frow">
     <div>© 2026 sleptontools</div>
-    <div><a href="index.html#picks">Picks</a> · <a href="index.html#compare">Compare</a> · <a href="https://iamagm.gumroad.com/l/personal-finance-os">Finance OS</a> · <a href="index.html#faq">FAQ</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:contact@sleptontools.com">contact@sleptontools.com</a></div>
+    <div><a href="index.html#picks">Picks</a> · <a href="index.html#compare">Compare</a> · <a href="https://iamagm.gumroad.com/l/personal-finance-os">Finance OS</a> · <a href="index.html#faq">FAQ</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:contact@sleptontools.com">contact@sleptontools.com</a> · <a href="/budget-tracker">Budget Tracker</a></div>
     <div class="mono">Not financial advice. Do your own research.</div>
   </div>
 </footer>
@@ -370,5 +396,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false);});});}
 })();
 </script>
+<script src="search.js" defer></script>
 </body>
 </html>
