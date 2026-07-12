@@ -4,6 +4,7 @@
   var SEARCH_INDEX = [
     { title: "Home", description: "Honest reviews of budgeting apps, savings tools, and money systems.", keywords: "reviews personal finance money apps", url: "/" },
     { title: "Budget Tracker", description: "A free budget tracker that runs in your browser — no signup, no account.", keywords: "free tool budget spending tracker", url: "/budget-tracker" },
+    { title: "Debt Payoff Calculator", description: "Compare the snowball and avalanche methods side by side — free, no signup.", keywords: "debt payoff calculator snowball avalanche free tool", url: "/debt-payoff-calculator" },
     { title: "Acorns Review", description: "The fee math nobody shows you.", keywords: "acorns micro investing round ups", url: "/acorns-review" },
     { title: "YNAB Review", description: "Is $109/year worth it? The honest math.", keywords: "ynab budgeting zero based", url: "/ynab-review" },
     { title: "Rocket Money Review", description: "Free vs Premium and the fees to watch.", keywords: "rocket money subscriptions cancel", url: "/rocket-money-review" },
@@ -12,7 +13,9 @@
     { title: "Wise Review", description: "The real cost of sending money abroad.", keywords: "wise money transfer exchange rate", url: "/wise-review" },
     { title: "Personal Finance OS", description: "The complete Notion money system — budget, debt payoff, savings, net worth.", keywords: "notion template finance os dashboard", url: "/personal-finance-os-review" },
     { title: "Budget Tracker Lite", description: "The free starter version of the Personal Finance OS.", keywords: "free notion lite starter", url: "/budget-tracker-lite" },
-    { title: "About", description: "Why sleptontools exists, and how we test and score finance apps.", keywords: "about trust editorial", url: "/about" }
+    { title: "About", description: "Why sleptontools exists, and how we test and score finance apps.", keywords: "about trust editorial", url: "/about" },
+    { title: "Best Budgeting Apps", description: "YNAB, Rocket Money, Acorns, Credit Karma, Morningstar, and Wise compared side by side.", keywords: "best budgeting apps comparison ratings pricing", url: "/best-budgeting-apps" },
+    { title: "How to Make a Budget", description: "Why most budgets fail and the zero-based method explained simply, step by step.", keywords: "how to budget zero based guide beginner", url: "/how-to-make-a-budget" }
   ];
 
   function norm(s) {
