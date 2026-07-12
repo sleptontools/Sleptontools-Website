@@ -4,30 +4,30 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="application-name" content="Sleptontools">
-<title>Free Debt Payoff Calculator — Snowball vs Avalanche | Sleptontools</title>
-<meta name="description" content="A free debt payoff calculator that runs in your browser. Add your debts and see the snowball and avalanche payoff methods compared side by side — months to debt-free and total interest for each. No signup, no account." />
-<meta name="keywords" content="debt payoff calculator, snowball vs avalanche, debt snowball calculator, debt avalanche calculator, free debt calculator, pay off debt 2026" />
+<title>Free Net Worth Calculator — Track Your Net Worth Over Time | Sleptontools</title>
+<meta name="description" content="A free net worth calculator that runs in your browser. Add your assets and debts, see your net worth calculated instantly, and save monthly snapshots to track your trend over time. No signup, no account." />
+<meta name="keywords" content="net worth calculator, free net worth tracker, calculate net worth, net worth tracker 2026, assets and debts calculator, track net worth over time" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Free Debt Payoff Calculator — Snowball vs Avalanche | Sleptontools" />
-<meta name="twitter:description" content="Add your debts and see the snowball and avalanche payoff methods compared side by side — months to debt-free and total interest for each. No signup, no account." />
+<meta name="twitter:title" content="Free Net Worth Calculator — Track Your Net Worth Over Time | Sleptontools" />
+<meta name="twitter:description" content="Add your assets and debts, see your net worth calculated instantly, and save monthly snapshots to track your trend over time. No signup, no account." />
 <meta name="twitter:image" content="https://sleptontools.com/og-image.png" />
-<meta property="og:title" content="Free Debt Payoff Calculator — Snowball vs Avalanche | Sleptontools" />
-<meta property="og:description" content="Add your debts and see the snowball and avalanche payoff methods compared side by side — months to debt-free and total interest for each." />
-<meta property="og:url" content="https://sleptontools.com/debt-payoff-calculator" />
+<meta property="og:title" content="Free Net Worth Calculator — Track Your Net Worth Over Time | Sleptontools" />
+<meta property="og:description" content="Add your assets and debts, see your net worth calculated instantly, and save monthly snapshots to track your trend over time." />
+<meta property="og:url" content="https://sleptontools.com/net-worth-calculator" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Sleptontools" />
 <meta property="og:image" content="https://sleptontools.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<link rel="canonical" href="https://sleptontools.com/debt-payoff-calculator" />
+<link rel="canonical" href="https://sleptontools.com/net-worth-calculator" />
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600;700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Free Debt Payoff Calculator",
-  "description": "A free debt payoff calculator that runs in your browser. Compare the snowball and avalanche methods side by side — months to debt-free and total interest paid for each.",
-  "url": "https://sleptontools.com/debt-payoff-calculator",
+  "name": "Free Net Worth Calculator",
+  "description": "A free net worth calculator that runs in your browser. Add your assets and debts, see your net worth calculated instantly, and save monthly snapshots to track your trend over time.",
+  "url": "https://sleptontools.com/net-worth-calculator",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Web Browser",
   "offers": {
@@ -198,84 +198,40 @@ header{background:#F2F3F1;border-bottom:2px solid #101312;position:sticky;top:0;
 }
 .panel-body { padding: 20px 18px; }
 
-/* ── EXTRA PAYMENT ── */
-.income-row {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.income-row .currency {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1.4rem;
-  color: var(--mint-dark);
-}
-.income-input {
-  flex: 1;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 1.3rem;
-  font-weight: 600;
-  padding: 10px 14px;
-  border: 2px solid var(--border);
-  background: var(--paper);
-  color: var(--ink);
-  width: 100%;
-  min-width: 0;
-}
-.income-input:focus { outline: none; border-color: var(--mint); }
-
-/* ── DEBT LIST ── */
-.debt {
+/* ── LINE ITEMS (assets / debts) ── */
+.item {
   border: 1px solid var(--border);
   border-left: 3px solid var(--mint);
   background: var(--white);
-  padding: 14px 16px;
-  margin-bottom: 12px;
-}
-.debt-top {
+  padding: 12px 16px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 10px;
+  align-items: center;
+  gap: 12px;
   flex-wrap: wrap;
 }
-.debt-name {
+.item.debt-item { border-left-color: var(--red); }
+.item-name {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  flex: 1 1 120px;
 }
-.debt-figures {
+.item-value {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.72rem;
-  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.9rem;
   white-space: nowrap;
 }
-.debt-figures b { color: var(--ink); }
-.debt-fields {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-bottom: 10px;
-}
-.debt-fields label {
+.item-actions { display: flex; align-items: center; gap: 8px; }
+
+.item-empty {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.62rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  display: block;
-  margin-bottom: 4px;
+  font-size: 0.72rem;
+  color: #999;
+  text-align: center;
+  padding: 14px 0;
 }
-.debt-fields input {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.8rem;
-  padding: 7px 9px;
-  border: 1.5px solid var(--border);
-  background: var(--paper);
-  width: 100%;
-  min-width: 0;
-}
-.debt-fields input:focus { outline: none; border-color: var(--mint); }
-@media (max-width: 480px) { .debt-fields { grid-template-columns: 1fr 1fr; } }
 
 .btn {
   font-family: 'IBM Plex Mono', monospace;
@@ -291,14 +247,17 @@ header{background:#F2F3F1;border-bottom:2px solid #101312;position:sticky;top:0;
 .btn:hover { transform: translateY(-1px); }
 .btn:focus-visible { outline: 2px solid var(--mint-dark); outline-offset: 2px; }
 .btn-mint { background: var(--mint); color: var(--ink); }
+.btn-blue { background: var(--blue); color: #fff; }
 .btn-ghost {
   background: transparent;
   color: var(--muted);
   border: 1.5px solid var(--border);
+  padding: 6px 10px;
+  font-size: 0.62rem;
 }
 .btn-ghost:hover { color: var(--red); border-color: var(--red); }
 
-/* ── ADD DEBT FORM ── */
+/* ── ADD FORM ── */
 .add-form {
   display: flex;
   gap: 10px;
@@ -313,20 +272,10 @@ header{background:#F2F3F1;border-bottom:2px solid #101312;position:sticky;top:0;
   min-width: 0;
 }
 .add-form input:focus { outline: none; border-color: var(--mint); }
-.add-name { flex: 2 1 140px; }
-.add-num { flex: 1 1 100px; }
+.add-name { flex: 2 1 160px; }
+.add-amount { flex: 1 1 120px; }
 
-.debt-empty {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.72rem;
-  color: #999;
-  text-align: center;
-  padding: 16px 0;
-}
-
-.danger-zone { margin-top: 20px; text-align: right; }
-
-/* ── COMPARISON RECEIPT ── */
+/* ── RECEIPT ── */
 .receipt { position: sticky; top: 20px; }
 .receipt-paper {
   background: var(--white);
@@ -354,24 +303,36 @@ header{background:#F2F3F1;border-bottom:2px solid #101312;position:sticky;top:0;
   border-bottom: 1px dashed var(--border);
   margin-bottom: 14px;
 }
-.method-block { margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px dashed var(--border); }
-.method-block:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.method-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-.method-head .m-name { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; }
-.method-head .m-badge { font-size: 0.6rem; background: var(--mint); color: var(--ink); padding: 3px 8px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
 .receipt-line {
   display: flex;
   justify-content: space-between;
   font-size: 0.8rem;
-  padding: 4px 0;
+  padding: 5px 0;
   color: #444;
 }
 .receipt-line .rl-value { font-weight: 600; color: var(--ink); }
-.bar-row { margin-top: 8px; }
-.bar-label { display: flex; justify-content: space-between; font-size: 0.68rem; color: var(--muted); margin-bottom: 4px; }
-.bar-track { height: 8px; background: var(--paper); border: 1px solid var(--border); overflow: hidden; }
-.bar-fill { height: 100%; background: var(--mint); }
-.bar-fill.avalanche { background: var(--blue); }
+.receipt-line.total {
+  border-top: 1px dashed var(--border);
+  margin-top: 10px;
+  padding-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.receipt-line.total .rl-value { font-size: 1.3rem; }
+.nw-positive { color: var(--mint-dark) !important; }
+.nw-negative { color: var(--red) !important; }
+
+.snapshot-btn-row { margin-top: 16px; text-align: center; }
+.snapshot-btn-row .btn { width: 100%; padding: 11px 14px; font-size: 0.72rem; }
+
+.snapshot-table { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border); }
+.snapshot-table-title { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 8px; }
+.snapshot-row { display: flex; justify-content: space-between; font-size: 0.76rem; padding: 5px 0; border-bottom: 1px dashed var(--border); }
+.snapshot-row:last-child { border-bottom: none; }
+.snapshot-row .sr-date { color: var(--muted); }
+.snapshot-row .sr-nw { font-weight: 700; }
+.snapshot-empty { font-size: 0.7rem; color: #999; text-align: center; padding: 8px 0; }
+
 .receipt-footer {
   text-align: center;
   font-size: 0.62rem;
@@ -443,6 +404,7 @@ footer .mono{font-family:'IBM Plex Mono',monospace}
   .panel-body { padding: 16px 14px; }
   .add-form { flex-direction: column; }
   .add-form input, .add-form .btn { width: 100%; }
+  .item { flex-direction: column; align-items: flex-start; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
@@ -515,8 +477,8 @@ footer .mono{font-family:'IBM Plex Mono',monospace}
 
 <div class="hero">
   <div class="eyebrow">/// Free Tool — No Signup</div>
-  <h1>Debt Payoff Calculator</h1>
-  <p>Add every debt you owe, tell it how much extra you can throw at debt each month, and it'll show you the snowball and avalanche payoff orders side by side — months to debt-free and total interest for each.</p>
+  <h1>Net Worth Calculator</h1>
+  <p>Add what you own and what you owe. Your net worth updates instantly, and you can save a snapshot each month to watch the trend build over time.</p>
   <div class="privacy-note"><b>Private by design</b> — your numbers are saved on your device only. Nothing is uploaded, ever.</div>
 </div>
 
@@ -525,77 +487,64 @@ footer .mono{font-family:'IBM Plex Mono',monospace}
   <!-- LEFT COLUMN -->
   <div>
 
-    <!-- EXTRA PAYMENT -->
-    <section class="panel" aria-labelledby="extra-label">
+    <!-- ASSETS -->
+    <section class="panel" aria-labelledby="assets-label">
       <div class="panel-head">
-        <span class="ph-label" id="extra-label">Extra Monthly Payment</span>
-        <span class="ph-meta">beyond minimums</span>
+        <span class="ph-label" id="assets-label">Your Assets</span>
+        <span class="ph-meta" id="assetCount">0 assets</span>
       </div>
       <div class="panel-body">
-        <div class="income-row">
-          <span class="currency">$</span>
-          <input type="number" inputmode="decimal" min="0" step="1" class="income-input" id="extraInput" placeholder="0.00" aria-label="Extra monthly payment in dollars" />
+        <div id="assetList"></div>
+        <div class="add-form">
+          <input type="text" class="add-name" id="newAssetName" placeholder="Asset (e.g. Checking, Home)" aria-label="New asset name" maxlength="30" />
+          <input type="number" inputmode="decimal" min="0" step="0.01" class="add-amount" id="newAssetValue" placeholder="Value $" aria-label="New asset value in dollars" />
+          <button class="btn btn-mint" id="addAssetBtn">+ Add</button>
         </div>
       </div>
     </section>
 
     <!-- DEBTS -->
-    <section class="panel" style="margin-top:24px" aria-labelledby="debt-label">
+    <section class="panel" style="margin-top:24px" aria-labelledby="debts-label">
       <div class="panel-head">
-        <span class="ph-label" id="debt-label">Your Debts</span>
+        <span class="ph-label" id="debts-label">Your Debts</span>
         <span class="ph-meta" id="debtCount">0 debts</span>
       </div>
       <div class="panel-body">
         <div id="debtList"></div>
-
         <div class="add-form">
-          <input type="text" class="add-name" id="newDebtName" placeholder="Debt name (e.g. Visa)" aria-label="New debt name" maxlength="30" />
-          <input type="number" inputmode="decimal" min="0" step="0.01" class="add-num" id="newDebtBalance" placeholder="Balance $" aria-label="New debt balance in dollars" />
-          <input type="number" inputmode="decimal" min="0" step="0.01" class="add-num" id="newDebtApr" placeholder="APR %" aria-label="New debt interest rate percent" />
-          <input type="number" inputmode="decimal" min="0" step="0.01" class="add-num" id="newDebtMin" placeholder="Min payment $" aria-label="New debt minimum payment in dollars" />
+          <input type="text" class="add-name" id="newDebtName" placeholder="Debt (e.g. Credit card, Mortgage)" aria-label="New debt name" maxlength="30" />
+          <input type="number" inputmode="decimal" min="0" step="0.01" class="add-amount" id="newDebtBalance" placeholder="Balance $" aria-label="New debt balance in dollars" />
           <button class="btn btn-mint" id="addDebtBtn">+ Add</button>
-        </div>
-
-        <div class="danger-zone">
-          <button class="btn btn-ghost" id="resetBtn">Clear All Debts</button>
         </div>
       </div>
     </section>
 
   </div>
 
-  <!-- RIGHT COLUMN: COMPARISON -->
-  <aside class="receipt" aria-label="Payoff comparison">
+  <!-- RIGHT COLUMN: NET WORTH RECEIPT -->
+  <aside class="receipt" aria-label="Net worth summary">
     <div class="receipt-paper">
-      <div class="receipt-title">— Payoff Comparison —</div>
+      <div class="receipt-title">— Your Net Worth —</div>
+      <div class="receipt-line"><span>Total assets</span><span class="rl-value" id="rAssets">$0.00</span></div>
+      <div class="receipt-line"><span>Total debts</span><span class="rl-value" id="rDebts">$0.00</span></div>
+      <div class="receipt-line total"><span>Net worth</span><span class="rl-value nw-positive" id="rNetWorth">$0.00</span></div>
 
-      <div class="method-block">
-        <div class="method-head"><span class="m-name">Snowball</span><span class="m-badge" id="snowballBadge">—</span></div>
-        <div class="receipt-line"><span>Months to debt-free</span><span class="rl-value" id="snowMonths">—</span></div>
-        <div class="receipt-line"><span>Total interest paid</span><span class="rl-value" id="snowInterest">—</span></div>
-        <div class="bar-row">
-          <div class="bar-label"><span>Interest vs Avalanche</span></div>
-          <div class="bar-track"><div class="bar-fill" id="snowBar" style="width:0%"></div></div>
-        </div>
+      <div class="snapshot-btn-row">
+        <button class="btn btn-blue" id="saveSnapshotBtn">Save This Month's Snapshot</button>
       </div>
 
-      <div class="method-block">
-        <div class="method-head"><span class="m-name">Avalanche</span><span class="m-badge" id="avalancheBadge">—</span></div>
-        <div class="receipt-line"><span>Months to debt-free</span><span class="rl-value" id="avaMonths">—</span></div>
-        <div class="receipt-line"><span>Total interest paid</span><span class="rl-value" id="avaInterest">—</span></div>
-        <div class="bar-row">
-          <div class="bar-label"><span>Interest vs Snowball</span></div>
-          <div class="bar-track"><div class="bar-fill avalanche" id="avaBar" style="width:0%"></div></div>
-        </div>
+      <div class="snapshot-table">
+        <div class="snapshot-table-title">Snapshot History</div>
+        <div id="snapshotList"><div class="snapshot-empty">No snapshots saved yet.</div></div>
       </div>
 
-      <div class="receipt-footer">Sleptontools · Debt Payoff Calculator<br/>Snowball = smallest balance first · Avalanche = highest rate first</div>
+      <div class="receipt-footer">Sleptontools · Net Worth Calculator<br/>Audited by you, monthly</div>
     </div>
 
     <div class="upsell">
       <div class="up-label">Want the full system?</div>
-      <h3>This plans the payoff. The Finance OS runs your whole financial life.</h3>
-      <p>Budget, debt payoff tracking, net worth, savings goals, and the monthly money routine — one Notion dashboard, $20 once.</p>
+      <h3>This tracks the number. The Finance OS runs your whole financial life.</h3>
+      <p>Budget, debt payoff, net worth, savings goals, and the monthly money routine — one Notion dashboard, $20 once.</p>
       <a href="https://iamagm.gumroad.com/l/personal-finance-os" target="_blank" rel="noopener noreferrer">Get the Finance OS →</a>
     </div>
   </aside>
@@ -605,7 +554,7 @@ footer .mono{font-family:'IBM Plex Mono',monospace}
 <footer>
   <div class="wrap frow">
     <div>© 2026 sleptontools</div>
-    <div><a href="/#picks">Picks</a> · <a href="/#compare">Compare</a> · <a href="https://iamagm.gumroad.com/l/personal-finance-os" target="_blank" rel="noopener noreferrer">Finance OS</a> · <a href="/#faq">FAQ</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="mailto:contact@sleptontools.com">contact@sleptontools.com</a> · <a href="/budget-tracker">Budget Tracker</a> · <a href="/debt-payoff-calculator">Debt Payoff Calculator</a> · <a href="/net-worth-calculator">Net Worth Calculator</a> · <a href="/how-to-make-a-budget">How to Make a Budget</a> · <a href="/best-budgeting-apps">Best Budgeting Apps</a></div>
+    <div><a href="/#picks">Picks</a> · <a href="/#compare">Compare</a> · <a href="https://iamagm.gumroad.com/l/personal-finance-os" target="_blank" rel="noopener noreferrer">Finance OS</a> · <a href="/#faq">FAQ</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="mailto:contact@sleptontools.com">contact@sleptontools.com</a> · <a href="/budget-tracker">Budget Tracker</a> · <a href="/debt-payoff-calculator">Debt Payoff Calculator</a> · <a href="/net-worth-calculator">Net Worth Calculator</a> · <a href="/best-budgeting-apps">Best Budgeting Apps</a> · <a href="/how-to-make-a-budget">How to Make a Budget</a></div>
     <div class="mono">Not financial advice. Do your own research.</div>
   </div>
 </footer>
@@ -614,11 +563,12 @@ footer .mono{font-family:'IBM Plex Mono',monospace}
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "sleptontools_debt_v1";
+  var STORAGE_KEY = "sleptontools_networth_v1";
 
   var state = {
-    extra: 0,
-    debts: [] // {id, name, balance, apr, minPayment}
+    assets: [], // {id, name, value}
+    debts: [],  // {id, name, balance}
+    snapshots: [] // {monthKey, label, netWorth}
   };
 
   function load() {
@@ -627,8 +577,9 @@ footer .mono{font-family:'IBM Plex Mono',monospace}
       if (raw) {
         var parsed = JSON.parse(raw);
         if (parsed && typeof parsed === "object") {
-          state.extra = Number(parsed.extra) || 0;
+          state.assets = Array.isArray(parsed.assets) ? parsed.assets : [];
           state.debts = Array.isArray(parsed.debts) ? parsed.debts : [];
+          state.snapshots = Array.isArray(parsed.snapshots) ? parsed.snapshots : [];
         }
       }
     } catch (e) { /* corrupted or unavailable storage — start fresh */ }
@@ -640,7 +591,8 @@ footer .mono{font-family:'IBM Plex Mono',monospace}
 
   function money(n) {
     var v = Number(n) || 0;
-    return "$" + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    var sign = v < 0 ? "-" : "";
+    return sign + "$" + Math.abs(v).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
   function uid() {
@@ -653,170 +605,154 @@ footer .mono{font-family:'IBM Plex Mono',monospace}
     return div.innerHTML;
   }
 
-  var extraInput   = document.getElementById("extraInput");
-  var debtList     = document.getElementById("debtList");
-  var debtCount    = document.getElementById("debtCount");
+  var assetList  = document.getElementById("assetList");
+  var assetCount = document.getElementById("assetCount");
+  var newAssetName  = document.getElementById("newAssetName");
+  var newAssetValue = document.getElementById("newAssetValue");
+  var addAssetBtn   = document.getElementById("addAssetBtn");
+
+  var debtList  = document.getElementById("debtList");
+  var debtCount = document.getElementById("debtCount");
   var newDebtName  = document.getElementById("newDebtName");
   var newDebtBalance = document.getElementById("newDebtBalance");
-  var newDebtApr   = document.getElementById("newDebtApr");
-  var newDebtMin   = document.getElementById("newDebtMin");
   var addDebtBtn   = document.getElementById("addDebtBtn");
-  var resetBtn     = document.getElementById("resetBtn");
 
-  var snowMonths   = document.getElementById("snowMonths");
-  var snowInterest = document.getElementById("snowInterest");
-  var snowBadge    = document.getElementById("snowballBadge");
-  var snowBar      = document.getElementById("snowBar");
-  var avaMonths    = document.getElementById("avaMonths");
-  var avaInterest  = document.getElementById("avaInterest");
-  var avaBadge     = document.getElementById("avalancheBadge");
-  var avaBar       = document.getElementById("avaBar");
+  var rAssets    = document.getElementById("rAssets");
+  var rDebts     = document.getElementById("rDebts");
+  var rNetWorth  = document.getElementById("rNetWorth");
+  var saveSnapshotBtn = document.getElementById("saveSnapshotBtn");
+  var snapshotList = document.getElementById("snapshotList");
 
-  // ── payoff simulation ──
-  function simulate(debts, extra, mode) {
-    if (!debts.length) return { months: 0, totalInterest: 0 };
-    var ordered = debts.slice().sort(function (a, b) {
-      return mode === "snowball" ? a.balance - b.balance : b.apr - a.apr;
-    });
-    var work = ordered.map(function (d) {
-      return { balance: Number(d.balance) || 0, apr: Number(d.apr) || 0, minPayment: Number(d.minPayment) || 0 };
-    });
-    var totalMin = work.reduce(function (s, d) { return s + d.minPayment; }, 0);
-    var budget = totalMin + (Number(extra) || 0);
-    var months = 0, totalInterest = 0, maxMonths = 600;
-
-    while (work.some(function (d) { return d.balance > 0.01; }) && months < maxMonths) {
-      months++;
-      work.forEach(function (d) {
-        if (d.balance > 0) {
-          var interest = d.balance * (d.apr / 100 / 12);
-          d.balance += interest;
-          totalInterest += interest;
-        }
-      });
-      var freeBudget = budget;
-      work.forEach(function (d) {
-        if (d.balance > 0) {
-          var pay = Math.min(d.minPayment, d.balance);
-          d.balance -= pay;
-          freeBudget -= pay;
-        }
-      });
-      for (var i = 0; i < work.length && freeBudget > 0.01; i++) {
-        if (work[i].balance > 0) {
-          var extraPay = Math.min(freeBudget, work[i].balance);
-          work[i].balance -= extraPay;
-          freeBudget -= extraPay;
-        }
-      }
+  function renderLineItems(list, container, isDebt) {
+    container.innerHTML = "";
+    if (list.length === 0) {
+      container.innerHTML = '<div class="item-empty">Nothing added yet.</div>';
+      return;
     }
-    return { months: months, totalInterest: totalInterest, hitCap: months >= maxMonths };
+    list.forEach(function (item) {
+      var amount = isDebt ? item.balance : item.value;
+      var el = document.createElement("div");
+      el.className = "item" + (isDebt ? " debt-item" : "");
+      el.innerHTML =
+        '<span class="item-name">' + esc(item.name) + '</span>' +
+        '<span class="item-value">' + money(amount) + '</span>' +
+        '<span class="item-actions"><button class="btn btn-ghost" data-remove="' + item.id + '" data-kind="' + (isDebt ? "debt" : "asset") + '">Remove</button></span>';
+      container.appendChild(el);
+    });
   }
 
   function render() {
-    if (document.activeElement !== extraInput) {
-      extraInput.value = state.extra ? state.extra : "";
-    }
+    renderLineItems(state.assets, assetList, false);
+    renderLineItems(state.debts, debtList, true);
 
-    debtList.innerHTML = "";
-    if (state.debts.length === 0) {
-      debtList.innerHTML = '<div class="debt-empty">No debts added yet. Add your first one below.</div>';
-    } else {
-      state.debts.forEach(function (d) {
-        var el = document.createElement("div");
-        el.className = "debt";
-        el.innerHTML =
-          '<div class="debt-top">' +
-            '<span class="debt-name">' + esc(d.name) + '</span>' +
-            '<span class="debt-figures"><b>' + money(d.balance) + '</b> at ' + (Number(d.apr) || 0) + '% APR</span>' +
-          '</div>' +
-          '<div class="debt-fields">' +
-            '<div><label>Balance $</label><input type="number" inputmode="decimal" min="0" step="0.01" data-field="balance" data-id="' + d.id + '" value="' + esc(String(d.balance)) + '"></div>' +
-            '<div><label>APR %</label><input type="number" inputmode="decimal" min="0" step="0.01" data-field="apr" data-id="' + d.id + '" value="' + esc(String(d.apr)) + '"></div>' +
-            '<div><label>Min payment $</label><input type="number" inputmode="decimal" min="0" step="0.01" data-field="minPayment" data-id="' + d.id + '" value="' + esc(String(d.minPayment)) + '"></div>' +
-          '</div>' +
-          '<div style="text-align:right"><button class="btn btn-ghost" data-remove="' + d.id + '">Remove</button></div>';
-        debtList.appendChild(el);
-      });
-    }
+    assetCount.textContent = state.assets.length + (state.assets.length === 1 ? " asset" : " assets");
     debtCount.textContent = state.debts.length + (state.debts.length === 1 ? " debt" : " debts");
 
-    var snow = simulate(state.debts, state.extra, "snowball");
-    var ava = simulate(state.debts, state.extra, "avalanche");
+    var totalAssets = state.assets.reduce(function (s, a) { return s + (Number(a.value) || 0); }, 0);
+    var totalDebts = state.debts.reduce(function (s, d) { return s + (Number(d.balance) || 0); }, 0);
+    var netWorth = totalAssets - totalDebts;
 
-    snowMonths.textContent = state.debts.length ? snow.months + (snow.hitCap ? "+" : "") : "—";
-    snowInterest.textContent = state.debts.length ? money(snow.totalInterest) : "—";
-    avaMonths.textContent = state.debts.length ? ava.months + (ava.hitCap ? "+" : "") : "—";
-    avaInterest.textContent = state.debts.length ? money(ava.totalInterest) : "—";
+    rAssets.textContent = money(totalAssets);
+    rDebts.textContent = money(totalDebts);
+    rNetWorth.textContent = money(netWorth);
+    rNetWorth.className = "rl-value " + (netWorth >= 0 ? "nw-positive" : "nw-negative");
 
-    if (state.debts.length && (snow.totalInterest > 0 || ava.totalInterest > 0)) {
-      var maxInt = Math.max(snow.totalInterest, ava.totalInterest, 1);
-      snowBar.style.width = Math.round((snow.totalInterest / maxInt) * 100) + "%";
-      avaBar.style.width = Math.round((ava.totalInterest / maxInt) * 100) + "%";
-      snowBadge.textContent = snow.totalInterest <= ava.totalInterest ? "Cheaper" : "";
-      avaBadge.textContent = ava.totalInterest <= snow.totalInterest ? "Cheaper" : "";
-    } else {
-      snowBar.style.width = "0%";
-      avaBar.style.width = "0%";
-      snowBadge.textContent = "—";
-      avaBadge.textContent = "—";
-    }
+    renderSnapshots();
   }
 
-  extraInput.addEventListener("input", function () {
-    state.extra = Math.max(Number(extraInput.value) || 0, 0);
+  function renderSnapshots() {
+    snapshotList.innerHTML = "";
+    if (state.snapshots.length === 0) {
+      snapshotList.innerHTML = '<div class="snapshot-empty">No snapshots saved yet.</div>';
+      return;
+    }
+    var sorted = state.snapshots.slice().sort(function (a, b) { return a.monthKey < b.monthKey ? 1 : -1; });
+    sorted.forEach(function (snap) {
+      var row = document.createElement("div");
+      row.className = "snapshot-row";
+      var nwClass = snap.netWorth >= 0 ? "nw-positive" : "nw-negative";
+      row.innerHTML =
+        '<span class="sr-date">' + esc(snap.label) + '</span>' +
+        '<span class="sr-nw ' + nwClass + '">' + money(snap.netWorth) + '</span>';
+      snapshotList.appendChild(row);
+    });
+  }
+
+  function addAsset() {
+    var name = newAssetName.value.trim();
+    var value = Math.max(Number(newAssetValue.value) || 0, 0);
+    if (!name) { newAssetName.focus(); return; }
+    state.assets.push({ id: uid(), name: name, value: value });
+    newAssetName.value = "";
+    newAssetValue.value = "";
+    newAssetName.focus();
     save();
     render();
-  });
+  }
 
   function addDebt() {
     var name = newDebtName.value.trim();
     var balance = Math.max(Number(newDebtBalance.value) || 0, 0);
-    var apr = Math.max(Number(newDebtApr.value) || 0, 0);
-    var minPayment = Math.max(Number(newDebtMin.value) || 0, 0);
     if (!name) { newDebtName.focus(); return; }
-    state.debts.push({ id: uid(), name: name, balance: balance, apr: apr, minPayment: minPayment });
+    state.debts.push({ id: uid(), name: name, balance: balance });
     newDebtName.value = "";
     newDebtBalance.value = "";
-    newDebtApr.value = "";
-    newDebtMin.value = "";
     newDebtName.focus();
     save();
     render();
   }
 
+  addAssetBtn.addEventListener("click", addAsset);
+  [newAssetName, newAssetValue].forEach(function (el) {
+    el.addEventListener("keydown", function (e) { if (e.key === "Enter") addAsset(); });
+  });
+
   addDebtBtn.addEventListener("click", addDebt);
-  [newDebtName, newDebtBalance, newDebtApr, newDebtMin].forEach(function (el) {
+  [newDebtName, newDebtBalance].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") addDebt(); });
   });
 
-  debtList.addEventListener("input", function (e) {
-    var field = e.target.getAttribute("data-field");
-    var id = e.target.getAttribute("data-id");
-    if (!field || !id) return;
-    var debt = state.debts.find(function (d) { return d.id === id; });
-    if (!debt) return;
-    debt[field] = Math.max(Number(e.target.value) || 0, 0);
-    save();
-    render();
-  });
-
-  debtList.addEventListener("click", function (e) {
+  function handleRemove(e) {
     var removeId = e.target.getAttribute("data-remove");
+    var kind = e.target.getAttribute("data-kind");
     if (!removeId) return;
-    var target = state.debts.find(function (d) { return d.id === removeId; });
-    var label = target ? target.name : "this debt";
-    if (confirm('Remove "' + label + '"?')) {
-      state.debts = state.debts.filter(function (d) { return d.id !== removeId; });
-      save();
-      render();
+    if (kind === "asset") {
+      var a = state.assets.find(function (x) { return x.id === removeId; });
+      if (a && confirm('Remove "' + a.name + '"?')) {
+        state.assets = state.assets.filter(function (x) { return x.id !== removeId; });
+        save();
+        render();
+      }
+    } else if (kind === "debt") {
+      var d = state.debts.find(function (x) { return x.id === removeId; });
+      if (d && confirm('Remove "' + d.name + '"?')) {
+        state.debts = state.debts.filter(function (x) { return x.id !== removeId; });
+        save();
+        render();
+      }
     }
-  });
+  }
 
-  resetBtn.addEventListener("click", function () {
-    if (!state.debts.length) return;
-    if (!confirm("Clear all debts? This can't be undone.")) return;
-    state.debts = [];
+  assetList.addEventListener("click", handleRemove);
+  debtList.addEventListener("click", handleRemove);
+
+  saveSnapshotBtn.addEventListener("click", function () {
+    var now = new Date();
+    var monthKey = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0");
+    var monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var label = monthNames[now.getMonth()] + " " + now.getFullYear();
+
+    var totalAssets = state.assets.reduce(function (s, a) { return s + (Number(a.value) || 0); }, 0);
+    var totalDebts = state.debts.reduce(function (s, d) { return s + (Number(d.balance) || 0); }, 0);
+    var netWorth = totalAssets - totalDebts;
+
+    var existing = state.snapshots.find(function (s) { return s.monthKey === monthKey; });
+    if (existing) {
+      existing.netWorth = netWorth;
+      existing.label = label;
+    } else {
+      state.snapshots.push({ monthKey: monthKey, label: label, netWorth: netWorth });
+    }
     save();
     render();
   });

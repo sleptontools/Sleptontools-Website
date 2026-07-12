@@ -5,6 +5,7 @@
     { title: "Home", description: "Honest reviews of budgeting apps, savings tools, and money systems.", keywords: "reviews personal finance money apps", url: "/" },
     { title: "Budget Tracker", description: "A free budget tracker that runs in your browser — no signup, no account.", keywords: "free tool budget spending tracker", url: "/budget-tracker" },
     { title: "Debt Payoff Calculator", description: "Compare the snowball and avalanche methods side by side — free, no signup.", keywords: "debt payoff calculator snowball avalanche free tool", url: "/debt-payoff-calculator" },
+    { title: "Net Worth Calculator", description: "Add your assets and debts, track your net worth over time — free, no signup.", keywords: "net worth calculator free tool assets debts tracker", url: "/net-worth-calculator" },
     { title: "Acorns Review", description: "The fee math nobody shows you.", keywords: "acorns micro investing round ups", url: "/acorns-review" },
     { title: "YNAB Review", description: "Is $109/year worth it? The honest math.", keywords: "ynab budgeting zero based", url: "/ynab-review" },
     { title: "Rocket Money Review", description: "Free vs Premium and the fees to watch.", keywords: "rocket money subscriptions cancel", url: "/rocket-money-review" },
