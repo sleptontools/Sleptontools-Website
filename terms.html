@@ -112,6 +112,34 @@ footer a{color:#fff}
 footer a:hover{color:#8FC1FF}
 @keyframes flagbg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 @media(prefers-reduced-motion:reduce){footer{animation:none}}
+
+/* ===== TERMS PAGE REDESIGN ===== */
+main.legal-layout{max-width:1080px;display:grid;grid-template-columns:1fr 220px;gap:40px;align-items:start;padding:0 20px 60px}
+.legal-content{max-width:800px;min-width:0}
+.legal-hero{margin:6px 0 14px}
+.legal-stamp{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);background:#fff;border:2px dashed var(--mint);border-radius:4px;padding:7px 16px;transform:rotate(-2deg);box-shadow:2px 2px 0 rgba(23,201,123,.25)}
+.meta{display:inline-flex;align-items:center;border:1px solid var(--line);border-top:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 16px;width:auto}
+.summary-box{background:#fff;border:1.5px solid var(--ink);border-left:5px solid var(--green);padding:13px 16px;font-size:14px;margin:20px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.summary-box::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(14,122,75,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.summary-box:hover{transform:translateY(-2px);box-shadow:4px 4px 0 var(--ink)}
+.summary-box:hover::before{transform:translateX(100%)}
+.summary-box ul{list-style:none;margin:0;padding:0}
+.summary-box li{font-family:'IBM Plex Mono',monospace;font-size:13px;padding-left:22px;position:relative;margin-bottom:8px}
+.summary-box li:last-child{margin-bottom:0}
+.summary-box li::before{content:'✓';position:absolute;left:0;top:0;color:var(--green);font-weight:700}
+.tos-block{border-left:4px solid var(--mint);padding:6px 0 6px 20px;margin:28px 0;scroll-margin-top:90px}
+.tos-block.alt{background:rgba(23,201,123,.05)}
+.tos-block h2{margin-top:0}
+.toc-sidebar{position:sticky;top:90px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;border:1.5px solid var(--ink);background:#fff;padding:16px;box-shadow:4px 4px 0 var(--ink)}
+.toc-label{text-transform:uppercase;letter-spacing:1px;font-weight:700;color:var(--dim);margin-bottom:10px;font-size:11px}
+.toc-sidebar a{display:block;color:var(--ink);text-decoration:none;padding:6px 0;border-bottom:1px dashed var(--line)}
+.toc-sidebar a:last-child{border-bottom:none}
+.toc-sidebar a:hover{color:var(--green)}
+@media(max-width:900px){
+  main.legal-layout{display:block;max-width:800px}
+  .legal-content{max-width:none}
+  .toc-sidebar{display:none}
+}
 </style>
 </head>
 <body>
@@ -179,47 +207,94 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </header>
-<main>
+<main class="legal-layout">
+<div class="legal-content">
 <div class="breadcrumb"><a href="/">Home</a> / Terms of Service</div>
 <h1>Terms of Service</h1>
+<div class="legal-hero"><span class="legal-stamp">LEGAL DOC</span></div>
 <div class="meta">LAST UPDATED JULY 7, 2026</div>
 
 <p>These terms govern your use of sleptontools.com ("we," "us," "this site"). By visiting or using this site, you agree to these terms. If you don't agree, please don't use the site.</p>
 
+<div class="summary-box">
+  <ul>
+    <li>This site earns affiliate commissions — disclosed on every page</li>
+    <li>Nothing here is financial advice</li>
+    <li>Content is for informational purposes only</li>
+  </ul>
+</div>
+
+<div class="tos-block" id="what-this-site-is">
 <h2>What this site is</h2>
 <p>sleptontools publishes independent reviews and comparisons of personal finance apps, budgeting tools, investing platforms, and related software. We also sell our own digital product (the Personal Finance OS Notion template) and participate in affiliate marketing programs, meaning we may earn a commission when you sign up for a product through a link on this site.</p>
+</div>
 
+<div class="tos-block alt" id="not-financial-advice">
 <h2>Not financial advice</h2>
 <div class="note"><strong>Nothing on this site is financial, investment, tax, or legal advice.</strong> Content is for informational and educational purposes only. We are not licensed financial advisors, accountants, or attorneys. Before making any financial decision, consider consulting a qualified professional who understands your specific situation.</div>
 <p>Reviews, comparisons, and scores reflect our own research and opinions at the time of publication. Pricing, features, and terms of third-party products change — we verify pricing regularly, but you should always confirm current details directly with the provider before signing up.</p>
+</div>
 
+<div class="tos-block" id="accuracy-of-information">
 <h2>Accuracy of information</h2>
 <p>We make a genuine effort to keep information accurate and current, including re-verifying prices before publishing or updating an article. That said, we don't guarantee that every detail is error-free or fully up to date at every moment. If you spot something outdated or incorrect, we want to know — contact details are on our <a href="/about">About page</a>.</p>
+</div>
 
+<div class="tos-block alt" id="affiliate-links-and-monetization">
 <h2>Affiliate links and monetization</h2>
 <p>Some links on this site are affiliate links, clearly disclosed on the pages where they appear. If you sign up for a product through one of these links, we may earn a commission at no extra cost to you. Affiliate relationships never influence our scores or recommendations — a partner paying us doesn't change whether we tell you their product has real weaknesses. Full detail is in our <a href="/privacy-policy">Privacy Policy</a>.</p>
+</div>
 
+<div class="tos-block" id="third-party-products-and-websites">
 <h2>Third-party products and websites</h2>
 <p>This site reviews and links to products and services we don't own or control (YNAB, Rocket Money, Acorns, Robinhood, Webull, Empower, <a href="https://wise.com/?clickref=1011lDmjaSZX&partnerID=1011l434774&utm_medium=affiliate&utm_campaign=0&adref=&utm_source=sleptontools&partnerizecampaignID=1011l727" target="_blank" rel="sponsored noopener">Wise</a>, and others). We aren't responsible for those companies' products, pricing, terms, customer service, or any issues that arise from your use of them. Your relationship with any third-party product is governed by that company's own terms, not ours.</p>
+</div>
 
+<div class="tos-block alt" id="our-own-product">
 <h2>Our own product</h2>
 <p>The Personal Finance OS is our own digital Notion template, sold through Gumroad. Purchases of that product are subject to Gumroad's own terms and any specific terms stated at the point of purchase. As a digital product, sales are generally final except where required otherwise by law.</p>
+</div>
 
+<div class="tos-block" id="intellectual-property">
 <h2>Intellectual property</h2>
 <p>The content on this site — articles, reviews, comparisons, graphics, and the sleptontools name and logo — is our own work and may not be copied, republished, or distributed without permission. You're welcome to link to our pages or quote a brief excerpt with attribution.</p>
+</div>
 
+<div class="tos-block alt" id="no-warranties">
 <h2>No warranties</h2>
 <p>This site and its content are provided "as is," without warranties of any kind, express or implied. We don't guarantee the site will be error-free, uninterrupted, or that any recommendation will produce a particular financial outcome for you.</p>
+</div>
 
+<div class="tos-block" id="limitation-of-liability">
 <h2>Limitation of liability</h2>
 <p>To the fullest extent permitted by law, sleptontools is not liable for any direct, indirect, incidental, or consequential damages arising from your use of this site, reliance on its content, or your dealings with any third-party product or service mentioned here. Financial decisions are your own responsibility.</p>
+</div>
 
+<div class="tos-block alt" id="changes-to-these-terms">
 <h2>Changes to these terms</h2>
 <p>We may update these terms as the site evolves. The "last updated" date at the top will always reflect the most recent version. Continued use of the site after changes means you accept the updated terms.</p>
+</div>
 
+<div class="tos-block" id="contact">
 <h2>Contact</h2>
 <p>Questions about these terms can be sent through the contact details on our <a href="/about">About page</a>.</p>
+</div>
 
+</div>
+<aside class="toc-sidebar">
+  <div class="toc-label">On this page</div>
+  <a href="#what-this-site-is">What this site is</a>
+  <a href="#not-financial-advice">Not financial advice</a>
+  <a href="#accuracy-of-information">Accuracy of information</a>
+  <a href="#affiliate-links-and-monetization">Affiliate links and monetization</a>
+  <a href="#third-party-products-and-websites">Third-party products and websites</a>
+  <a href="#our-own-product">Our own product</a>
+  <a href="#intellectual-property">Intellectual property</a>
+  <a href="#no-warranties">No warranties</a>
+  <a href="#limitation-of-liability">Limitation of liability</a>
+  <a href="#changes-to-these-terms">Changes to these terms</a>
+  <a href="#contact">Contact</a>
+</aside>
 </main>
 <footer>
   <div class="wrap frow">
