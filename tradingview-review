@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.defer=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4NQ244R');</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>TradingView Review (2026): Is the Plus Plan Worth It?</title>
+<meta name="description" content="TradingView review with verified 2026 pricing — why the free plan falls short for active traders, what Plus actually unlocks, and whether $29.95/month is worth it.">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="TradingView Review (2026): Is the Plus Plan Worth It?" />
+<meta name="twitter:description" content="TradingView review with verified 2026 pricing — why the free plan falls short for active traders, what Plus actually unlocks, and whether $29.95/month is worth it." />
+<meta name="twitter:image" content="https://sleptontools.com/og-image.png" />
+<meta property="og:image" content="https://sleptontools.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<link rel="canonical" href="https://sleptontools.com/tradingview-review">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,500..900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap&font-display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,500..900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap&font-display=swap"></noscript>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"TradingView Plus","review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"4.3","bestRating":"5","worstRating":"1"},"author":{"@type":"Organization","name":"Sleptontools"},"publisher":{"@type":"Organization","name":"Sleptontools","url":"https://sleptontools.com"}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"TradingView Review: The Free Plan Is Good. That's the Problem.","author":{"@type":"Organization","name":"sleptontools"},"publisher":{"@type":"Organization","name":"sleptontools"},"datePublished":"2026-07-21","dateModified":"2026-07-21","mainEntityOfPage":"https://sleptontools.com/tradingview-review"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is TradingView free?","acceptedAnswer":{"@type":"Answer","text":"Yes — TradingView has a permanent free plan with 1 chart, 2 indicators, and 1 expiring alert. It's a real tool, not a demo. The limits become the bottleneck once you're doing serious analysis."}},
+{"@type":"Question","name":"What does Plus add over the free plan?","acceptedAnswer":{"@type":"Answer","text":"Four charts per tab, ten indicators, 100 price alerts with webhook support, and 365 days of minute-bar history. It's the first plan where the platform stops feeling like it's working against you."}},
+{"@type":"Question","name":"Does TradingView have a free trial?","acceptedAnswer":{"@type":"Answer","text":"Yes — Essential, Plus, and Premium each include a 30-day free trial. Cancel before the trial ends and you're not charged."}},
+{"@type":"Question","name":"Do I need to pay extra for real-time futures data?","acceptedAnswer":{"@type":"Answer","text":"Yes. CME Group data (ES, NQ, CL, GC, and the rest) is 10 minutes delayed by default on all plans. Real-time CME data is $7/month extra. If you're trading futures intraday, add that to your total cost."}},
+{"@type":"Question","name":"Can I use TradingView with any broker?","acceptedAnswer":{"@type":"Answer","text":"Yes. TradingView is a charting platform, not a broker. You analyze there and execute through your brokerage. 100+ brokers are directly integrated, or you can use it standalone alongside any execution platform."}},
+{"@type":"Question","name":"Do alerts expire on Plus?","acceptedAnswer":{"@type":"Answer","text":"Yes — alerts expire after 60 days on Free, Essential, and Plus. Non-expiring alerts are a Premium feature. Set a reminder to renew your alerts if you're on Plus and running longer-term levels."}}
+]}
+</script>
+<style>
+/* ===== HEADER - matches index.html exactly ===== */
+header{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+.hinner{max-width:1080px;margin:0 auto;padding:8px 24px;display:flex;align-items:flex-end;justify-content:space-between}
+.logo img{display:block;width:auto;height:30px}
+.logo{text-decoration:none;line-height:0}
+.navlinks{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:500;line-height:1}
+.navlinks>a{color:var(--ink);text-decoration:none;padding:7px 10px;border-radius:5px}
+.navlinks>a:hover{background:var(--green);color:#fff}
+.navdrop{position:relative}
+.navdrop>span{cursor:pointer;display:inline-flex;align-items:center;gap:4px;color:var(--ink);padding:7px 10px;border-radius:5px;font-size:14px;font-weight:500}
+.navdrop>span:hover{background:var(--green);color:#fff}
+.navdrop>span::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;display:inline-block}
+.navdrop .menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);opacity:0;visibility:hidden;transition:opacity .15s;z-index:60;min-width:200px}
+.navdrop:hover .menu,.navdrop:focus-within .menu{opacity:1;visibility:visible}
+.navdrop .menu-inner{background:#fff;border:1.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.navdrop .menu-inner a{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:13px;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+.navdrop .menu-inner a:last-child{border-bottom:none}
+.navdrop .menu-inner a:hover{background:var(--paper)}
+.dot.g{background:var(--green);width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+.dot.b{background:var(--blue);width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+.dot.gd{background:var(--gold);width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{width:22px;height:2px;background:var(--ink);display:block}
+.mobilenav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 16px;box-shadow:0 6px 14px rgba(0,0,0,.08);z-index:59}
+.mobilenav.open{display:block}
+.mobilenav a{display:block;padding:11px 0;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--line)}
+.mobilenav .subhead{font-size:11px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);padding:12px 0 2px}
+.mobilenav a.sub{padding-left:12px;font-size:14px}
+@media(max-width:640px){.navlinks{display:none}.hamburger{display:flex}}
+.search-wrap{position:relative;display:flex;align-items:center}
+.search-toggle{background:none;border:none;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;color:var(--ink)}
+.search-toggle:hover{color:var(--green)}
+.search-toggle svg{width:18px;height:18px;display:block}
+.search-box{display:none;position:absolute;top:calc(100% + 10px);right:0;background:var(--paper);border:1.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:10px;width:280px;z-index:80}
+.search-box.open{display:block}
+.search-input{width:100%;font-family:'IBM Plex Mono',monospace;font-size:13px;padding:9px 10px;border:1.5px solid var(--line);background:#fff;color:var(--ink)}
+.search-input:focus{outline:none;border-color:var(--mint)}
+.search-results{margin-top:8px;max-height:300px;overflow-y:auto}
+.search-results a{display:block;padding:9px 10px;border:1px solid var(--line);border-left:3px solid transparent;background:#fff;text-decoration:none;color:var(--ink);margin-bottom:6px}
+.search-results a:last-child{margin-bottom:0}
+.search-results a:hover{border-left-color:var(--mint)}
+.search-results .sr-title{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;display:block;color:var(--ink)}
+.search-results .sr-desc{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);display:block;margin-top:3px}
+.search-empty{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim);padding:8px 2px}
+@media(max-width:640px){.search-wrap{position:static}.search-box{left:12px;right:12px;top:100%;width:auto}}
+
+/* ===== END HEADER ===== */
+:root{--ink:#101312;--paper:#F2F3F1;--green:#0E7A4B;--mint:#17C97B;--blue:#1D6FE0;--gold:#C9A227;--red:#B3402A;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:var(--green)}
+nav a{color:var(--ink);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:13px;margin-left:18px;opacity:.85}
+nav a:hover{opacity:1;color:var(--blue)}
+main{max-width:860px;margin:0 auto;padding:0 20px 60px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:12px;padding:18px 0 6px;color:#555}
+.breadcrumb a{color:#555;text-decoration:none}
+h1{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.08;margin:10px 0 14px;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--blue)}
+h2{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:800;font-size:26px;margin:44px 0 14px;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:6px}
+h3{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:700;font-size:19px;margin:26px 0 8px}
+p{margin:0 0 16px}
+.meta{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#555;border-top:1px dashed #999;border-bottom:1px dashed #999;padding:8px 0;margin-bottom:4px}
+.byline{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#555;margin-bottom:18px}
+.disclosure{background:#fff;border:1.5px solid var(--ink);border-left:5px solid var(--gold);padding:13px 16px;font-size:13.5px;margin-bottom:26px}
+.shot{border:2px solid var(--ink);overflow:hidden;margin:26px 0;box-shadow:6px 6px 0 var(--ink);background:#fff}
+.shot a{display:block;line-height:0}
+.shot img{display:block;width:100%;height:auto}
+.shot .cap{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#555;padding:10px 14px;border-top:1px solid var(--line)}
+.verdict{border:2px solid var(--ink);background:#fff;padding:22px;margin:26px 0;box-shadow:6px 6px 0 var(--ink)}
+.verdict .label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--blue)}
+.scorerow{display:flex;gap:24px;flex-wrap:wrap;margin:14px 0}
+.scorebox{flex:1;min-width:200px;border:1px dashed #999;padding:12px 16px;background:#EAF1FC}
+.score{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--blue)}
+.score small{font-size:16px;color:#777}
+.factgrid{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--ink);margin:18px 0;overflow:hidden}
+@media(max-width:640px){.factgrid{grid-template-columns:1fr}}
+.factcard{padding:14px 16px;transition:background .15s ease}
+.factcard:hover{background:#EAF1FC}
+.factcard h4{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--blue);margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);display:flex;align-items:center;gap:8px}
+.factcard .num{width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0}
+.factcard .pick{background:var(--blue);color:#fff;font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:3px;margin-left:auto}
+.factcard p{font-size:14.5px;margin:0}
+.factcard:nth-child(odd){border-right:2px solid var(--ink)}
+.factcard:not(:nth-last-child(-n+2)){border-bottom:2px solid var(--ink)}
+@media(max-width:640px){.factcard{border-right:none !important}.factcard:not(:last-child){border-bottom:2px solid var(--ink) !important}}
+.callout{border:2px solid var(--red);background:#FBEFEA;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.callout::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.callout:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
+.callout:hover::before{transform:translateX(100%)}
+.callout .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:600}
+.insight{border:2px solid var(--blue);background:#EAF1FC;padding:16px 18px;margin:22px 0;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.insight::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(29,111,224,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.insight:hover{transform:translateY(-3px);box-shadow:5px 5px 0 var(--ink)}
+.insight:hover::before{transform:translateX(100%)}
+.insight .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:600}
+.insight ul.checklist{list-style:none;padding-left:0;margin-top:10px}
+.insight ul.checklist li{padding-left:22px;position:relative;margin-bottom:9px;font-size:14.5px}
+.insight ul.checklist li:last-child{margin-bottom:0}
+.insight ul.checklist li::before{content:'✓';position:absolute;left:0;color:var(--blue);font-weight:700}
+.cta{background:var(--ink);color:var(--paper);padding:24px;margin:30px 0;text-align:center}
+.cta h3{color:#6FA8F5;margin-top:0}
+.btn{display:inline-block;background:var(--blue);color:#fff;font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:13px 26px;text-decoration:none;margin:8px 6px 4px;border:2px solid var(--ink);transition:transform .12s ease}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.fineprint{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#999;margin-top:8px}
+.cta .fineprint{color:#aaa}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0;position:relative}
+.grid::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-50%);margin-left:-9px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}.grid::before{display:none}}
+.pros,.cons{border:2px solid var(--ink);padding:18px;background:#fff;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.pros{border-left:6px solid var(--blue)}
+.cons{border-left:6px solid var(--red)}
+.pros::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(29,111,224,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.cons::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(120deg,transparent 40%,rgba(179,64,42,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .5s ease}
+.pros:hover,.cons:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--ink)}
+.pros:hover::before,.cons:hover::before{transform:translateX(100%)}
+.pros h4{color:var(--blue);display:flex;align-items:center;gap:6px}
+.pros h4::before{content:'✓';font-size:14px}
+.cons h4{color:var(--red);display:flex;align-items:center;gap:6px}
+.cons h4::before{content:'✕';font-size:13px}
+.pros h4,.cons h4{font-family:'IBM Plex Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.wholist ul{padding-left:18px}
+.pros ul,.cons ul{padding-left:0;list-style:none}
+.pros li,.cons li,.wholist li{margin-bottom:0;font-size:15px;font-weight:400}
+.pros li,.cons li{padding-left:20px;padding-bottom:10px;padding-top:2px;position:relative;border-bottom:1px dashed var(--line)}
+.pros li:last-child,.cons li:last-child{border-bottom:none}
+.pros li::before{content:'+';position:absolute;left:0;color:var(--blue);font-weight:600}
+.cons li::before{content:'–';position:absolute;left:0;color:var(--red);font-weight:600}
+.tablewrap{overflow-x:auto;border:1.5px solid var(--ink);margin:20px 0;box-shadow:6px 6px 0 var(--ink)}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14px;min-width:680px}
+th{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.5px;text-transform:uppercase;text-align:left;background:var(--ink);color:var(--paper);padding:12px 14px}
+td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:#EBF6F0}
+td:nth-child(2){background:#FBEFEA}
+td:nth-child(4){background:#EAF1FC;font-weight:600}
+th:nth-child(4){color:var(--mint)}
+.faq details{border:1px solid #ccc;margin-bottom:10px;background:#fff}
+.faq summary{padding:14px 16px;font-weight:600;cursor:pointer;font-size:15.5px}
+.faq details p{padding:0 16px 14px;font-size:15px}
+.related{border:2px solid var(--ink);padding:18px;margin:34px 0;background:#fff}
+.related .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.related ul{list-style:none;margin-top:10px}
+.related li{padding:7px 0;border-bottom:1px dashed #ccc}
+
+@media(max-width:640px){
+            }
+@media(max-width:700px){
+            }
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+@media(max-width:640px){
+}
+footer{background:linear-gradient(120deg,var(--ink) 0%,#0B2E1F 45%,var(--ink) 100%);background-size:200% 200%;animation:flagbg 16s ease infinite;border-top:2px solid var(--mint);padding:32px 0;margin-top:56px;font-size:13px;color:#fff}
+footer .wrap{padding:0 24px}
+footer .frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#fff}
+footer a:hover{color:#8FC1FF}
+@keyframes flagbg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media(prefers-reduced-motion:reduce){footer{animation:none}}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4NQ244R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <div class="hinner" style="position:relative">
+    <a class="logo" href="/"><picture><source srcset="logo-full.webp" type="image/webp"><img src="logo-full.png" alt="sleptontools" width="120" height="30"></picture></a>
+    <div class="navlinks">
+      <a href="/">Home</a>
+      <div class="navdrop" tabindex="0">
+        <span>Reviews</span>
+        <div class="menu">
+          <div class="menu-inner">
+            <a href="/budgeting-apps"><span class="dot g"></span>Budgeting apps</a>
+            <a href="/investing-apps"><span class="dot b"></span>Investing apps</a>
+            <a href="/best-budgeting-apps"><span class="dot gd"></span>Best Budgeting Apps</a>
+          </div>
+        </div>
+      </div>
+      <div class="navdrop" tabindex="0">
+        <span>Free Tools</span>
+        <div class="menu">
+          <div class="menu-inner">
+            <a href="/budget-tracker"><span class="dot g"></span>Budget Tracker</a>
+            <a href="/debt-payoff-calculator"><span class="dot b"></span>Debt Payoff Calculator</a>
+            <a href="/net-worth-calculator"><span class="dot gd"></span>Net Worth Calculator</a>
+          </div>
+        </div>
+      </div>
+      <div class="navdrop" tabindex="0">
+        <span>Guides</span>
+        <div class="menu">
+          <div class="menu-inner">
+            <a href="/how-to-make-a-budget"><span class="dot g"></span>How to Make a Budget</a>
+          </div>
+        </div>
+      </div>
+      <a href="/personal-finance-os-review">Finance OS</a>
+      <a href="/about">About</a>
+    </div>
+    <div class="search-wrap">
+      <button class="search-toggle" id="searchToggle" aria-label="Search" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+      <div class="search-box" id="searchBox">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search the site..." autocomplete="off">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <button class="hamburger" id="hamBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="mobilenav" id="mobileNav">
+      <a href="/">Home</a>
+      <div class="subhead">Reviews</div>
+      <a class="sub" href="/budgeting-apps"><span class="dot g"></span>Budgeting apps</a>
+      <a class="sub" href="/investing-apps"><span class="dot b"></span>Investing apps</a>
+      <a class="sub" href="/best-budgeting-apps"><span class="dot gd"></span>Best Budgeting Apps</a>
+      <div class="subhead">Free Tools</div>
+      <a class="sub" href="/budget-tracker"><span class="dot g"></span>Budget Tracker</a>
+      <a class="sub" href="/debt-payoff-calculator"><span class="dot b"></span>Debt Payoff Calculator</a>
+      <a class="sub" href="/net-worth-calculator"><span class="dot gd"></span>Net Worth Calculator</a>
+      <div class="subhead">Guides</div>
+      <a class="sub" href="/how-to-make-a-budget"><span class="dot g"></span>How to Make a Budget</a>
+      <a href="/personal-finance-os-review">Finance OS</a>
+      <a href="/about">About</a>
+    </div>
+  </div>
+</header>
+<main>
+<div class="breadcrumb"><a href="/">Home</a> / Investing / TradingView Review</div>
+
+<h1>TradingView Review: <em>The Free Plan Is Good. That's the Problem.</em></h1>
+<div class="meta">UPDATED JULY 2026 · PRICING FACT-CHECKED · ~9 MIN READ</div>
+<div class="byline">-Arlin Garcia</div>
+
+<div class="disclosure"><strong>FTC disclosure:</strong> Some links on this page are affiliate links. If you sign up through them, we may earn a commission at no extra cost to you. That never changes the score. We say what's broken.</div>
+
+<div class="verdict">
+<div class="label">The Verdict</div>
+<div class="scorerow">
+<div class="scorebox"><div class="score">4.3<small>/5</small></div><strong>TradingView Plus</strong><br><span style="font-size:14px">Professional-grade charting, real screeners, and webhook alerts that actually automate your entries — for traders who've decided the free plan's limits are the bottleneck.</span></div>
+</div>
+<p style="margin-bottom:0"><strong>Short version:</strong> TradingView's free plan is genuinely capable — and that's exactly what makes it a trap. You'll open it, like it, and build a real workflow around it. Then you'll hit the wall: one chart per tab, two indicators, alerts that expire in 60 days, no webhook support, 5,000 bars of history. The free plan isn't a demo. It's a well-designed funnel. Plus at $29.95/month (or $21.95 billed annually) is where the platform stops feeling cramped: four charts per tab, ten indicators, 100 alerts with webhook support, and 365 days of minute-bar data. If you're analyzing markets more than twice a week, the free plan is costing you more than the upgrade would.</p>
+</div>
+
+<div class="shot">
+<a href="https://www.awin1.com/cread.php?awinmid=117793&awinaffid=2976781&ued=https%3A%2F%2Fwww.tradingview.com%2Fpricing%2F%3Fsource%3Dheader_go_pro_button%26feature%3Dstart_free_trial" target="_blank" rel="nofollow noopener noreferrer">
+<img src="tradingview-screenshot-hero.jpg" alt="TradingView Plus charting dashboard with multiple chart layouts open side by side" loading="lazy" width="1440" height="560">
+</a>
+<div class="cap">TradingView's multi-chart layout — you get one chart per tab on the free plan. Plus gives you four.</div>
+</div>
+
+<h2>What TradingView actually is</h2>
+<p>TradingView is a browser-based charting and analysis platform, not a broker — over 100 million traders use it to read markets, build strategies, and track everything from stocks to crypto to forex. Nothing to install, no desktop software to keep updated. Open a tab, log in, and your layouts, watchlists, and indicators are exactly where you left them, whether you're on a laptop, a tablet, or a phone.</p>
+<p>The important thing to understand is that TradingView sits on top of your brokerage, not inside it. You chart and analyze on TradingView, then execute the trade through whatever broker actually holds your money — <a href="/webull-review">Webull</a>, Interactive Brokers, or one of the 100+ other integrated brokers. That separation is a feature: if you ever switch brokers, you're not rebuilding your entire charting setup from scratch. Your indicators, drawings, and alerts stay put.</p>
+
+<h2>Charting</h2>
+<p>The charting layer is where TradingView earns its reputation. Premium and Ultimate unlock 21 chart types — candlesticks, Heikin Ashi, Renko, volume footprint, TPO (Time Price Opportunity), range bars — on top of 110+ drawing tools covering trendlines, Fibonacci retracements, Gann fans, pitchforks, and Elliott Wave counts. This isn't a toolbox you'll ever fully use, but the depth is there when a strategy calls for it.</p>
+
+<div class="shot">
+<a href="https://www.awin1.com/cread.php?awinmid=117793&awinaffid=2976781&ued=https%3A%2F%2Fwww.tradingview.com%2Fpricing%2F%3Fsource%3Dheader_go_pro_button%26feature%3Dstart_free_trial" target="_blank" rel="nofollow noopener noreferrer">
+<img src="tradingview-charting.jpg" alt="TradingView chart showing multiple timeframes and drawing tools" loading="lazy" width="1180" height="640">
+</a>
+<div class="cap">TradingView's charting layer — drawing tools, indicators, and multi-timeframe layouts in one view.</div>
+</div>
+
+<p>Multi-chart layouts are where the plan tiers actually bite. Free gives you one chart per tab. Plus bumps that to four. Premium goes to eight, and Ultimate maxes out at sixteen. Every chart in a layout stays synchronized — symbols, timeframes, and drawings link across the charts you have open, so scrolling or switching a symbol on one updates the rest. Bar Magnifier lets you zoom into a single bar to see the tick-by-tick action that built it, and Premium/Ultimate add second-based and tick-based intervals for anyone doing real intraday precision work.</p>
+
+<h2>Indicators and screeners</h2>
+<p>TradingView ships with 400+ built-in indicators — Volume Profile, anchored VWAP, Ichimoku, the standard stuff and the less-standard stuff — plus access to a community library of 100,000+ user-published indicators and strategies. Indicators can stack on top of other indicators, which means you can build multi-timeframe analysis directly on the chart without touching Pine Script. How many you can run at once is tier-gated: 2 on Free, 5 on Essential, 10 on Plus, 25 on Premium, 50 on Ultimate.</p>
+<p>The screeners are the underrated part of the platform. There are six of them — stocks, bonds, ETFs, crypto coins, CEX pairs, DEX pairs — and the stock screener alone covers 150+ exchanges with 500+ filter fields, refreshing every 10 seconds on paid plans. Heatmaps for stocks, ETFs, and crypto group everything by sector and let you filter by market cap, volume, or price change, which makes scanning for what's actually moving today a lot faster than clicking through symbols one at a time.</p>
+
+<div class="shot">
+<a href="https://www.awin1.com/cread.php?awinmid=117793&awinaffid=2976781&ued=https%3A%2F%2Fwww.tradingview.com%2Fpricing%2F%3Fsource%3Dheader_go_pro_button%26feature%3Dstart_free_trial" target="_blank" rel="nofollow noopener noreferrer">
+<img src="tradingview-screener.jpg" alt="TradingView stock screener with filter fields and results" loading="lazy" width="1180" height="640">
+</a>
+<div class="cap">The stock screener — 500+ filter fields, real-time refresh on paid plans.</div>
+</div>
+
+<h2>Alerts and automation</h2>
+<p>Alerts can combine up to 5 conditions in one trigger — price levels, indicator values, drawing triggers, even Pine Script logic — so you're not stacking five separate alerts to watch one setup. How many alerts you can have running at once scales with plan: 1 on Free, 20 on Essential, 100 on Plus, 400 on Premium, 1,000 on Ultimate.</p>
+<p>Webhooks are the feature that actually separates Plus from everything below it. They connect your alerts to external tools or automation systems, meaning an alert can trigger something instead of just notifying you. If you want your analysis to do more than ping your phone, Plus is the minimum tier that makes that possible.</p>
+
+<div class="callout">
+<div class="tag">⚠ Alerts expire on the free plan — and on Plus</div>
+<p style="margin:8px 0 0">Free, Essential, and Plus alerts all expire after 60 days. If you set a level and walk away, you may return to find your alerts silently gone. Premium is the first tier with non-expiring alerts. If permanent alerts matter to your setup, price that into your plan decision before upgrading to Plus.</p>
+</div>
+
+<h2 style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:34px;border-radius:50%;background:#2E5BFF;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:11px;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--ink);text-transform:none;letter-spacing:0">TV</span>Pricing, fact-checked today</h2>
+<div class="factgrid">
+<div class="factcard"><h4><span class="num">1</span>Free (Basic)</h4><p>$0/month, always free</p></div>
+<div class="factcard"><h4><span class="num">2</span>Essential</h4><p>$14.95/month · $12.95/month billed annually</p></div>
+<div class="factcard"><h4><span class="num">3</span>Plus<span class="pick">Recommended</span></h4><p>$29.95/month · $21.95/month billed annually</p></div>
+<div class="factcard"><h4><span class="num">4</span>Premium</h4><p>$59.95/month · $49.95/month billed annually</p></div>
+<div class="factcard"><h4><span class="num">5</span>Ultimate</h4><p>$199.95/month · $169.95/month billed annually</p></div>
+<div class="factcard"><h4><span class="num">6</span>Free trial</h4><p>30 days on Essential, Plus, and Premium · 14 days on Ultimate</p></div>
+<div class="factcard"><h4><span class="num">7</span>CME real-time data add-on</h4><p>$7/month extra (futures traders: this is not optional)</p></div>
+<div class="factcard"><h4><span class="num">8</span>Affiliate cookie window</h4><p>90 days · referred users get a $15 discount coupon</p></div>
+</div>
+<p class="fineprint">Prices verified July 2026 against TradingView's official pricing page.</p>
+
+<div class="tablewrap">
+<table>
+<tr><th>Feature</th><th>Free</th><th>Essential</th><th>Plus ✓</th><th>Premium</th><th>Ultimate</th></tr>
+<tr><td>Charts per tab</td><td>1</td><td>2</td><td>4</td><td>8</td><td>16</td></tr>
+<tr><td>Indicators per chart</td><td>2</td><td>5</td><td>10</td><td>25</td><td>50</td></tr>
+<tr><td>Price alerts</td><td>1</td><td>20</td><td>100</td><td>400</td><td>1,000</td></tr>
+<tr><td>Alert lifetime</td><td>60 days</td><td>60 days</td><td>60 days</td><td>No expiry</td><td>No expiry</td></tr>
+<tr><td>Webhook alerts</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Historical bars</td><td>5K</td><td>10K</td><td>10K</td><td>20K</td><td>40K</td></tr>
+<tr><td>Second intervals</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Chart types</td><td>Basic</td><td>Basic</td><td>Basic</td><td>21 types</td><td>21 types</td></tr>
+<tr><td>Price/month</td><td>$0</td><td>$14.95</td><td>$29.95</td><td>$59.95</td><td>$199.95</td></tr>
+<tr><td>Price/month (annual)</td><td>$0</td><td>$12.95</td><td>$21.95</td><td>$49.95</td><td>$169.95</td></tr>
+</table>
+</div>
+<p class="fineprint">Free plan limits are the cells that will stop your workflow first. Plus is highlighted as the recommended starting point for active traders.</p>
+
+<h2>Why the free plan isn't enough</h2>
+<div class="insight">
+<div class="tag">✓ What you lose on the free plan</div>
+<ul class="checklist">
+<li>1 chart per tab: no multi-timeframe side-by-side analysis without swapping layouts manually</li>
+<li>2 indicators per chart: not enough for any real technical setup</li>
+<li>1 price alert that expires in 60 days: practically unusable for set-and-monitor strategies</li>
+<li>No webhook support: alerts can notify you, but can't trigger anything</li>
+<li>5,000 bars of history: too thin for meaningful backtesting</li>
+<li>No second-based intervals: intraday precision work not available</li>
+</ul>
+</div>
+<p>The free plan is the right place to start. It's not the right place to stay.</p>
+
+<h2>What Plus actually unlocks</h2>
+<div class="insight">
+<div class="tag">✓ What Plus actually unlocks</div>
+<ul class="checklist">
+<li>4 charts per tab: run 4 timeframes side by side, stay in your layout</li>
+<li>10 indicators per chart: enough for a full technical setup</li>
+<li>100 price alerts: set your levels and let the platform watch</li>
+<li>Webhook alerts: connect your alerts to execution tools or notification systems</li>
+<li>365 days of minute-bar history: enough to backtest strategies that actually matter</li>
+<li>10K bars: more than Essential, enough for most swing and intraday setups</li>
+</ul>
+</div>
+
+<h2>One thing to know about futures data</h2>
+<p>CME Group instruments (ES, NQ, MES, MNQ, CL, GC, RTY, YM) are 10 minutes delayed on all subscription tiers by default — including paid plans. Real-time CME data is a separate add-on: $7/month for non-professional users. If you're day trading futures, that $7 is not optional. Factor it into your real monthly cost.</p>
+
+<h2>Pros &amp; cons</h2>
+<div class="grid">
+<div class="pros"><h4>What works</h4><ul>
+<li>Browser-based, no install — works on any device</li>
+<li>100,000+ community indicators and Pine Script for custom tools</li>
+<li>30-day free trial on Plus before any charge</li>
+<li>Webhook alerts in Plus enable real automation</li>
+<li>Huge global data coverage: 3.5M+ instruments, 100+ exchanges</li>
+<li>Bar Replay for reviewing past sessions at any speed</li>
+<li>Paper trading built in with customizable settings</li>
+</ul></div>
+<div class="cons"><h4>What doesn't</h4><ul>
+<li>Free plan alerts expire after 60 days — easy to miss</li>
+<li>CME real-time data costs $7/month extra on top of your plan</li>
+<li>Non-expiring alerts require Premium — a meaningful jump in price from Plus</li>
+<li>Not a broker — you still need a separate account to execute trades</li>
+<li>Broker integration list skews international; US futures traders use it as charting only</li>
+</ul></div>
+</div>
+
+<h2>Who should use it</h2>
+<div class="wholist">
+<ul>
+<li><strong>Use TradingView Plus if:</strong> you're analyzing markets more than twice a week and the free plan's one-chart, two-indicator limit is slowing you down. Plus is the first tier that feels like a real workstation.</li>
+<li><strong>Use Premium instead if:</strong> you need non-expiring alerts, second-based intervals, or 25 indicators per chart for a more complex setup.</li>
+<li><strong>Stick with Free if:</strong> you're still learning the platform. Start free, hit the limits naturally, upgrade when it costs you more than the plan would.</li>
+<li><strong>Skip TradingView if:</strong> you want a broker, not a charting tool. For actual trade execution, see the <a href="/webull-review">Webull review</a>.</li>
+</ul>
+</div>
+
+<div class="cta">
+<h3>Ready to upgrade your charting setup?</h3>
+<a class="btn" href="https://www.awin1.com/cread.php?awinmid=117793&awinaffid=2976781&ued=https%3A%2F%2Fwww.tradingview.com%2Fpricing%2F%3Fsource%3Dheader_go_pro_button%26feature%3Dstart_free_trial" target="_blank" rel="nofollow noopener noreferrer">Try TradingView Plus free for 30 days →</a>
+<div class="fineprint">affiliate link · referred users get a $15 discount coupon · cancel before trial ends and you owe nothing</div>
+</div>
+
+<h2>FAQ</h2>
+<div class="faq">
+<details><summary>Is TradingView free?</summary><p>Yes — TradingView has a permanent free plan with 1 chart, 2 indicators, and 1 expiring alert. It's a real tool, not a demo. The limits become the bottleneck once you're doing serious analysis.</p></details>
+<details><summary>What does Plus add over the free plan?</summary><p>Four charts per tab, ten indicators, 100 price alerts with webhook support, and 365 days of minute-bar history. It's the first plan where the platform stops feeling like it's working against you.</p></details>
+<details><summary>Does TradingView have a free trial?</summary><p>Yes — Essential, Plus, and Premium each include a 30-day free trial. Cancel before the trial ends and you're not charged.</p></details>
+<details><summary>Do I need to pay extra for real-time futures data?</summary><p>Yes. CME Group data (ES, NQ, CL, GC, and the rest) is 10 minutes delayed by default on all plans. Real-time CME data is $7/month extra. If you're trading futures intraday, add that to your total cost.</p></details>
+<details><summary>Can I use TradingView with any broker?</summary><p>Yes. TradingView is a charting platform, not a broker. You analyze there and execute through your brokerage. 100+ brokers are directly integrated, or you can use it standalone alongside any execution platform.</p></details>
+<details><summary>Do alerts expire on Plus?</summary><p>Yes — alerts expire after 60 days on Free, Essential, and Plus. Non-expiring alerts are a Premium feature. Set a reminder to renew your alerts if you're on Plus and running longer-term levels.</p></details>
+</div>
+
+<div class="cta">
+<h3>Track what you actually own</h3>
+<p style="font-size:15px">Our $20 Personal Finance OS is the Notion dashboard we actually use — accounts, debts, sinking funds, one screen.</p>
+<a class="btn" href="https://iamagm.gumroad.com/l/personal-finance-os" target="_blank" rel="noopener noreferrer" style="background:var(--mint);color:var(--ink)">Get the Personal Finance OS →</a>
+<div class="fineprint">our own product · instant download</div>
+</div>
+
+<div class="related">
+<div class="tag">Keep reading</div>
+<ul>
+<li><a href="/webull-review">Webull Review: Robinhood's Free Alternative</a></li>
+<li><a href="/morningstar-review">Morningstar Investor Review</a></li>
+<li><a href="/best-micro-investing-apps">Best Micro-Investing Apps for Beginners</a></li>
+<li><a href="/">← All reviews</a></li>
+</ul>
+</div>
+</main>
+<footer>
+  <div class="wrap frow">
+    <div>© 2026 sleptontools</div>
+    <div><a href="/#picks">Picks</a> · <a href="/#compare">Compare</a> · <a href="https://iamagm.gumroad.com/l/personal-finance-os" target="_blank" rel="noopener noreferrer">Finance OS</a> · <a href="/#faq">FAQ</a> · <a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/budget-tracker">Budget Tracker</a> · <a href="/debt-payoff-calculator">Debt Payoff Calculator</a> · <a href="/net-worth-calculator">Net Worth Calculator</a> · <a href="/how-to-make-a-budget">How to Make a Budget</a> · <a href="/best-budgeting-apps">Best Budgeting Apps</a></div>
+    <div class="mono">Not financial advice. Do your own research.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('hamBtn'),m=document.getElementById('mobileNav');
+  if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false);});});}
+})();
+</script>
+<script src="search.js" defer></script>
+</body>
+</html>
